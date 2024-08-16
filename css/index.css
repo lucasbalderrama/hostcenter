@@ -1,0 +1,179 @@
+/* pagina */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(45, 68, 85, 0.93);
+    font-size:x-large;
+}
+/* fim pagina */
+/* cabeçalho */
+header {
+    background-color: rgba(99, 149, 187, 1);
+    color:white;
+    padding: 10px;
+    text-align: center;
+}
+
+#container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+}
+
+nav {
+    width: 1000px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    padding: 16px;
+}
+
+nav ul li a {
+    color:black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Outfit", sans-serif;
+    text-transform: uppercase;
+}
+
+a{
+    transition: color 0.3s;
+}
+
+a:hover{
+    color:rgb(185, 185, 185);
+}
+
+#login {
+    margin-left: 30vh;
+}
+/* fim cabeçalho */
+/* seção 1 */
+#secao1{
+    background: url('../img/fundo.jpeg')
+    no-repeat center center;
+    background-size: cover;
+    height: 600px;
+    display: flow-root;
+    width: 100%;
+    
+}
+#secao1 h1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 85px;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685), 
+    0px -4px 7px rgba(255, 255, 255, 0.558);
+    margin-top: 50px;
+}
+#secao1 p{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 45px;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685), 
+    0px -4px 7px rgba(255, 255, 255, 0.558);
+}
+/* fim seção 1 */
+/* secão 2 */
+
+/* sobre */
+#secao2{
+    height: 1000px;
+    margin-top: 150px;
+}
+.imgSobre {
+    background: url('../img/check-in.png') no-repeat center center;
+    background-size: cover;
+    height: 700px;
+    width: 1400px;
+    position: relative;
+    border-radius: 20px;
+    margin: 50px auto;
+    max-width: 90%;
+    min-width: 600px;
+}
+
+.sobre {
+    position: absolute;
+    top: 7%;
+    right: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 600px;
+    height: 570px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+    min-width: 450px;
+}
+
+.sobre h1 {
+    font-size: 84px;
+    text-align: center;
+}
+
+.sobre p {
+    margin-top: 18px;
+    font-size: 35px;
+}
+/* fim sobre */
+/* recursos */
+#recursos{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    max-width: 90%;
+    min-width: 600px;
+    width: 1470px;
+    margin: auto;
+    gap: 15px;
+    margin-top: 100px;
+}
+.recurso{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color:white;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px black;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+.fa-solid{
+    font-size: 100px;
+    margin-top: 12%;
+}
+.recurso p{
+    margin-top: 20px;
+}
+.recurso i {
+    font-size: 6vw; /* Tamanho do ícone proporcional à largura da tela */
+}
+
+.recurso p {
+    font-size: 1.73vw; /* Tamanho do texto proporcional à largura da tela */
+}
+/* fim recursos */
+/* fim seção 2 */
+/* seção 3 */
