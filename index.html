@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src="./js/servicos.js"></script>
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
     <title>HostCenter - Sua estadia Ideal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -62,6 +62,18 @@
     </section>
     <section id="secao3">
         <h1>Galeria</h1>
+        <div class="carossel">
+            <div class="imgCarossel">
+                <img src="./img/galeria1.png">
+                <img src="./img/galeria2.png">
+                <img src="./img/galeria3.png">
+                <img src="./img/galeria4.png">
+                <img src="./img/galeria5.png">
+                <img src="./img/galeria6.png">
+            </div>
+            <button class="anterior" onclick="anterior()"><</button>
+            <button class="proximo" onclick="proximo()">></button>
+        </div>
     </section>
 </body>
 </html>
