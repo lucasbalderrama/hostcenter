@@ -23,6 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -31,12 +32,17 @@ header {
 
 nav {
     width: 1000px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 nav ul li {
