@@ -1,18 +1,18 @@
 /* pagina */
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
 body {
     background: rgba(45, 68, 85, 0.93);
-    font-size: x-large;
+    font-size:x-large;
 }
-
+/* fim pagina */
 /* cabeçalho */
 header {
     background-color: rgba(99, 149, 187, 1);
-    color: white;
+    color:white;
     padding: 10px;
     text-align: center;
 }
@@ -23,7 +23,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .logo {
@@ -31,17 +30,13 @@ header {
 }
 
 nav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
+    width: 1000px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
 }
 
 nav ul li {
@@ -49,7 +44,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color:  #D1E5FF;
+    color:black;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -57,16 +52,16 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-a {
+a{
     transition: color 0.3s;
 }
 
-a:hover {
-    color: rgb(185, 185, 185);
+a:hover{
+    color:rgb(185, 185, 185);
 }
 
 #login {
-    margin-left: auto;
+    margin-left: 30vh;
 }
 /* fim cabeçalho */
 /* seção 1 */
