@@ -23,7 +23,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .logo {
@@ -31,18 +30,17 @@ header {
 }
 
 nav {
-    width: 1000px;
     flex-grow: 1;
     display: flex;
     justify-content: center;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
 }
 
 nav ul li {
@@ -50,7 +48,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color:black;
+    color:white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -75,7 +73,7 @@ a:hover{
     background: url('../img/fundo.jpeg')
     no-repeat center center;
     background-size: cover;
-    height: 600px;
+    height: 90vh;
     display: flow-root;
     width: 100%;
     
