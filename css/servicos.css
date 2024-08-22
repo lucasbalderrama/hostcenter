@@ -26,17 +26,26 @@ header {
 }
 
 .logo {
-    width: 80px;
+    width: 55px;
+    
+}
+#navEsquerda{
+    margin-left: 40vh;
+    display: flex;
 }
 
 nav {
-    width: 1000px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
 }
 
 nav ul li {
@@ -44,12 +53,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #D1E5FF;
+    color:white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     font-family: "Outfit", sans-serif;
     text-transform: uppercase;
+    margin: 0 3vh;
 }
 
 a{
@@ -58,6 +68,10 @@ a{
 
 a:hover{
     color:rgb(185, 185, 185);
+}
+
+#login {
+    margin-left: 30vh;
 }
 
 section{
