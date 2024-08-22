@@ -78,27 +78,61 @@ a:hover{
     margin-left: 30vh;
 }
 /* fim cabeçalho */
-.dia {
-    color: white;
-    width: 600px;
+/* form */
+form{
     padding: 20px;
-    background-color:rgba(95, 143, 230, 0.78);
-    margin-bottom: 15px;
+    border-radius: solid 4px white;
+    width: 350px;
+    margin: auto;
+    display: block;
+    margin-top: 65px;
+    margin-bottom: 140px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+label{
+    font-family: "Outfit", sans-serif;
+}
+
+#fundo{
+    background-color:rgba(99, 149, 187, 1);
+    padding: 40px;
+    
+}
+#fundo h2{
+    color: white;
+    text-align: center;
+}
+
+input{
+    width: 95%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(180, 180, 180);
+    font-size: 17px;
+    background-color: rgba(217, 217, 217, 1);
+}
+.formulario{
+    margin-top: 18px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+#entrar{
+    width: 50%;
+    background-color: rgba(217, 217, 217, 1);
+    padding: 7px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    height: 300px;
 }
-
-.dia h1{
-    margin-top: 0;
-    color: white;
-    margin-bottom: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.dia p{
-    margin-bottom: 14px;
-    font-size: 20px;
+#entrar a {
     font-family: "Outfit", sans-serif;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
 }
