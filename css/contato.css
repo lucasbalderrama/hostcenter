@@ -1,0 +1,104 @@
+/* pagina */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(45, 68, 85, 0.93);
+    font-size:x-large;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+/* fim pagina */
+/* cabeçalho */
+header {
+    background-color: rgba(99, 149, 187, 1);
+    color:white;
+    padding: 10px;
+    text-align: center;
+}
+
+#container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 55px;
+    
+}
+#navEsquerda{
+    margin-left: 40vh;
+    display: flex;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li {
+    padding: 16px;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Outfit", sans-serif;
+    text-transform: uppercase;
+    margin: 0 3vh;
+}
+
+a{
+    transition: color 0.3s;
+}
+
+a:hover{
+    color:rgb(185, 185, 185);
+}
+
+#login {
+    margin-left: 30vh;
+}
+/* fim cabeçalho */
+.dia {
+    color: white;
+    width: 600px;
+    padding: 20px;
+    background-color:rgba(95, 143, 230, 0.78);
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    height: 300px;
+}
+
+.dia h1{
+    margin-top: 0;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dia p{
+    margin-bottom: 14px;
+    font-size: 20px;
+    font-family: "Outfit", sans-serif;
+}
