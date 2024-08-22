@@ -189,6 +189,7 @@ footer a{
     display: flex;
 }
 .flex a, .flex p{
+    font-size: 25px;
     margin-left: 10px;
     color:white;
     font-weight: bolder;

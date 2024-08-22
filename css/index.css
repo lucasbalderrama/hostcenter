@@ -9,7 +9,6 @@ body {
     font-size:x-large;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight:300;
     font-style: normal;
 }
 /* fim pagina */
@@ -276,10 +275,10 @@ footer a{
 .flex a, .flex p{
     margin-left: 10px;
     color:white;
-    font-weight: bolder;
     font-family: "Inter", sans-serif;
+    font-weight: bolder;
 }
-#footerHostCenter a, #footerHostCenter p{
+.flex p{
     margin-top: 30px;
 }
 
