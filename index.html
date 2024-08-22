@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/servicos.css">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js" defer></script>
     <title>HostCenter - Sua estadia Ideal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -62,22 +64,22 @@
         </div>
     </section>
     <section id="secao3">
-        <h1>Galeria</h1>
+        <h1>GALERIA</h1>
         <div class="carossel">
             <div class="imgCarossel">
-                <img src="./img/galeria1.png">
-                <img src="./img/galeria2.png">
-                <img src="./img/galeria3.png">
-                <img src="./img/galeria4.png">
-                <img src="./img/galeria5.png">
-                <img src="./img/galeria6.png">
+                <img class="galeriaImg" src="./img/galeria1.png">
+                <img class="galeriaImg" src="./img/galeria2.png">
+                <img class="galeriaImg" src="./img/galeria3.png">
+                <img class="galeriaImg" src="./img/galeria4.png">
+                <img class="galeriaImg" src="./img/galeria5.png">
+                <img class="galeriaImg" src="./img/galeria6.png">
             </div>
-            <button class="anterior" onclick="anterior()"><</button>
-            <button class="proximo" onclick="proximo()">></button>
+            <button class="anterior" onclick="anterior()"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="proximo" onclick="proximo()"><i class="fa-solid fa-angle-right"></i></button>
         </div>
     </section>
     <footer>
-        <div class="flex">
+        <div class="flex" id="footerHostCenter">
             <i id="hotel" class="fa-solid fa-hotel"></i>
             <p>HostCenter</p> 
         </div>
