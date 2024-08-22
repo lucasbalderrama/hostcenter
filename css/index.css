@@ -91,16 +91,16 @@ a:hover{
 #secao1 h1{
     text-align: center;
     color: white;
-    font-size: 80px;
+    font-size: 100px;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685), 
     0px -3px 6px rgba(255, 255, 255, 0.558);
-    margin-top: 70px;
+    margin-top: 60px;
     
 }
 #secao1 p{
     text-align: center;
     color: white;
-    font-size: 45px;
+    font-size: 50px;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
 }
 
@@ -195,32 +195,25 @@ a:hover{
     font-weight:300;
     font-style: normal;
 }
-/* galeria */
+
 .carossel {
     position: relative;
-    width: 750px;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 50px;
-
-    position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
     overflow: hidden;
+    margin-top: 60px;
 }
 
 .imgCarossel {
     display: flex;
     transition: transform 0.5s ease;
 }
-.galeriaImg{
-    width: 750px;
-}
 
 img {
     width: 100%;
 }
+
 
 button {
     position: absolute;
