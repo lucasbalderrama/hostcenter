@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+}
+
+#secao1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2D4455;
+}
+
+#box-login{
+    display: flex;
+    background-color: white;
+    width: 720px;
+    border-radius: 20px;
+}
+
+#box-img-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dde8f1;
+    width: 350px;
+    height: 450px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#img-login{
+    width: 335px;
+    height: 335px;
+}
+
+form{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: Reem Kufi;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.inserir{
+    width: 230px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(227, 227, 227);
+    margin-bottom: 10px;
+    padding-left: 16px;
+    font-family: Inter;
+}
+
+#div-termos{
+    margin-top: 10px;
+    display: flex;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+}
+  
+.switch input{ 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2.4px;
+    bottom: 2.4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider{
+    background-color: #2196F3;
+}
+  
+input:focus + .slider{
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before{
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+  
+.slider.round{
+    border-radius: 34px;
+}
+  
+.slider.round:before{
+    border-radius: 50%;
+}
+
+#termos{
+    font-family: Inter;
+    font-size: 14px;
+    margin-left: 8px;
+    margin-top: 2px;
+    font-weight: 500px;
+    color: gray;
+}
+
+#entrar{
+    background-color: #75B0DD;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: Reem Kufi;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+#entrar:hover{
+    background-color: #92c3e8;
+}
