@@ -169,6 +169,7 @@ a:hover{
     border: solid 1px black;
     border-radius: 20px;
     text-align: center;
+     transition: top ease 0.5s;
     
 }
 .fa-solid{
@@ -282,4 +283,41 @@ footer a{
     margin-top: 30px;
 }
 
+#primeiro, #segundo, #terceiro, #quarto, #quinto{
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+#primeiro:hover, #segundo:hover, #terceiro:hover, #quarto:hover, #quinto:hover{
+    top: -20px;
+}
+
+/* #segundo{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    font-size: 22px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s; */
+/* }
+
+#segundo:hover{
+    top: -20px;
+}
+
+#terceiro{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    font-size: 22px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+#terceiro:hover{
+    top: -20px;
+} */
 
