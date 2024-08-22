@@ -26,7 +26,12 @@ header {
 }
 
 .logo {
-    width: 80px;
+    width: 55px;
+    
+}
+#navEsquerda{
+    margin-left: 40vh;
+    display: flex;
 }
 
 nav {
@@ -50,10 +55,11 @@ nav ul li {
 nav ul li a {
     color:white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     font-family: "Outfit", sans-serif;
     text-transform: uppercase;
+    margin: 0 3vh;
 }
 
 a{
