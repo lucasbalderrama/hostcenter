@@ -62,19 +62,66 @@ a:hover{
 
 section{
     height: 220vh;
+    margin: 10px;
 }
-
+h1{
+    color: #1f1f1f;
+    font-family: "Reem Kufi", sans-serif;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
 h2{
     color: #2D4455;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Reem Kufi", sans-serif;
+    font-size: 60px;
+    text-align: center;
 }
-
+p{
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:450;
+    font-style: normal;
+    padding: 10px;
+    color: #1f1f1f;
+}
 .fundo-texto{
     background-color: #8EB7EB;
     border-radius: 20px;
+    padding: 20px;
+    width: 610px;
+    height: 435px;
+    margin: 0 4vh;
+    transition: transform 0.3s ease;
 }
 
+.fundo-texto:hover{
+    transform: scale(1.1);
+    }
 .img{
     width: 600px;
-    height: 435px;
+    height: 470px;
+    margin: 0 4vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
+.caixa{
+    padding: 40px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+    
+#estacionamento p{
+    margin-top: 10px;
+}
+.geral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
