@@ -32,15 +32,15 @@ header {
     width: 55px;
     
 }
-#navEsquerda{
-    margin-left: 40vh;
+#nav1{
+    margin-left: 8%;
     display: flex;
+    justify-content: center;
 }
 
 nav {
     flex-grow: 1;
-    display: flex;
-    justify-content: center;
+    
 }
 
 nav ul {
@@ -48,7 +48,6 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 20px;
 }
 
 nav ul li {
@@ -62,7 +61,7 @@ nav ul li a {
     font-weight: bold;
     font-family: "Outfit", sans-serif;
     text-transform: uppercase;
-    margin: 0 3vh;
+    margin: 0 3vw;
 }
 
 a{
@@ -73,9 +72,31 @@ a:hover{
     color:rgb(185, 185, 185);
 }
 
-#login {
-    margin-left: 30vh;
+
+#checkbox{
+    display: none; /* deixa escondido enquanto a tela é grande */
 }
+
+#botao{
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    margin-right: 10%;
+}
+
+#nav2{ 
+    display: none;
+    position: absolute;
+ 
+    background-color: rgba(99, 149, 187, 1);
+    top: 70px;
+    right: 0;
+    width: 200px;
+}
+
+
 /* fim cabeçalho */
 /* seção 1 */
 #secao1{
@@ -172,7 +193,7 @@ a:hover{
     border: solid 1px black;
     border-radius: 20px;
     text-align: center;
-     transition: top ease 0.5s;
+    transition: top ease 0.5s;
     
 }
 .fa-solid{
@@ -296,6 +317,60 @@ footer a{
     top: -20px;
 }
 
+@media (max-width: 768px) {
+    #nav1{
+        display: none;
+    }
+    #botao{
+        display: block;
+    }
+    #checkbox:checked + #botao + #nav2{
+        display: block;
+    }
+    .logo{
+        margin-left: 50%;
+    }
+    #secao1 h1{
+        font-size: 60px;
+        margin-top: 60px;
+    }
+    #secao1 p{
+        font-size: 20px;
+    }
+    .imgSobre {
+        height: 500px;
+        width: 1100px;
+        position: relative;
+        min-width: 60px;
+    }
+    .sobre {
+        width: 300px;
+        height: 370px;
+        min-width: 45px;
+    }
+    .sobre h1 {
+        font-size: 55px;
+    }
+    .sobre p {
+        font-size: 20px;
+    }
+    #recursos{
+        min-width: 60px;
+        width: 1470px;
+        gap: 15px;
+    }
+    .recurso{
+        width: 130px;
+        height: 130px;
+        padding: 10px;
+    }
+    .fa-solid{
+        font-size: 55px;
+    }
+    .recurso p{
+        font-size: 18px;
+    }
+}
 /* #segundo{
     padding-left: 30px;
     padding-right: 30px;
