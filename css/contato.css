@@ -10,6 +10,7 @@ body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    
 }
 /* fim pagina */
 /* cabeçalho */
@@ -32,15 +33,15 @@ header {
     width: 55px;
     
 }
-#navEsquerda{
-    margin-left: 40vh;
+#nav1{
+    margin-left: 8%;
     display: flex;
+    justify-content: center;
 }
 
 nav {
     flex-grow: 1;
-    display: flex;
-    justify-content: center;
+    
 }
 
 nav ul {
@@ -48,7 +49,6 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 20px;
 }
 
 nav ul li {
@@ -62,7 +62,7 @@ nav ul li a {
     font-weight: bold;
     font-family: "Outfit", sans-serif;
     text-transform: uppercase;
-    margin: 0 3vh;
+    margin: 0 3vw;
 }
 
 a{
@@ -73,20 +73,39 @@ a:hover{
     color:rgb(185, 185, 185);
 }
 
-#login {
-    margin-left: 30vh;
+
+#checkbox{
+    display: none; /* deixa escondido enquanto a tela é grande */
 }
+
+#botao{
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    margin-right: 10%;
+}
+
+#nav2{ 
+    display: none;
+    position: absolute;
+ 
+    background-color: rgba(99, 149, 187, 1);
+    top: 70px;
+    right: 0;
+    width: 200px;
+}
+
+
 /* fim cabeçalho */
 /* form */
 form{
     padding: 20px;
-    border-radius: solid 4px white;
-    width: 350px;
+    width: 400px;
     margin: auto;
     display: block;
-    margin-top: 65px;
     margin-bottom: 140px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 label{
@@ -98,7 +117,7 @@ label{
     padding: 40px;
     
 }
-#fundo h2{
+form h2{
     color: white;
     text-align: center;
 }
@@ -111,14 +130,17 @@ input{
     font-size: 17px;
     background-color: rgba(217, 217, 217, 1);
 }
+#observacao{
+    height: 100px;
+}
 .formulario{
-    margin-top: 18px;
+    margin-top: 15px;
     font-size: 17px;
     display: flex;
     align-items: center;
 }
 #entrar{
-    width: 50%;
+    width: 25%;
     background-color: rgba(217, 217, 217, 1);
     padding: 7px;
     margin-top: 6px;
@@ -131,10 +153,61 @@ input{
 #entrar a {
     font-family: "Outfit", sans-serif;
     color: black;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 800;
     text-decoration: none;
 }
+#centralizar{
+    margin-left: 50%;
+    margin-top: 180px;
+
+}
+/* fim forms */
+/* caixinhas de contato */
+#contato{
+    position: relative;
+    width: 500px;
+    height: 450px;
+    background-color: #5d89c7;
+    padding: 20px;
+}
+#contato p, #contato h3{
+    margin: 12px;
+}
+.caixinhaContato {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background-color: #f2f2f2;
+    color: #000;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+#insta {
+    right: 735px;
+}
+
+#email {
+    right: 500px;
+}
+
+#equipe {
+    bottom: 30px;
+    right: 735px;
+}
+.fa-location-dot, .fa-users, #iconInsta, .fa-envelope{
+    font-size: 50px;
+    margin-top: 15px;
+}
+#local{
+    bottom: 30px;
+    right: 500px;
+}
+/* fim caixinhas de contato */
+/* footer */
 footer{
     margin-top: 15vh;
     background-color:rgba(99, 149, 187, 1);
@@ -171,5 +244,34 @@ footer a{
 .flex p{
     margin-top: 10px;
 }
-
+@media (max-width: 768px) {
+    #nav1{
+        display: none;
+    }
+    #botao{
+        display: block;
+    }
+    #checkbox:checked + #botao + #nav2{
+        display: block;
+    }
+    .logo{
+        margin-left: 50%;
+    }
+    footer a, footer p{
+        font-size: 15px;
+    }
+    #hotel{
+        font-size: 35px;
+        margin-top: 20px;
+    }
+    .flex a{
+        margin-top: 9px;
+    }
+    .flex p{
+        margin-bottom: 30px;
+    }
+    .fa-solid{
+        font-size: 55px;
+    }
+}
 

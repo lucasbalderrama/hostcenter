@@ -17,32 +17,63 @@
         <div id="container">
             <a href="index.html"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
             <nav>
-                <ul>
-                    <div id="navEsquerda">
-                        <li><h3><a href="./index.html">início</a></h3></li>
-                        <li><h3><a href="./servicos.html">Serviços</a></h3></li>
-                        <li><h3><a href="./reservar.html">Reservar</a></h3></li>
-                        <li><h3><a href="./contato.html">Contato</a></h3></li>
-                        <li><h3><a id="login" href="./login.html">Entrar</a></h3></li>
-                    </div>
+                <ul id="nav1">
+                    <li><h3><a href="./index.html">início</a></h3></li>
+                    <li><h3><a href="./servicos.html">Serviços</a></h3></li>
+                    <li><h3><a href="./reservar.html">Reservar</a></h3></li>
+                    <li><h3><a href="./contato.html">Contato</a></h3></li>
+                    <li><h3><a id="login" href="./login.html">Entrar</a></h3></li>
+                </ul>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" id="botao">☰</label>
+                <ul id="nav2">
+                    <li><h3><a href="./index.html">início</a></h3></li>
+                    <li><h3><a href="./servicos.html">Serviços</a></h3></li>
+                    <li><h3><a href="./reservar.html">Reservar</a></h3></li>
+                    <li><h3><a href="./contato.html">Contato</a></h3></li>
+                    <li><h3><a href="./login.html">Entrar</a></h3></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div id="top" class="dia">
-        <form action="./index.html" id="fundo">
-            <h2>Entre em contato conosco</h2>
-            <div class="formulario">
-                <input type="text" id="username" placeholder="Digite seu nome" required>
+    <div id="centralizar">
+        <div id="contato">
+            <div class="caixinhaContato" id="insta">
+                <i id="iconInsta" class="fa-brands fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>@smartwebsn</p>
             </div>
-            <div class="formulario">
-                <input type="text" id="email" placeholder="Digite um email válido" required>
+            <div class="caixinhaContato" id="email">
+                <i class="fa-regular fa-envelope"></i>
+                <h3>Email</h3>
+                <p>smartwebsn<br>@gmail.com</p>
             </div>
-            <div class="formulario">
-                <button id="entrar"><a href="index.html">Entrar</a></button>  
+            <div class="caixinhaContato" id="equipe">
+                <i class="fa-solid fa-users"></i>
+                <h3>Equipe</h3>
+                <p>Ana Lívia Lopes<br>Gabriel Reis<br>Isadora Gomes<br>Lucas Randal</p>
             </div>
-
-        </form>
+            <div class="caixinhaContato" id="local">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Localização</h3>
+                <p>Hotel localizado na cidade de Serra Serena, no bairro Vila Verde, número 31.</p>
+            </div>
+            <form action="./index.html">
+                <h2>Entre em contato conosco</h2>
+                <div class="formulario">
+                    <input type="text" id="username" placeholder="Digite seu nome" required>
+                </div>
+                <div class="formulario">
+                    <input type="text" id="email" placeholder="Digite um email válido" required>
+                </div>
+                <div class="formulario">
+                    <input type="text" id="observacao" placeholder="Digite sua pergunta ou observação">
+                </div>
+                <div class="formulario">
+                    <button id="entrar"><a href="index.html">Entrar</a></button>  
+                </div>
+            </form>
+        </div>
     </div>
     <footer>
         <div class="flex">

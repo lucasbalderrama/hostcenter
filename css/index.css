@@ -321,6 +321,22 @@ footer a{
     .logo{
         margin-left: 50%;
     }
+    footer a, footer p{
+        font-size: 15px;
+    }
+    #hotel{
+        font-size: 35px;
+        margin-top: 20px;
+    }
+    .flex a{
+        margin-top: 9px;
+    }
+    .flex p{
+        margin-bottom: 30px;
+    }
+    .fa-solid{
+        font-size: 55px;
+    }
     #secao1{
         height: 75vh;
         
@@ -360,24 +376,8 @@ footer a{
         height: 130px;
         padding: 10px;
     }
-    .fa-solid{
-        font-size: 55px;
-    }
     .recurso p{
         font-size: 18px;
-    }
-    footer a, footer p{
-        font-size: 15px;
-    }
-    #hotel{
-        font-size: 35px;
-        margin-top: 20px;
-    }
-    .flex a{
-        margin-top: 9px;
-    }
-    .flex p{
-        margin-bottom: 30px;
     }
     #secao3 h1{
         font-size: 50px;
