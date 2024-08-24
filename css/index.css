@@ -321,8 +321,12 @@ footer a{
     .logo{
         margin-left: 50%;
     }
+    #secao1{
+        height: 75vh;
+        
+    }
     #secao1 h1{
-        font-size: 45px;
+        font-size: 52px;
         margin-top: 60px;
     }
     #secao1 p{
@@ -379,31 +383,3 @@ footer a{
         font-size: 50px;
     }
 }
-/* #segundo{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    font-size: 22px;
-    position: relative;
-    top: 0;
-    transition: top ease 0.5s; */
-/* }
-
-#segundo:hover{
-    top: -20px;
-}
-
-#terceiro{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    font-size: 22px;
-    position: relative;
-    top: 0;
-    transition: top ease 0.5s;
-}
-
-#terceiro:hover{
-    top: -20px;
-} */
-
