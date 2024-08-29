@@ -170,6 +170,13 @@ select {
     width: 100px;
 }
 
+input[type="text"],
+select {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
 
 
 
@@ -209,5 +216,3 @@ footer a{
     font-weight: bolder;
     font-family: "Inter", sans-serif;
 }
-
-
