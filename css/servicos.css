@@ -1,4 +1,3 @@
-/* pagina */
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +6,9 @@
 body {
     background: #E5E7EA;
     font-size:x-large;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 /* fim pagina */
 /* cabeçalho */
@@ -29,15 +31,15 @@ header {
     width: 55px;
     
 }
-#navEsquerda{
-    margin-left: 40vh;
+#nav1{
+    margin-left: 8%;
     display: flex;
+    justify-content: center;
 }
 
 nav {
     flex-grow: 1;
-    display: flex;
-    justify-content: center;
+    
 }
 
 nav ul {
@@ -45,7 +47,6 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 20px;
 }
 
 nav ul li {
@@ -59,7 +60,7 @@ nav ul li a {
     font-weight: bold;
     font-family: "Outfit", sans-serif;
     text-transform: uppercase;
-    margin: 0 3vh;
+    margin: 0 3vw;
 }
 
 a{
@@ -70,8 +71,28 @@ a:hover{
     color:rgb(185, 185, 185);
 }
 
-#login {
-    margin-left: 30vh;
+
+#checkbox{
+    display: none; /* deixa escondido enquanto a tela é grande */
+}
+
+#botao{
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    margin-right: 10%;
+}
+
+#nav2{ 
+    display: none;
+    position: absolute;
+ 
+    background-color: rgba(99, 149, 187, 1);
+    top: 70px;
+    right: 0;
+    width: 200px;
 }
 
 section{
@@ -83,40 +104,44 @@ h1{
     font-size: 60px;
     text-align: center;
     margin-top: 20px;
+    text-shadow: 2px 2px #79B7E6;
 }
 h2{
-    color: #2D4455;
+    color: #00304D;
     font-family: "Reem Kufi", sans-serif;
     font-size: 60px;
     text-align: center;
 }
 p{
-    font-size: 25px;
+    font-size: 21px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight:450;
+    text-align: justify;
     font-style: normal;
     padding: 10px;
-    color: #1f1f1f;
+    padding-top: 15px;
+    color: #2c2b2b;
 }
 .fundo-texto{
-    background-color: #8EB7EB;
-    border-radius: 20px;
+    background-color: #8eb6ebbb;
+    border-radius: 5%;
     padding: 20px;
-    width: 610px;
-    height: 435px;
+    width: 75vh;
+    height: 65vh;
     margin: 0 4vh;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;    
     transition: transform 0.3s ease;
 }
 
 .fundo-texto:hover{
-    transform: scale(1.1);
+    transform: scale(1.01);
     }
 .img{
-    width: 600px;
-    height: 470px;
+    width: 80vh;
+    height: 70vh;
     margin: 0 4vh;
-    border-radius: 10px;
+    border-radius: 3%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
@@ -174,5 +199,57 @@ footer a{
 #footerHostCenter a, #footerHostCenter p{
     margin-top: 30px;
 }
+@media (min-width: 468px) and (max-width: 1023px) {
+    #nav1{
+        display: none;
+    }
+    #botao{
+        display: block;
+    }
+    #checkbox:checked + #botao + #nav2{
+        display: block;
+    }
+    .logo{
+        margin-left: 50%;
+    }
+    .caixa{
+        flex-wrap: wrap;
+    }
+    .fundo-texto{
+        width: 65vh;
+        height: 50vh;
+        margin: 50px;
+    }
+    .geral img{
+        width: 70vh;
+        height: 50vh;
 
+    }
+    .geral h2{
+        font-size: 45px;
+    }
+    .geral p{
+        font-size: 17px;
+        padding-top: 10px;
+    }
+    footer a, footer p{
+        font-size: 15px;
+    }
+    #hotel{
+        font-size: 35px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }   
+    footer p{
+        margin-top: 10px;
+    }
+    .fa-solid{
+        font-size: 55px;
+    }
+}
+@media (min-width: 1024px) {
+    #lazer, #limpeza{
+        height: 70vh;
+    }
+}
 

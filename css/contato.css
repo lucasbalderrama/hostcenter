@@ -65,11 +65,11 @@ nav ul li a {
     margin: 0 3vw;
 }
 
-a{
+nav a{
     transition: color 0.3s;
 }
 
-a:hover{
+nav a:hover{
     color:rgb(185, 185, 185);
 }
 
@@ -121,7 +121,10 @@ form h2{
     color: white;
     text-align: center;
 }
-
+#contato a{
+    text-decoration: none;
+    color: #000;
+}
 input{
     width: 95%;
     padding: 6px;

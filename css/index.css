@@ -187,6 +187,7 @@ a:hover{
     height: 200px;
     padding: 10px;
     background-color:white;
+    font-weight: bold;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -208,7 +209,7 @@ a:hover{
 /* fim recursos */
 /* fim seção 2 */
 /* seção 3 */
-#secao3 h1{
+#secao3 h2{
     text-align: center;
     color: white;
     font-size: 80px;
@@ -218,6 +219,7 @@ a:hover{
     font-optical-sizing: auto;
     font-weight:300;
     font-style: normal;
+    text-shadow: 3px 3px #79B7E6;
 }
 
 .carossel {
