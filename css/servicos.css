@@ -103,8 +103,9 @@ h1{
     font-family: "Reem Kufi", sans-serif;
     font-size: 60px;
     text-align: center;
-    margin-top: 20px;
-    text-shadow: 2px 2px #79B7E6;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #79B7E6;
 }
 h2{
     color: #00304D;
@@ -124,33 +125,35 @@ p{
     color: #2c2b2b;
 }
 .fundo-texto{
-    background-color: #8eb6ebbb;
-    border-radius: 5%;
-    padding: 20px;
-    width: 75vh;
-    height: 65vh;
-    margin: 0 4vh;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;    
+    padding: 10px;
+    width: 70vh;
+    height: 55vh;
+    margin: 0 4vh;   
+}
+
+.img{
+    width: 73vh;
+    height: 60vh;
     transition: transform 0.3s ease;
 }
-
-.fundo-texto:hover{
+.img:hover{
     transform: scale(1.01);
-    }
-.img{
-    width: 80vh;
-    height: 70vh;
-    margin: 0 4vh;
-    border-radius: 3%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-
+.esquerda{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.direita{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
 .caixa{
-    padding: 40px;
     margin: 30px;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
  }
     
 #estacionamento p{
@@ -199,7 +202,7 @@ footer a{
 #footerHostCenter a, #footerHostCenter p{
     margin-top: 30px;
 }
-@media (min-width: 468px) and (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 960px) {
     #nav1{
         display: none;
     }
@@ -217,7 +220,7 @@ footer a{
     }
     .fundo-texto{
         width: 65vh;
-        height: 50vh;
+        height: 41vh;
         margin: 50px;
     }
     .geral img{
@@ -245,11 +248,6 @@ footer a{
     }
     .fa-solid{
         font-size: 55px;
-    }
-}
-@media (min-width: 1024px) {
-    #lazer, #limpeza{
-        height: 70vh;
     }
 }
 
