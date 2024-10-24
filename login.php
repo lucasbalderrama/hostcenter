@@ -1,3 +1,27 @@
+<?php
+
+session_start();
+include 'conexao.php';
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
+
+    $query = "SELECT * FROM usuarios WHERE email_usuario = '$email' AND senha_usuario = '$senha'";
+
+    $result = mysqli_query($conexao, $query);
+
+    if($result->num_rows > 0) {
+        $usuario_logado = $result->fetch_assoc();
+        $_SESSION['nome'] = $usuario_logado['nome_usuario'];
+        
+        header('Location: index.php');
+    } else {
+        echo "<p style='color:red;'>Email ou senha incorretos</p>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,11 +50,11 @@
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>
                 <ul id="nav2">
-                    <li><h3><a href="./index.html">início</a></h3></li>
+                    <li><h3><a href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.html">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.html">Reservar</a></h3></li>
-                    <li><h3><a href="./contato.html">Contato</a></h3></li>
-                    <li><h3><a href="./login.html">Entrar</a></h3></li>
+                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./contato.php">Contato</a></h3></li>
+                    <li><h3><a href="./login.php">Entrar</a></h3></li>
                 </ul>
             </nav>
         </div>
@@ -40,19 +64,12 @@
             <div id="box-img-login">
                 <img id="img-login" src="../hostcenter/img/hostcenter-login.jpeg" alt="">
             </div>
-            <form action="index.html">
+            <form action="" method="POST">
                 <h1>LOGIN</h1>
-                <input class="inserir" type="text" placeholder="Usuário" required>
-                <input class="inserir" type="email" placeholder="Email" required>
-                <input class="inserir" type="password" placeholder="Senha" required>
+                <input class="inserir" name="email" type="email" placeholder="Email" required>
+                <input class="inserir" name="senha" type="password" placeholder="Senha" required>
                 <a href="../hostcenter/index.html"><input id="entrar" type="submit" value="Entrar"></a>
-                <div id="div-termos">
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider round"></span>
-                    </label>
-                    <p id="termos">Receber emails</p>
-                </div>
+                <p>Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
             </form>
         </div>
     </section>
