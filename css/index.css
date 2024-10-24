@@ -201,9 +201,71 @@ a:hover{
     font-size: 80px;
     margin-top: 12%;
     margin-bottom: 6%;
+    position: absolute;
 }
 .recurso p{
     margin-top: 20px;
+}
+.card {
+    width: 150px;
+    height:150px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-20px);
+
+        &:before {
+            opacity: 1;
+        }
+
+        .info {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .fa-table-tennis-paddle-ball {
+        position: absolute;
+    }
+
+    .info {
+        position: relative;
+        z-index: 3;
+        color: white;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.5s;
+}
+    .info p{
+        font-size: 23px;
+        margin-top: 8px;
+    }
 }
 
 /* fim recursos */
@@ -260,6 +322,7 @@ button:hover{
 }
 button .fa-solid{
     font-size: 25px;
+    position: relative;
 }
 
 .anterior {
@@ -296,6 +359,7 @@ footer a{
 }
 .fa-hotel{
     font-size: 45px;
+    position: relative;
 }
 .flex{
     display: flex;
@@ -389,4 +453,14 @@ footer a{
     #secao3 h1{
         font-size: 50px;
     }
+    .info p{
+        font-size: 10px;
+    }
 }
+
+
+
+
+  
+  
+
