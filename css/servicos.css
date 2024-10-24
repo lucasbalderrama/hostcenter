@@ -6,9 +6,6 @@
 body {
     background: #E5E7EA;
     font-size:x-large;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
 }
 /* fim pagina */
 /* cabeçalho */
@@ -94,35 +91,62 @@ a:hover{
     right: 0;
     width: 200px;
 }
-
-section{
-    margin: 10px;
+/* fim nav */
+.container2 {
+    display: flex;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 650px;
+    max-width: 100%;
 }
-h1{
-    color: #1f1f1f;
-    font-family: "Reem Kufi", sans-serif;
-    font-size: 60px;
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px #79B7E6;
+
+.text-section {
+    padding: 40px;
+    background-color: #fff;
+    width: 50%;
+}
+
+.text-section h1 {
+    margin-top: 150px;
+    font-size: 65px;
+    color: #00304D;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.text-section h1 .highlight {
+    background-color: #e1edff;
+    padding: 0 8px;
+    border: #00304D solid 0.1px;
+    border-radius: 20px;
+}
+
+.text-section p {
+    font-size: 30px;
+    margin-top: 40px;
+    color: #555;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;;
+}
+
+.image-section {
+    width: 50%;
+}
+
+.image-section img {
+    width: 574px;
+    height: 620px;
+    margin-top: 30px;
+    object-fit: cover;
+    border-top-left-radius: 273px;
+    border-top-right-radius: 273px;
 }
 h2{
     color: #00304D;
     font-family: "Reem Kufi", sans-serif;
     font-size: 60px;
     text-align: center;
-}
-p{
-    font-size: 21px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight:450;
-    text-align: justify;
-    font-style: normal;
-    padding: 10px;
-    padding-top: 15px;
-    color: #2c2b2b;
 }
 .fundo-texto{
     padding: 10px;
