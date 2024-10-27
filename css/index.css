@@ -75,7 +75,7 @@ a:hover{
 
 
 #checkbox{
-    display: none; /* deixa escondido enquanto a tela é grande */
+    display: none;
 }
 
 #botao{
@@ -144,7 +144,7 @@ a:hover{
   &:before {
     content:  "";
     position: absolute;
-    top:      0; /* Inicia a linha do topo */
+    top:      0; 
     left:     28%; 
     width:    44%; 
     height:   4px;
@@ -513,15 +513,15 @@ footer a{
     @keyframes line-animation {
     0% { transform: scaleX(0); }
     15% { transform: scaleX(0); }
-    20%, 25% { transform: scaleX(1.8); top: 0px; } /* Começa do topo */
-    50% { transform: scaleX(1.8); top: calc(100% + 5px); } /* Move para baixo */
-    70% { transform: scaleX(0.9); top: calc(100% + 5px); } /* Linha diminui no final */
+    20%, 25% { transform: scaleX(1.8); top: 0px; } 
+    50% { transform: scaleX(1.8); top: calc(100% + 5px); } 
+    70% { transform: scaleX(0.9); top: calc(100% + 5px); } 
     80%, 100% { transform: scaleX(0.9); top: calc(100% + 5px); }
     }
 
     @keyframes clip-path-reveal-1 {
-    0%, 20% { clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0); } /* Começa a revelar de cima */
-    50%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } /* Revela o texto totalmente */
+    0%, 20% { clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0); } 
+    50%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } 
     }
     .logo-container {
         height: 11%;
