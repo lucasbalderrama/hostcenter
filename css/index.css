@@ -152,27 +152,27 @@ a:hover{
     transform-origin: center center;
     transform: scaleX(0);
     
-    animation: line-animation 3s ease forwards; /* Animação apenas uma vez, de cima para baixo */
+    animation: line-animation 3s ease forwards; 
   }
   
   h1#page-logo {
     
-    animation: clip-path-reveal-1 3s ease forwards; /* Exibe o texto uma vez, de cima para baixo */
+    animation: clip-path-reveal-1 3s ease forwards; 
   }
 }
 
 @keyframes line-animation {
   0% { transform: scaleX(0); }
   15% { transform: scaleX(0); }
-  20%, 25% { transform: scaleX(1); top: 50px; } /* Começa do topo */
-  50% { transform: scaleX(1); top: calc(100% + 5px); } /* Move para baixo */
-  70% { transform: scaleX(0.45); top: calc(100% + 5px); } /* Linha diminui no final */
+  20%, 25% { transform: scaleX(1); top: 50px; } 
+  50% { transform: scaleX(1); top: calc(100% + 5px); } 
+  70% { transform: scaleX(0.45); top: calc(100% + 5px); }
   80%, 100% { transform: scaleX(0.45); top: calc(100% + 5px); }
 }
 
 @keyframes clip-path-reveal-1 {
-  0%, 20% { clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0); } /* Começa a revelar de cima */
-  50%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } /* Revela o texto totalmente */
+  0%, 20% { clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0); }
+  50%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } 
 }
 
 
