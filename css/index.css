@@ -37,10 +37,11 @@ header {
     display: flex;
     justify-content: center;
 }
-
+#login{
+    margin-left: 160%;
+}
 nav {
-    flex-grow: 1;
-    
+    flex-grow: 1; 
 }
 
 nav ul {
@@ -89,11 +90,12 @@ a:hover{
 #nav2{ 
     display: none;
     position: absolute;
- 
-    background-color: rgba(99, 149, 187, 1);
+    background-color: rgba(99, 149, 187, 0.814);
     top: 70px;
     right: 0;
     width: 200px;
+    z-index: 1; 
+    border: solid 5px rgb(99, 149, 187);
 }
 
 
@@ -115,7 +117,8 @@ a:hover{
     font-family: Playfair Display SC;
     font-weight: 200;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
-    margin-top: 60px;
+    margin-top: 15px;
+    margin-bottom: 0;
     
 }
 #secao1 p{
@@ -125,7 +128,54 @@ a:hover{
     font-weight: 500;
     font-size: 40px;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
+    animation: showup 5s forwards;
 }
+@keyframes showup {
+    0% {opacity:0;}
+    30% {opacity:0;}
+    50% {opacity:1;}
+
+}
+
+.logo-container {
+  position: relative;
+  height: 20%;
+  
+  &:before {
+    content:  "";
+    position: absolute;
+    top:      0; /* Inicia a linha do topo */
+    left:     28%; 
+    width:    44%; 
+    height:   4px;
+    background-color: rgba(99, 149, 187, 1);
+    transform-origin: center center;
+    transform: scaleX(0);
+    
+    animation: line-animation 3s ease forwards; /* Animação apenas uma vez, de cima para baixo */
+  }
+  
+  h1#page-logo {
+    
+    animation: clip-path-reveal-1 3s ease forwards; /* Exibe o texto uma vez, de cima para baixo */
+  }
+}
+
+@keyframes line-animation {
+  0% { transform: scaleX(0); }
+  15% { transform: scaleX(0); }
+  20%, 25% { transform: scaleX(1); top: 50px; } /* Começa do topo */
+  50% { transform: scaleX(1); top: calc(100% + 5px); } /* Move para baixo */
+  70% { transform: scaleX(0.45); top: calc(100% + 5px); } /* Linha diminui no final */
+  80%, 100% { transform: scaleX(0.45); top: calc(100% + 5px); }
+}
+
+@keyframes clip-path-reveal-1 {
+  0%, 20% { clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0); } /* Começa a revelar de cima */
+  50%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } /* Revela o texto totalmente */
+}
+
+
 
 /* fim seção 1 */
 /* secão 2 */
@@ -297,6 +347,8 @@ a:hover{
 .imgCarossel {
     display: flex;
     transition: transform 0.5s ease;
+    object-fit: cover; 
+    width: 100%;
 }
 
 img {
@@ -454,8 +506,27 @@ footer a{
         font-size: 50px;
     }
     .info p{
-        font-size: 10px;
+        font-size: 1px;
     }
+
+
+    @keyframes line-animation {
+    0% { transform: scaleX(0); }
+    15% { transform: scaleX(0); }
+    20%, 25% { transform: scaleX(1.8); top: 0px; } /* Começa do topo */
+    50% { transform: scaleX(1.8); top: calc(100% + 5px); } /* Move para baixo */
+    70% { transform: scaleX(0.9); top: calc(100% + 5px); } /* Linha diminui no final */
+    80%, 100% { transform: scaleX(0.9); top: calc(100% + 5px); }
+    }
+
+    @keyframes clip-path-reveal-1 {
+    0%, 20% { clip-path: polygon(0 0, 100% 0, 100% 0, 0% 0); } /* Começa a revelar de cima */
+    50%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } /* Revela o texto totalmente */
+    }
+    .logo-container {
+        height: 11%;
+    }
+
 }
 
 

@@ -17,7 +17,7 @@
             <a href="index.html"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
             <nav>
                 <ul id="nav1">
-                    <li><h3><a href="./index.php">início</a></h3></li>
+                    <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
@@ -36,7 +36,9 @@
         </div>
     </header>
     <section id="secao1">
-        <h1>HostCenter</h1>
+    <div class="logo-container">
+        <h1 id="page-logo">HostCenter</h1> <br>
+    </div> <br>
         <p>Sua estadia ideal</p>
     </section>
     <section id="secao2">
@@ -88,8 +90,9 @@
                 <img class="galeriaImg" src="./img/galeria2.png">
                 <img class="galeriaImg" src="./img/galeria3.png">
                 <img class="galeriaImg" src="./img/galeria4.png">
-                <img class="galeriaImg" src="./img/galeria5.png">
                 <img class="galeriaImg" src="./img/galeria6.png">
+                <img class="galeriaImg" src="./img/galeria7.png">
+                
             </div>
             <button class="anterior" onclick="anterior()"><i class="fa-solid fa-angle-left"></i></button>
             <button class="proximo" onclick="proximo()"><i class="fa-solid fa-angle-right"></i></button>
