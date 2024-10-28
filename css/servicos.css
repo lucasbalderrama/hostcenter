@@ -115,7 +115,7 @@ a:hover{
     font-optical-sizing: auto;
 }
 
-.text-section h1 .highlight {
+.text-section h1 .fundo-h1 {
     background-color: #e1edff;
     padding: 0 8px;
     border: #00304D solid 0.1px;
@@ -124,7 +124,7 @@ a:hover{
 
 .text-section p {
     font-size: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
     color: #555;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;;
@@ -141,6 +141,77 @@ a:hover{
     object-fit: cover;
     border-top-left-radius: 273px;
     border-top-right-radius: 273px;
+}
+.container_servicos{
+    background-color: #2D4455;
+    margin: 0 auto;
+    padding: 30px;
+}
+.intro{
+    width: 500px;
+}
+.intro h1{
+    font-size: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    margin-top: 120px;
+}
+.intro-p {
+    font-size: 1.1em;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    font-size: 20px;
+    text-align: justify;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.services {
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    align-items: end;
+    margin-top: 20px;
+    margin-left: 45%;
+}
+
+.service-item {
+    margin: 10px;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.service-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: left;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+.service-item p{
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;;
+}
+.service-item .icon {
+    font-size: 2em;
+}
+
+.image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
 }
 h2{
     color: #00304D;
