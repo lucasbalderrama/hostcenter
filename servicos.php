@@ -45,7 +45,7 @@
         <div class="container2">
             <div class="text-section">
                 <h1>Experiências que <span class="fundo-h1">elevam</span> sua estadia</h1>
-                <p>Descubra o conforto e a hospitalidade que transformam sua estadia em uma experiência inesquecível.</p>
+                <p>Descubra o conforto e a hospitalidade que transformam sua estadia em uma experiência inesquecível</p>
             </div>
             <div class="image-section">
                 <img src="./img/fam_hotel.png" alt="Família aproveitando estadia no hotel">
@@ -60,31 +60,31 @@
                     Nosso hotel tem o compromisso de proporcionar uma estadia que vá além das expectativas, oferecendo serviços cuidadosamente pensados para o seu conforto e bem-estar. Com foco em excelência, disponibilizamos gastronomia de alta qualidade, opções de lazer para todas as idades, estacionamento seguro e um serviço de limpeza que garante um ambiente sempre impecável.
                 </p>
                 <div class="image">
-                <img src="servicos.jpg" alt="Imagem dos serviços do hotel">
+                <img src="./img/servicos.png" alt="Imagem dos serviços do hotel">
                 </div>
             </div>
             
             <div class="services">
                 <div class="service-item">
-                    <div class="icon"><img src="/hostcenter/img/talher.png" alt=""></div>
+                    <div class="icon"><img src="./img/talher.png" alt=""></div>
                     <h2>Gastronomia</h2>
                     <p>O hotel oferece uma experiência gastronômica excepcional, com um menu variado que inclui opções vegetarianas, veganas e pratos personalizados, atendendo a todos os paladares.</p>
                 </div>
 
                 <div class="service-item">
-                    <div class="icon"><img src="/hostcenter/img/playground.png" alt=""></div>
+                    <div class="icon"><img src="./img/playground.png" alt=""></div>
                     <h2>Lazer</h2>
                     <p>O hotel proporciona diversas opções de lazer, como piscina relaxante, academia equipada e um playground seguro, garantindo diversão e bem-estar para toda a família.</p>
                 </div>
 
-                <div class="service-item">
-                    <div class="icon"><img src="/hostcenter/img/carro.png" alt=""></div>
+                <div class="service-item service2">
+                    <div class="icon"><img src="./img/carro.png" alt=""></div>
                     <h2>Estacionamento</h2>
                     <p>O estacionamento do hotel é amplo, bem sinalizado e monitorado, oferecendo segurança e praticidade para os hóspedes que chegam de carro.</p>
                 </div>
 
-                <div class="service-item">
-                    <div class="icon"><img src="/hostcenter/img/vassoura.png" alt=""></div>
+                <div class="service-item service2">
+                    <div class="icon"><img src="./img/vassoura.png" alt=""></div>
                     <h2>Limpeza</h2>
                     <p>A equipe de limpeza mantém o hotel impecável, com serviços diários de higienização dos quartos e áreas comuns, assegurando uma estadia confortável e segura.</p>
                 </div>
