@@ -65,25 +65,25 @@
             </div>
             
             <div class="services">
-                <div class="service-item">
+                <div class="service-item" id="comida">
                     <div class="icon"><img src="./img/talher.png" alt=""></div>
                     <h2>Gastronomia</h2>
                     <p>O hotel oferece uma experiência gastronômica excepcional, com um menu variado que inclui opções vegetarianas, veganas e pratos personalizados, atendendo a todos os paladares.</p>
                 </div>
 
-                <div class="service-item">
+                <div class="service-item" id="lazer">
                     <div class="icon"><img src="./img/playground.png" alt=""></div>
                     <h2>Lazer</h2>
                     <p>O hotel proporciona diversas opções de lazer, como piscina relaxante, academia equipada e um playground seguro, garantindo diversão e bem-estar para toda a família.</p>
                 </div>
 
-                <div class="service-item service2">
+                <div class="service-item service2" id="estacionamento">
                     <div class="icon"><img src="./img/carro.png" alt=""></div>
                     <h2>Estacionamento</h2>
                     <p>O estacionamento do hotel é amplo, bem sinalizado e monitorado, oferecendo segurança e praticidade para os hóspedes que chegam de carro.</p>
                 </div>
 
-                <div class="service-item service2">
+                <div class="service-item service2" id="limpeza">
                     <div class="icon"><img src="./img/vassoura.png" alt=""></div>
                     <h2>Limpeza</h2>
                     <p>A equipe de limpeza mantém o hotel impecável, com serviços diários de higienização dos quartos e áreas comuns, assegurando uma estadia confortável e segura.</p>

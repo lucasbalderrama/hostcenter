@@ -96,16 +96,14 @@ a:hover{
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    height: 650px;
+    height: 670px;
     max-width: 100%;
 }
-
 .text-section {
     padding: 40px;
     background-color: #fff;
     width: 50%;
 }
-
 .text-section h1 {
     margin-top: 150px;
     font-size: 65px;
@@ -113,14 +111,12 @@ a:hover{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
 }
-
 .text-section h1 .fundo-h1 {
     background-color: #e1edff;
     padding: 0 8px;
     border: #00304D solid 0.1px;
     border-radius: 20px;
 }
-
 .text-section p {
     font-size: 30px;
     margin-top: 30px;
@@ -128,14 +124,12 @@ a:hover{
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;;
 }
-
 .image-section {
     width: 50%;
 }
-
 .image-section img {
     width: 574px;
-    height: 620px;
+    height: 640px;
     margin-top: 30px;
     object-fit: cover;
     border-top-left-radius: 273px;
@@ -171,7 +165,6 @@ a:hover{
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
 }
-
 .services {
     display: grid;
     grid-template-columns:  repeat(2, 1fr);
@@ -179,17 +172,16 @@ a:hover{
     gap: 20px;
     align-items: end;
     margin-top: 100px;
+    margin-bottom: 80px;
     width: 58%;
     align-self: flex-start;
 }
-
 .service-item {
     margin: 10px;
     border-radius: 8px;
     text-align: justify;
     width: 90%;
 }
-
 .service-item h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
@@ -209,14 +201,18 @@ a:hover{
     font-size: 2em;
 }
 .service2{
-    margin-top: 140px;
+    margin-top: 150px;
 }
 .image img{
-    width: 450px;
-    height: 340px;
+    width: 470px;
+    height: 360px;
     border-radius: 3%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+#lazer, #estacionamento{
+    margin-bottom: 30px;
+}
+
 
 footer{
     background-color:rgba(99, 149, 187, 1);
