@@ -36,12 +36,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+<header>
         <div id="container">
             <a href="index.html"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
             <nav>
                 <ul id="nav1">
-                    <li><h3><a href="./index.php">início</a></h3></li>
+                    <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input class="inserir" name="email" type="email" placeholder="Email" required>
                 <input class="inserir" name="senha" type="password" placeholder="Senha" required>
                 <a href="../hostcenter/index.html"><input id="entrar" type="submit" value="Entrar"></a>
-                <p>Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
+                <p class="outro">Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
             </form>
         </div>
     </section>

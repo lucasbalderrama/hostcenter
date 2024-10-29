@@ -33,24 +33,50 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-<form action="" method="POST">
-        <h1>Cadastrar</h1>
-            <label for="nome">Nome</label>
-            <input class="inserir" type="text" name="nome">
+    <header>
+        <div id="container">
+            <a href="index.html"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
+            <nav>
+                <ul id="nav1">
+                    <li><h3><a href="./index.php">início</a></h3></li>
+                    <li><h3><a href="./servicos.php">Serviços</a></h3></li>
+                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./contato.php">Contato</a></h3></li>
+                    <li><h3><a id="login" href="./login.php">Entrar</a></h3></li>
+                </ul>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" id="botao">☰</label>
+                <ul id="nav2">
+                    <li><h3><a href="./index.php">início</a></h3></li>
+                    <li><h3><a href="./servicos.php">Serviços</a></h3></li>
+                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./contato.php">Contato</a></h3></li>
+                    <li><h3><a href="./login.php">Entrar</a></h3></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="secao1">
+        <div id="box-login">
+            <div id="box-img-login">
+                <img id="img-login" src="../hostcenter/img/hostcenter-login.jpeg" alt="">
+            </div>
+            <form action="" method="POST">
+                <h1>CADASTRAR</h1>
+                <input class="inserir" type="text" name="nome" placeholder="Nome">
 
-            <label for="email">Email</label>
-            <input class="inserir" type="email" name="email">
+                <input class="inserir" type="email" name="email" placeholder="Email">
 
-            <label for="senha">Senha</label>
-            <input class="inserir" type="password" name="senha">
-
-            <button id="entrar" type="submit">Cadastrar</button>
-
-            <p>Já tem uma conta? <a href="./login.php">Entre!</a></p>
-            <p><a href="./index.php">Voltar para o início</a></p>
-        </form>
+                <input class="inserir" type="password" name="senha" placeholder="Senha">
+        
+                <button id="entrar" type="submit">Cadastrar</button>
+        
+                <p class="outro">Já possui uma conta? <a href="./login.php">Entre!</a></p>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
