@@ -23,3 +23,4 @@ function anterior() {
         galeriaVisivel();
     }
 }
+AOS.init();

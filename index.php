@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 </head>
 <body>
     <header>
@@ -42,7 +43,7 @@
         <p>Sua estadia ideal</p>
     </section>
     <section id="secao2">
-        <div class="imgSobre">
+        <div class="imgSobre" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="sobre">
                 <h1>Sobre:</h1>
                 <p>Bem-vindo ao HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, no bairro Vila Verde, oferecemos quartos bem decorados, serviços de alta qualidade, restaurante gourmet, academia e piscina. Seja para negócios ou lazer, o HostCenter é seu refúgio ideal.</p>
