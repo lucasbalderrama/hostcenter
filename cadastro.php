@@ -28,7 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar</title>
+    <title>HostCenter - Cadastrar</title>
+    <link rel="shortcut icon" href="img/hostcenter-icon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,5 +79,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </form>
         </div>
     </section>
+    <footer>
+        <div class="flex">
+            <i id="hotel" class="fa-solid fa-hotel"></i>
+            <p>HostCenter</p> 
+        </div>
+        <div class="flex">
+            <i class="fa-brands fa-instagram"></i>
+            <a href="#">smartwebsn</a>
+        </div>
+    </footer>
 </body>
 </html>
