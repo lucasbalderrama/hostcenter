@@ -25,10 +25,11 @@ header {
     display: flex;
     justify-content: center;
 }
-
+#login{
+    margin-left: 160%;
+}
 nav {
-    flex-grow: 1;
-    
+    flex-grow: 1; 
 }
 
 nav ul {
@@ -62,7 +63,7 @@ a:hover{
 
 
 #checkbox{
-    display: none; /* deixa escondido enquanto a tela é grande */
+    display: none;
 }
 
 #botao{
@@ -77,11 +78,12 @@ a:hover{
 #nav2{ 
     display: none;
     position: absolute;
- 
-    background-color: rgba(99, 149, 187, 1);
+    background-color: rgba(99, 149, 187, 0.814);
     top: 70px;
     right: 0;
     width: 200px;
+    z-index: 1; 
+    border: solid 5px rgb(99, 149, 187);
 }
 
 #secao1{
@@ -231,6 +233,11 @@ input:checked + .slider:before{
 #entrar:hover{
     background-color: #92c3e8;
 }
+
+.outro{
+    font-family: Reem Kufi;
+}
+
 footer{
 
     background-color:rgba(99, 149, 187, 1);

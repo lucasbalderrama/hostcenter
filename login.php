@@ -7,17 +7,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    $query = "SELECT * FROM usuarios WHERE email_usuario = '$email' AND senha_usuario = '$senha'";
+    $query = "SELECT * FROM usuarios WHERE email_usuario = '$email'";
 
     $result = mysqli_query($conexao, $query);
 
     if($result->num_rows > 0) {
         $usuario_logado = $result->fetch_assoc();
-        $_SESSION['nome'] = $usuario_logado['nome_usuario'];
-        
-        header('Location: index.php');
+
+        if (password_verify($senha, $usuario_logado['senha_usuario'])) {
+            $_SESSION['nome'] = $usuario_logado['nome_usuario'];
+            
+            header('Location: index.php');
+        } else {
+            echo "<p style='color:red;'>Senha incorreta</p>";
+        }
     } else {
-        echo "<p style='color:red;'>Email ou senha incorretos</p>";
+        echo "<p style='color:red;'>Usuário não consta no sistema!</p>";
     }
 }
 ?>
@@ -28,7 +33,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
-    <title>Entrar</title>
+    <title>HostCenter - Entrar</title>
+    <link rel="shortcut icon" href="img/hostcenter-icon.png" type="image/x-icon">
     <script src="./js/login.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,12 +42,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+<header>
         <div id="container">
             <a href="index.html"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
             <nav>
                 <ul id="nav1">
-                    <li><h3><a href="./index.php">início</a></h3></li>
+                    <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
@@ -69,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input class="inserir" name="email" type="email" placeholder="Email" required>
                 <input class="inserir" name="senha" type="password" placeholder="Senha" required>
                 <a href="../hostcenter/index.html"><input id="entrar" type="submit" value="Entrar"></a>
-                <p>Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
+                <p class="outro">Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
             </form>
         </div>
     </section>
