@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['nome'] = '';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,14 +20,20 @@
 <body>
     <header>
         <div id="container">
-            <a href="index.html"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
+            <a href="index.php"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
             <nav>
                 <ul id="nav1">
                     <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
-                    <li><h3><a id="login" href="./login.php">Entrar</a></h3></li>
+                    <?php
+                    if ($_SESSION['nome'] != ''){
+                        echo "<li><h3><a id='sair' href='./logout.php'>Sair</a></h3></li>";
+                    } elseif ($_SESSION['nome'] == '') {
+                        echo "<li><h3><a id='login' href='./login.php'>Entrar</a></h3></li>";
+                    }
+                    ?>
                 </ul>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>
@@ -31,7 +42,13 @@
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
-                    <li><h3><a href="./login.php">Entrar</a></h3></li>
+                    <?php
+                    if ($_SESSION['nome'] != ''){
+                        echo "<li><h3><a href='./logout.php'>Sair</a></h3></li>";
+                    } elseif ($_SESSION['nome'] == '') {
+                        echo "<li><h3><a href='./login.php'>Entrar</a></h3></li>";
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>

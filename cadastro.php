@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sql_insercao = "INSERT INTO usuarios (nome_usuario, email_usuario, senha_usuario) VALUES (?, ?, ?)";
     $stmt = $conexao->prepare($sql_insercao);
     $stmt->bind_param("sss", $nome, $email, $senha_hashed);
+
         
     if ($stmt->execute()) {
         header("Location: index.php");
@@ -34,12 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
     <header>
         <div id="container">
-            <a href="index.html"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
+            <a href="index.php"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
             <nav>
                 <ul id="nav1">
                     <li><h3><a href="./index.php">início</a></h3></li>
@@ -55,7 +57,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
-                    <li><h3><a href="./login.php">Entrar</a></h3></li>
+                    <?php
+                    if ($_SESSION['nome'] != ''){
+                        echo "<li><h3><a href='./logout.php'>Sair</a></h3></li>";
+                    } elseif ($_SESSION['nome'] == '') {
+                        echo "<li><h3><a href='./login.php'>Entrar</a></h3></li>";
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>
@@ -67,6 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
             <form action="" method="POST">
                 <h1>CADASTRAR</h1>
+                <h2>Crie uma conta</h2>
                 <input class="inserir" type="text" name="nome" placeholder="Nome">
 
                 <input class="inserir" type="email" name="email" placeholder="Email">

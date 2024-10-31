@@ -38,10 +38,14 @@ header {
     display: flex;
     justify-content: center;
 }
-
+#login{
+    margin-left: 130%;
+}
+#sair{
+    margin-left: 170%;
+}
 nav {
-    flex-grow: 1;
-    
+    flex-grow: 1; 
 }
 
 nav ul {
@@ -65,17 +69,17 @@ nav ul li a {
     margin: 0 3vw;
 }
 
-nav a{
+a{
     transition: color 0.3s;
 }
 
-nav a:hover{
+a:hover{
     color:rgb(185, 185, 185);
 }
 
 
 #checkbox{
-    display: none; /* deixa escondido enquanto a tela é grande */
+    display: none;
 }
 
 #botao{

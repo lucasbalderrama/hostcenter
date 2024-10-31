@@ -26,7 +26,10 @@ header {
     justify-content: center;
 }
 #login{
-    margin-left: 160%;
+    margin-left: 130%;
+}
+#sair{
+    margin-left: 170%;
 }
 nav {
     flex-grow: 1; 
@@ -129,6 +132,13 @@ form{
 h1{
     font-family: Reem Kufi;
     font-size: 40px;
+    color: #00304D;
+}
+
+h2{
+    font-family: Reem Kufi;
+    color: #325068;
+    font-size: 17px;
     margin-bottom: 30px;
 }
 

@@ -38,7 +38,10 @@ header {
     justify-content: center;
 }
 #login{
-    margin-left: 160%;
+    margin-left: 130%;
+}
+#sair{
+    margin-left: 170%;
 }
 nav {
     flex-grow: 1; 
@@ -124,7 +127,7 @@ a:hover{
 #secao1 p{
     text-align: center;
     color: white;
-    font-family: Inter;
+    font-family:Inter;
     font-weight: 500;
     font-size: 40px;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
