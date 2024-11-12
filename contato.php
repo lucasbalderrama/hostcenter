@@ -6,9 +6,12 @@
 
     <link rel="stylesheet" href="css/contato.css">
     <script src="js/contato.js" defer></script>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <title>HostCenter - Sua estadia Ideal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
 </head>
@@ -41,7 +44,7 @@
             <div class="caixinhaContato" id="insta">
                 <i id="iconInsta" class="fa-brands fa-instagram"></i><br> 
                 <h3>Instagram</h3>
-                <a href="https://www.instagram.com/smartwebsn/">Acesse em:<br> @smartwebsn</a>
+                <a id="insta-smart" href="https://www.instagram.com/smartwebsn/" target="_blank">Acesse em:<br> @smartwebsn</a>
             </div>
             <div class="caixinhaContato" id="email">
                 <i class="fa-regular fa-envelope"></i>
@@ -51,7 +54,12 @@
             <div class="caixinhaContato" id="equipe">
                 <i class="fa-solid fa-users"></i>
                 <h3>Equipe</h3>
-                <p>Ana Lívia Lopes<br>Gabriel Reis<br>Isadora Gomes<br>Lucas Randal</p>
+                <ul>
+                    <li><a href="https://linktr.ee/analivialopess" target="_blank">Ana Lívia Lopes</a></li>
+                    <li><a href="https://linktr.ee/gabrielreiss" target="_blank">Gabriel Reis</a></li>
+                    <li><a href="https://linktr.ee/isadoragomess" target="_blank">Isadora Gomes</a></li>
+                    <li><a href="https://linktr.ee/lucasbalderrama" target="_blank">Lucas Randal</a></li>
+                </ul>
             </div>
             <div class="caixinhaContato" id="local">
                 <i class="fa-solid fa-location-dot"></i>
@@ -70,7 +78,7 @@
                     <input type="text" id="observacao" placeholder="Digite sua pergunta ou observação">
                 </div>
                 <div class="formulario">
-                    <button id="entrar"><a href="index.html">Entrar</a></button>  
+                    <button id="entrar">Enviar</button>  
                 </div>
             </form>
         </div>

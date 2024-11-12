@@ -4,16 +4,6 @@
     padding: 0;
 }
 
-body {
-    background: rgba(45, 68, 85, 0.93);
-    font-size:x-large;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    
-}
-/* fim pagina */
-/* cabeçalho */
 header {
     background-color: rgba(99, 149, 187, 1);
     color:white;
@@ -38,10 +28,11 @@ header {
     display: flex;
     justify-content: center;
 }
-
+#login{
+    margin-left: 160%;
+}
 nav {
-    flex-grow: 1;
-    
+    flex-grow: 1; 
 }
 
 nav ul {
@@ -60,22 +51,22 @@ nav ul li a {
     text-decoration: none;
     font-size: 17px;
     font-weight: bold;
-    font-family: "Outfit", sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-transform: uppercase;
     margin: 0 3vw;
 }
 
-nav a{
+a{
     transition: color 0.3s;
 }
 
-nav a:hover{
-    color:rgb(185, 185, 185);
+a:hover{
+    color:#00304D;
 }
 
 
 #checkbox{
-    display: none; /* deixa escondido enquanto a tela é grande */
+    display: none;
 }
 
 #botao{
@@ -98,7 +89,6 @@ nav a:hover{
     border: solid 5px rgb(99, 149, 187);
 }
 
-
 /* fim cabeçalho */
 /* form */
 form{
@@ -110,29 +100,28 @@ form{
 }
 
 label{
-    font-family: "Outfit", sans-serif;
-}
-
-#fundo{
-    background-color:rgba(99, 149, 187, 1);
-    padding: 40px;
-    
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 form h2{
     color: white;
+    font-size: 35px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 #contato a{
     text-decoration: none;
     color: #000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 input{
     width: 95%;
     padding: 6px;
     margin-bottom: 10px;
-    border: 2px solid rgb(180, 180, 180);
+    border: solid #b4b4b4 2px;
     font-size: 17px;
+    border-radius: 7px;
     background-color: rgba(217, 217, 217, 1);
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 #observacao{
     height: 100px;
@@ -144,26 +133,30 @@ input{
     align-items: center;
 }
 #entrar{
-    width: 25%;
+    width: 40%;
+    height: 52px;
     background-color: rgba(217, 217, 217, 1);
-    padding: 7px;
     margin-top: 6px;
-    border: none;
-    border-radius: 5px;
+    border: solid #00304D 0.7px;
+    border-radius: 25px;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
-}
-#entrar a {
-    font-family: "Outfit", sans-serif;
-    color: black;
-    font-size: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #00304D;
+    font-size: 25px;
     font-weight: 800;
+    text-align: center;
     text-decoration: none;
 }
+
+#entrar:hover{
+    color: white;
+    background-color: #00304D;
+}
 #centralizar{
-    margin-left: 50%;
-    margin-top: 180px;
+    margin-left: 47%;
+    margin-top: 90px;
 
 }
 /* fim forms */
@@ -171,12 +164,18 @@ input{
 #contato{
     position: relative;
     width: 500px;
-    height: 450px;
+    height: 470px;
     background-color: #5d89c7;
     padding: 20px;
 }
 #contato p, #contato h3{
     margin: 12px;
+}
+#contato h3{
+    font-family: 'Montserrat', sans-serif;
+}
+#contato p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .caixinhaContato {
     position: absolute;
@@ -189,7 +188,12 @@ input{
     font-size: 17px;
     
 }
-
+.caixinhaContato ul li {
+    list-style: none;
+}
+#insta-smart:hover, .caixinhaContato ul li a:hover{
+    font-weight: bold;
+}
 #insta {
     right: 735px;
 }

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/pagamentos.css">
     <title>Document</title>
     <script src="./js/pagamentos.js"></script>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/pagamentos.css">
 </head>
 <body>

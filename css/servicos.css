@@ -32,10 +32,11 @@ header {
     display: flex;
     justify-content: center;
 }
-
+#login{
+    margin-left: 160%;
+}
 nav {
-    flex-grow: 1;
-    
+    flex-grow: 1; 
 }
 
 nav ul {
@@ -54,7 +55,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 17px;
     font-weight: bold;
-    font-family: "Outfit", sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-transform: uppercase;
     margin: 0 3vw;
 }
@@ -64,12 +65,12 @@ a{
 }
 
 a:hover{
-    color:rgb(185, 185, 185);
+    color:#00304D;
 }
 
 
 #checkbox{
-    display: none; /* deixa escondido enquanto a tela é grande */
+    display: none;
 }
 
 #botao{
@@ -84,11 +85,12 @@ a:hover{
 #nav2{ 
     display: none;
     position: absolute;
- 
-    background-color: rgba(99, 149, 187, 1);
+    background-color: rgba(99, 149, 187, 0.814);
     top: 70px;
     right: 0;
     width: 200px;
+    z-index: 1; 
+    border: solid 5px rgb(99, 149, 187);
 }
 /* fim nav */
 .container2 {

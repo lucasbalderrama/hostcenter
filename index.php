@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js" defer></script>
     <title>HostCenter - Sua estadia Ideal</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 </head>
@@ -45,8 +48,9 @@
     <section id="secao2">
         <div class="imgSobre" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="sobre">
-                <h1>Sobre:</h1>
-                <p>Bem-vindo ao HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, no bairro Vila Verde, oferecemos quartos bem decorados, serviços de alta qualidade, restaurante gourmet, academia e piscina. Seja para negócios ou lazer, o HostCenter é seu refúgio ideal.</p>
+                <h1>Sobre</h1>
+                <p>Bem-vindo ao HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, oferecemos serviços de alta qualidade com excelência.</p>
+                <p>Seja para negócios ou lazer, o HostCenter é seu refúgio ideal.</p>
             </div>
         </div>
         <div id="recursos">
@@ -84,7 +88,7 @@
         
     </section>
     <section id="secao3">
-        <h2>GALERIA</h2>
+        <h2>Galeria</h2>
         <div class="carossel">
             <div class="imgCarossel">
                 <img class="galeriaImg" src="./img/galeria1.png">

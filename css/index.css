@@ -60,7 +60,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 17px;
     font-weight: bold;
-    font-family: "Outfit", sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-transform: uppercase;
     margin: 0 3vw;
 }
@@ -70,7 +70,7 @@ a{
 }
 
 a:hover{
-    color:rgb(185, 185, 185);
+    color:#00304D;
 }
 
 
@@ -108,25 +108,23 @@ a:hover{
     height: 90vh;
     display: flow-root;
     width: 100%;
-    
 }
 #secao1 h1{
     text-align: center;
-    color: white;
-    font-size: 100px;
-    font-family: Playfair Display SC;
-    font-weight: 200;
+    color: rgb(228, 235, 249);
+    font-size: 90px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
-    margin-top: 15px;
+    margin-top: 50px;
     margin-bottom: 0;
-    
 }
 #secao1 p{
     text-align: center;
-    color: white;
-    font-family: Inter;
-    font-weight: 500;
-    font-size: 40px;
+    color: rgb(228, 235, 249);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
     animation: showup 5s forwards;
 }
@@ -164,10 +162,10 @@ a:hover{
 @keyframes line-animation {
   0% { transform: scaleX(0); }
   15% { transform: scaleX(0); }
-  20%, 25% { transform: scaleX(1); top: 50px; } 
-  50% { transform: scaleX(1); top: calc(100% + 5px); } 
-  70% { transform: scaleX(0.45); top: calc(100% + 5px); }
-  80%, 100% { transform: scaleX(0.45); top: calc(100% + 5px); }
+  20%, 25% { transform: scaleX(0.9); top: 50px; } 
+  50% { transform: scaleX(0.9); top: calc(100% + 5px); } 
+  70% { transform: scaleX(0.50); top: calc(100% + 5px); }
+  80%, 100% { transform: scaleX(0.50); top: calc(100% + 5px); }
 }
 
 @keyframes clip-path-reveal-1 {
@@ -184,8 +182,11 @@ a:hover{
 #secao2{
     margin-top: 150px;
 }
+#secao2 p{
+    text-align: justify;
+}
 .imgSobre {
-    background: url('../img/check-in.png') no-repeat center center;
+    background: url('../img/sobre.jpg') no-repeat center center;
     background-size: cover;
     height: 600px;
     width: 1300px;
@@ -199,25 +200,28 @@ a:hover{
 .sobre {
     position: absolute;
     top: 7%;
-    right: 50px;
+    left: 50px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     width: 500px;
     height: 470px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     max-width: 70%;
     min-width: 450px;
 }
 
 .sobre h1 {
     font-size: 65px;
+    color: #00304D;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .sobre p {
     margin-top: 18px;
     font-size: 30px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 /* fim sobre */
 /* recursos */
@@ -255,13 +259,15 @@ a:hover{
 }
 .recurso p{
     margin-top: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: rgb(228, 235, 249);
 }
 .card {
     width: 150px;
     height:150px;
     border-radius: 15px;
     padding: 1.5rem;
-    background: white;
+    background-color: rgb(228, 235, 249);
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -323,15 +329,14 @@ a:hover{
 /* seção 3 */
 #secao3 h2{
     text-align: center;
-    color: white;
-    font-size: 80px;
-    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.8);
+    color: rgb(240, 244, 254);
+    font-size: 90px;
     margin-top: 90px;
-    font-family: "Reem Kufi", sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-optical-sizing: auto;
-    font-weight:300;
+    font-weight:bolder;
     font-style: normal;
-    text-shadow: 3px 3px #79B7E6;
+    /* text-transform: uppercase; */
 }
 
 .carossel {
