@@ -33,7 +33,14 @@ header {
     justify-content: center;
 }
 #login{
+<<<<<<< HEAD
     margin-left: 160%;
+=======
+    margin-left: 130%;
+}
+#sair{
+    margin-left: 170%;
+>>>>>>> ad24e4a3b541a7b6387989a1c7b9a1b2653b08c9
 }
 nav {
     flex-grow: 1; 

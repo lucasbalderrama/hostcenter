@@ -33,7 +33,14 @@ header {
     justify-content: center;
 }
 #login{
+<<<<<<< HEAD
     margin-left: 160%;
+=======
+    margin-left: 130%;
+}
+#sair{
+    margin-left: 170%;
+>>>>>>> ad24e4a3b541a7b6387989a1c7b9a1b2653b08c9
 }
 nav {
     flex-grow: 1; 
@@ -92,7 +99,9 @@ a:hover{
     z-index: 1; 
     border: solid 5px rgb(99, 149, 187);
 }
-/* fim nav */
+
+
+/* fim cabeçalho */
 .container2 {
     display: flex;
     background-color: white;
