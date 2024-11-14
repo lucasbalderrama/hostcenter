@@ -93,8 +93,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input class="inserir" name="senha" type="password" placeholder="Senha" required>
                 <div id="forma-pagamento">
                     <p>Forma de pagamento</p>
-                    <div class="checkbox-container">
-                        <div class="checkbox-wrapper-29">
+                    <div class="checkbox-wrapper-29">
                         <label class="checkbox">
                             <input type="checkbox" class="checkbox__input" />  
                             <span class="checkbox__label"></span>
@@ -110,9 +109,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             <span class="checkbox__label"></span>
                             Pix
                         </label>
-                        </div>
                     </div>
-            </div>
+                </div>
                 <a href="../hostcenter/index.html"><input id="entrar" type="submit" value="Entrar"></a>
                 <p class="outro">Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
             </form>
