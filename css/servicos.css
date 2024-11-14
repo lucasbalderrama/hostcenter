@@ -120,7 +120,7 @@ a:hover{
 #botao{
     display: none;
     font-size: 40px;
-    color: white;
+    color:#00304D;
     cursor: pointer;
     float: right;
     margin-right: 10%;
@@ -314,13 +314,7 @@ footer ul li {
 }
 
 @media (max-width: 768px) {
-    #nav1{
-        display: none;
-    }
 
-    #botao{
-        display: block;
-    }
 
     #checkbox:checked + #botao + #nav2{
         display: block;
@@ -407,6 +401,28 @@ footer ul li {
     
     .fa-solid{
         font-size: 55px;
+    }
+    #nav1{
+        display: none;
+    }
+    nav{
+        justify-content:right;
+    }
+    #user-div{
+        margin-right: 20px;
+    }
+    #opt-sair{
+        font-size: 12px;
+        width: 30px;
+    }
+    #botao{
+        display: block;
+    }
+    #checkbox:checked + #botao + #nav2{
+        display: block;
+    }
+    .logo{
+        margin-left: 5%;
     }
 }
 

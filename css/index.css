@@ -491,9 +491,6 @@ footer ul li {
 }
 
 @media (max-width: 768px) {
-    header{
-        width: 100%;
-    }
     #nav1{
         display: none;
     }
