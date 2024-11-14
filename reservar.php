@@ -37,12 +37,7 @@
                 </div>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>
-                <ul id="nav2">
-                    <li><h3><a href="./index.php">início</a></h3></li>
-                    <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./ocupacoes.php">Reservar</a></h3></li>
-                    <li><h3><a href="./contato.php">Contato</a></h3></li>
-                </ul>
+                
             </nav>
         </div>
     </header>
