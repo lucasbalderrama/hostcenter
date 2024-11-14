@@ -1,35 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/reservar.js"></script>
-    <link rel="stylesheet" href="./css/reservar.css">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reservar.css">
     <title>Reserve seu quarto</title>
 </head>
 <body>
-<header>
+    <header>
         <div id="container">
             <a href="index.php"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
             <nav>
                 <ul id="nav1">
                     <li><h3><a href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./ocupacoes.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                     <?php
                     session_start();
 
-                    if ($_SESSION['nome'] != ''){
+                    if (isset($_SESSION['nome']) != ''){
                         echo "<li><h3><a id='sair' href='./logout.php'>Sair</a></h3></li>";
-                    } elseif ($_SESSION['nome'] == '') {
+                    } elseif (isset($_SESSION['nome']) == '') {
                         echo "<li><h3><a id='login' href='./login.php'>Entrar</a></h3></li>";
                     }
                     ?>
@@ -54,52 +46,108 @@
         </div>
     </header>
 
-    <section id="secao1">
-        <h1>Conheça nossas instalações</h1>
+    <?php
+    // Inclui a configuração do banco
+    include 'conexao.php';
 
-        <div id="quartos">
-            <img class="quartos-img" src="img/qcasal.jpg" alt="">
-            <div class="bloco">
-                <h2>Quarto Casal</h2>
-                <p>Quarto aconchegante com uma cama de casal, decoração elegante, Wi-Fi gratuito, TV de tela plana e ar-condicionado. Perfeito para casais que buscam conforto e tranquilidade</p>
-                <a href="pagamentos.html"><button>Reservar Agora</button></a>
+    // Verifica se o botão de submit foi clicado
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+        // Recebe os dados do formulário
+        $nome_usuario = $_POST['nome-usuario'];
+        $sobrenome_usuario = $_POST['sobrenome-usuario'];
+        $email_usuario = $_POST['email-usuario'];
+        $telefone_usuario = $_POST['telefone-usuario'];
+        $tp_quarto = $_POST['troom'];
+        $plano_refeicao = $_POST['meal'];
+        $entrada = $_POST['entrada-reserva'];
+        $saida = $_POST['saida-reserva'];
+        
+        // Insere os dados na tabela
+        $sql = "INSERT INTO roombook (nome_usuario, sobrenome_usuario, email_usuario, telefone_usuario, tp_quarto, plano_refeicao, entrada, saida)
+                VALUES (:nome_usuario, :sobrenome_usuario, :email_usuario, :telefone_usuario, :tp_quarto, :plano_refeicao, :entrada, :saida)";
+        $stmt = $pdo->prepare($sql);
+        
+        $stmt->bindParam(':nome_usuario', $nome_usuario);
+        $stmt->bindParam(':sobrenome_usuario', $sobrenome_usuario);
+        $stmt->bindParam(':email_usuario', $email_usuario);
+        $stmt->bindParam(':telefone_usuario', $telefone_usuario);
+        $stmt->bindParam(':tp_quarto', $tp_quarto);
+        $stmt->bindParam(':plano_refeicao', $plano_refeicao);
+        $stmt->bindParam(':entrada', $entrada);
+        $stmt->bindParam(':saida', $saida);
+        
+        // Executa e verifica a inserção
+        if ($stmt->execute()) {
+            echo "Erro ao fazer reserva.";
+
+            echo '<script>Swal.fire({text: "Reserva efetuada com sucesso!",icon: "success"});</script>';
+        }
+    }
+    ?>
+
+    <div class="container">
+        <div class="area-reserva">
+            <div class="bloco-reserva">
+                <h2>Insira seus dados:</h2>
+                    <form name="form" method="post">
+                        <div class="form-group">
+                            <label>Nome:</label>
+                            <input type="text" name="nome-usuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Sobrenome:</label>
+                            <input type="text" name="sobrenome-usuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail:</label>
+                            <input type="text" name="email-usuario" type="email" required>
+                        </div>
+                                           
+                        <div class="form-group">
+                            <label>Telefone:</label>
+                            <input type="text" name="telefone-usuario" type ="text" required>
+                    </div>
             </div>
-
-            <img class="quartos-img" src="img/qamigos.jpg" alt="">
-            <div class="bloco">
-                <h2>Quarto Amigos</h2>
-                <p>O Quarto para Amigos dispõe de quatro camas de solteiro. Decorado com um toque moderno, oferece Wi-Fi gratuito, TV de tela plana e frigobar, garantindo uma estadia agradável para amigos que viajam juntos.</p>
-                <a href="pagamentos.html"><button>Reservar Agora</button></a>
-            </div>
-
-            <img class="quartos-img" src="img/qfamilia.jpg" alt="">
-            <div class="bloco">
-                <h2>Quarto Familia</h2>
-                    <p>Amplo quarto com duas camas, design moderno e funcional. Comodidades como Wi-Fi gratuito, TV de tela plana e mini-bar, ideal para famílias ou grupos de amigos menores.</p>
-                    <a href="pagamentos.html"><button>Reservar Agora</button></a>
+        
+            <div class="bloco-reserva">
+                <div class="cab-reserva">
+                    <h2>Opções de reserva:</h2>
+                </div>
+                <div class="body-reserva">
+                    <div class="form-group">
+                        <label>Tipo de quarto:</label>
+                        <select name="troom" required>
+                            <option value selected ></option>
+                            <option name="quarto-c">Quarto Casal</option>
+                            <option name="quarto-f">Quarto Familia</option>
+                            <option name="quarto-a">Quarto Amigos</option>
+                        </select>
+                    </div>
+                     
+                    <div class="form-group">
+                        <label>Pacotes Refeição</label>
+                        <select name="meal"required>
+                            <option value selected ></option>
+                            <option name="pacote-cm">Pacote Café da Manhã</option>
+                            <option name="pacote-ad">Pacote adicional</option>
+                            <option name="pacote-co">Pacote Completo</option>
+                            <option name="nen-pacote">Nenhum pacote</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Entrada:</label>
+                        <input name="entrada-reserva" type ="date">
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Saída:</label>
+                        <input name="saida-reserva" type ="date">
+                    </div>
+                    <input type="submit" value="Reservar" name="submit" id="btn-reserva">
+                    </form>
             </div>
         </div>
-    </section>
-
-    <section id="secao2">
-        <select id="piso" name="piso">
-            <option value="piso">Piso</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-    </section>
-
-    <footer>
-        <div class="flex" id="footerHostCenter">
-            <i id="hotel" class="fa-solid fa-hotel"></i>
-            <p>HostCenter</p> 
-        </div>
-        <div class="flex">
-            <i class="fa-brands fa-instagram"></i>
-            <a href="https://www.instagram.com/smartwebsn/">smartwebsn</a>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
