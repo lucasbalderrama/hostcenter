@@ -22,21 +22,31 @@ session_start();
 <body>
     <header>
         <div id="container">
-            <a href="index.php"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
+            <a href="index.php" id="box-img"><img class= "logo" src="./img/HC-logo.svg" alt="logo"></li></a>
             <nav>
                 <ul id="nav1">
                     <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
+                </ul>
+                <div id="user-div">
                     <?php
-                    if ($_SESSION['nome'] != ''){
-                        echo "<li><h3><a id='sair' href='./logout.php'>Sair</a></h3></li>";
-                    } elseif ($_SESSION['nome'] == '') {
-                        echo "<li><h3><a id='login' href='./login.php'>Entrar</a></h3></li>";
+                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
+                        echo "<select name='' id='user' onchange='sair()'>
+                                <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                                <a><option value='' id='opt-sair'>Sair</option></a>
+                            </select>";
+                    } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] == '') {
+                        echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
                     }
                     ?>
-                </ul>
+                    <script>
+                        function sair(){
+                            window.location.href = "./logout.php";
+                        }
+                    </script>
+                </div>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>
                 <ul id="nav2">
@@ -44,13 +54,6 @@ session_start();
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
-                    <?php
-                    if ($_SESSION['nome'] != ''){
-                        echo "<li><h3><a href='./logout.php'>Sair</a></h3></li>";
-                    } elseif ($_SESSION['nome'] == '') {
-                        echo "<li><h3><a href='./login.php'>Entrar</a></h3></li>";
-                    }
-                    ?>
                 </ul>
             </nav>
         </div>
@@ -65,7 +68,7 @@ session_start();
         <div class="imgSobre" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="sobre">
                 <h1>Sobre</h1>
-                <p>Bem-vindo ao HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, oferecemos serviços de alta qualidade com excelência.</p>
+                <p>Bem-vindo a HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, oferecemos serviços de alta qualidade com excelência.</p>
                 <p>Seja para negócios ou lazer, o HostCenter é seu refúgio ideal.</p>
             </div>
         </div>
