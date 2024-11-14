@@ -30,9 +30,9 @@
                     <?php
                     session_start();
 
-                    if ($_SESSION['nome'] != ''){
+                    if (isset($_SESSION['nome']) != ''){
                         echo "<li><h3><a id='sair' href='./logout.php'>Sair</a></h3></li>";
-                    } elseif ($_SESSION['nome'] == '') {
+                    } elseif (isset($_SESSION['nome']) == '') {
                         echo "<li><h3><a id='login' href='./login.php'>Entrar</a></h3></li>";
                     }
                     ?>
@@ -63,7 +63,7 @@
                 <p>Descubra o conforto e a hospitalidade que transformam sua estadia em uma experiência inesquecível</p>
             </div>
             <div class="image-section">
-                <img src="./img/fam_hotel.png" alt="Família aproveitando estadia no hotel">
+                <img src="./img/familia.png" alt="Família aproveitando estadia no hotel">
             </div>
         </div>
     </section>
@@ -75,7 +75,7 @@
                     Nosso hotel tem o compromisso de proporcionar uma estadia que vá além das expectativas, oferecendo serviços cuidadosamente pensados para o seu conforto e bem-estar. Com foco em excelência, disponibilizamos gastronomia de alta qualidade, opções de lazer para todas as idades, estacionamento seguro e um serviço de limpeza que garante um ambiente sempre impecável.
                 </p>
                 <div class="image">
-                <img src="./img/mala.jpg" alt="Imagem dos serviços do hotel">
+                    <img src="./img/family.pool.jpg" alt="Imagem dos serviços do hotel">
                 </div>
             </div>
             
