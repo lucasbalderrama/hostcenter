@@ -14,10 +14,14 @@ body {
 /* fim pagina */
 /* cabeçalho */
 header {
-    background-color: rgba(99, 149, 187, 1);
-    color:white;
+    background-color: rgb(255, 255, 255);
+    color: #0e3960;
     padding: 10px;
     text-align: center;
+    position: fixed;
+    z-index: 50;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
 }
 
 #container {
@@ -27,10 +31,15 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+#box-img{
+    width: 180px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
 .logo {
-    width: 55px;
-    
+    width: 140px;
+    float: left;
 }
 #nav1{
     margin-left: 8%;
@@ -38,13 +47,45 @@ header {
     justify-content: center;
 }
 #login{
-    margin-left: 130%;
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
 }
-#sair{
-    margin-left: 170%;
+#user-div{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#user{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 7px;
+    align-self: center;
+}
+#opt-nome{
+    display: none;
+}
+#opt-sair{
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
 }
 nav {
-    flex-grow: 1; 
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -55,11 +96,11 @@ nav ul {
 }
 
 nav ul li {
-    padding: 16px;
+    padding: 10px;
 }
 
 nav ul li a {
-    color:white;
+    color: #0e3960;
     text-decoration: none;
     font-size: 17px;
     font-weight: bold;
@@ -73,7 +114,7 @@ a{
 }
 
 a:hover{
-    color:#00304D;
+    color:#297caf;
 }
 
 
@@ -119,7 +160,7 @@ a:hover{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
-    margin-top: 50px;
+    margin-top: 150px;
     margin-bottom: 0;
 }
 #secao1 p{
@@ -194,7 +235,7 @@ a:hover{
     height: 600px;
     width: 1300px;
     position: relative;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 50px auto;
     max-width: 90%;
     min-width: 600px;
@@ -395,43 +436,54 @@ button .fa-solid{
 /* fim galeria */
 /* fim seção 3 */
 /* footer */
-
-footer{
-    margin-top: 15vh;
+footer {
+    height: 350px;
     background-color:rgba(99, 149, 187, 1);
-    color:white;
-    text-align: left;
-    padding: 10px;
-    bottom: 0;
-    display: flex;
+    width: 100%;
+    color: white;
+    margin-top: 60px;
+}
+
+#footer {
     justify-content: space-evenly;
-    align-items: center;
-    height: 80px;
-}
-
-footer a{
-    text-decoration: none;
-    margin-top: 5px;
-}
-
-.fa-instagram{
-    font-size: 40px;
-}
-.fa-hotel{
-    font-size: 45px;
-    position: relative;
-}
-.flex{
     display: flex;
-}
-.flex a, .flex p{
-    margin-left: 10px;
-    color:white;
-    font-family: "Inter", sans-serif;
-    font-weight: bolder;
-}
-.flex p{
     margin-top: 30px;
+    padding-top: 20px;
+}
+
+footer h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 3px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #092c4f;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+ 
+.contato {
+    margin-top: 5px;
 }
 @media (max-width: 600px){
     .sobre p{
@@ -443,6 +495,16 @@ footer a{
     #nav1{
         display: none;
     }
+    nav{
+        justify-content:right;
+    }
+    #user-div{
+        margin-right: 20px;
+    }
+    #opt-sair{
+        font-size: 12px;
+        width: 30px;
+    }
     #botao{
         display: block;
     }
@@ -450,7 +512,7 @@ footer a{
         display: block;
     }
     .logo{
-        margin-left: 50%;
+        margin-left: 5%;
     }
     footer a, footer p{
         font-size: 15px;

@@ -30,9 +30,9 @@
                     <?php
                     session_start();
 
-                    if ($_SESSION['nome'] != ''){
+                    if (isset($_SESSION['nome']) != ''){
                         echo "<li><h3><a id='sair' href='./logout.php'>Sair</a></h3></li>";
-                    } elseif ($_SESSION['nome'] == '') {
+                    } elseif (isset($_SESSION['nome']) == '') {
                         echo "<li><h3><a id='login' href='./login.php'>Entrar</a></h3></li>";
                     }
                     ?>
@@ -63,7 +63,7 @@
                 <p>Descubra o conforto e a hospitalidade que transformam sua estadia em uma experiência inesquecível</p>
             </div>
             <div class="image-section">
-                <img src="./img/fam_hotel.png" alt="Família aproveitando estadia no hotel">
+                <img src="./img/familia.png" alt="Família aproveitando estadia no hotel">
             </div>
         </div>
     </section>
@@ -75,7 +75,7 @@
                     Nosso hotel tem o compromisso de proporcionar uma estadia que vá além das expectativas, oferecendo serviços cuidadosamente pensados para o seu conforto e bem-estar. Com foco em excelência, disponibilizamos gastronomia de alta qualidade, opções de lazer para todas as idades, estacionamento seguro e um serviço de limpeza que garante um ambiente sempre impecável.
                 </p>
                 <div class="image">
-                <img src="./img/mala.jpg" alt="Imagem dos serviços do hotel">
+                    <img src="./img/family.pool.jpg" alt="Imagem dos serviços do hotel">
                 </div>
             </div>
             
@@ -107,14 +107,46 @@
         </div>
     </section>
     <footer>
-        <div class="flex">
-            <i id="hotel" class="fa-solid fa-hotel"></i>
-            <p>HostCenter</p> 
-        </div>
-        <div class="flex">
-            <i class="fa-brands fa-instagram"></i>
-            <a href="https://www.instagram.com/smartwebsn/">smartwebsn</a>
-        </div>
-    </footer>
+            <div id="footer">
+        
+                <div class="contato">
+                    <h2>Informações de Contato</h2>
+                    <p><strong>SESI Caçapava:</strong></p>
+                    <p>Endereço: Av. Monsenhor Theodomiro Lobo, 100, Caçapava - SP, 12285-050</p>
+                    <p>Telefone: (12) 3653-1943</p>
+                    <p>E-mail: contato@sesi-cacapava.com.br</p>
+            
+                    <p><strong>SENAI Taubaté:</strong></p>
+                    <p>Endereço: Av. Independência, 846 - Independência, Taubaté - SP, 12031-001</p>
+                    <p>Telefone: (12) 3609-5701</p>
+                    <p>E-mail: senaitaubate@sp.senai.br</p>
+                </div> 
+            
+                <div class="equipe">
+                    <h2>Equipe Desenvolvedora</h2>
+                    <ul>
+                        <p>Ana Lívia dos Santos Lopes</p>
+                        <li><a href="https://linktr.ee/analivialopess" target="_blank">Link para contato</a></li>
+            
+                        <p>Gabriel Reis de Brito</p>
+                        <li><a href="https://linktr.ee/gabrielreiss" target="_blank">Link para contato</a></li>
+            
+                        <p>Isadora Gomes da Silva</p>
+                        <li><a href="https://linktr.ee/isadoragomess" target="_blank">Link para contato</a></li>
+            
+                        <p>Lucas Randal Abreu Balderrama</p>
+                        <li><a href="https://linktr.ee/lucasbalderrama" target="_blank">Link para contato</a></li>
+                    </ul>
+                </div>
+            
+                <div class="links-adicionais">
+                    <h2>Links Adicionais</h2>
+                    <ul>
+                        <li><a href="termos.php" target="_blank">Termos de Uso</a></li>
+                        <li><a href="privacidade.php" target="_blank">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer> 
 </body>
 </html>

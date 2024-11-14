@@ -22,21 +22,31 @@ session_start();
 <body>
     <header>
         <div id="container">
-            <a href="index.php"><img class= "logo" src="./img/logo.png" alt="logo"></li></a>
+            <a href="index.php" id="box-img"><img class= "logo" src="./img/HC-logo.svg" alt="logo"></li></a>
             <nav>
                 <ul id="nav1">
                     <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
+                </ul>
+                <div id="user-div">
                     <?php
-                    if ($_SESSION['nome'] != ''){
-                        echo "<li><h3><a id='sair' href='./logout.php'>Sair</a></h3></li>";
-                    } elseif ($_SESSION['nome'] == '') {
-                        echo "<li><h3><a id='login' href='./login.php'>Entrar</a></h3></li>";
+                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
+                        echo "<select name='' id='user' onchange='sair()'>
+                                <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                                <a><option value='' id='opt-sair'>Sair</option></a>
+                            </select>";
+                    } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] == '') {
+                        echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
                     }
                     ?>
-                </ul>
+                    <script>
+                        function sair(){
+                            window.location.href = "./logout.php";
+                        }
+                    </script>
+                </div>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>
                 <ul id="nav2">
@@ -44,13 +54,6 @@ session_start();
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
                     <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
-                    <?php
-                    if ($_SESSION['nome'] != ''){
-                        echo "<li><h3><a href='./logout.php'>Sair</a></h3></li>";
-                    } elseif ($_SESSION['nome'] == '') {
-                        echo "<li><h3><a href='./login.php'>Entrar</a></h3></li>";
-                    }
-                    ?>
                 </ul>
             </nav>
         </div>
@@ -65,7 +68,7 @@ session_start();
         <div class="imgSobre" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="sobre">
                 <h1>Sobre</h1>
-                <p>Bem-vindo ao HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, oferecemos serviços de alta qualidade com excelência.</p>
+                <p>Bem-vindo a HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, oferecemos serviços de alta qualidade com excelência.</p>
                 <p>Seja para negócios ou lazer, o HostCenter é seu refúgio ideal.</p>
             </div>
         </div>
@@ -120,14 +123,46 @@ session_start();
         </div>
     </section>
     <footer>
-        <div class="flex">
-            <i id="hotel" class="fa-solid fa-hotel"></i>
-            <p>HostCenter</p> 
-        </div>
-        <div class="flex">
-            <i class="fa-brands fa-instagram"></i>
-            <a href="#">smartwebsn</a>
-        </div>
-    </footer>
+            <div id="footer">
+        
+                <div class="contato">
+                    <h2>Informações de Contato</h2>
+                    <p><strong>SESI Caçapava:</strong></p>
+                    <p>Endereço: Av. Monsenhor Theodomiro Lobo, 100, Caçapava - SP, 12285-050</p>
+                    <p>Telefone: (12) 3653-1943</p>
+                    <p>E-mail: contato@sesi-cacapava.com.br</p>
+            
+                    <p><strong>SENAI Taubaté:</strong></p>
+                    <p>Endereço: Av. Independência, 846 - Independência, Taubaté - SP, 12031-001</p>
+                    <p>Telefone: (12) 3609-5701</p>
+                    <p>E-mail: senaitaubate@sp.senai.br</p>
+                </div> 
+            
+                <div class="equipe">
+                    <h2>Equipe Desenvolvedora</h2>
+                    <ul>
+                        <p>Ana Lívia dos Santos Lopes</p>
+                        <li><a href="https://linktr.ee/analivialopess" target="_blank">Link para contato</a></li>
+            
+                        <p>Gabriel Reis de Brito</p>
+                        <li><a href="https://linktr.ee/gabrielreiss" target="_blank">Link para contato</a></li>
+            
+                        <p>Isadora Gomes da Silva</p>
+                        <li><a href="https://linktr.ee/isadoragomess" target="_blank">Link para contato</a></li>
+            
+                        <p>Lucas Randal Abreu Balderrama</p>
+                        <li><a href="https://linktr.ee/lucasbalderrama" target="_blank">Link para contato</a></li>
+                    </ul>
+                </div>
+            
+                <div class="links-adicionais">
+                    <h2>Links Adicionais</h2>
+                    <ul>
+                        <li><a href="termos.php" target="_blank">Termos de Uso</a></li>
+                        <li><a href="privacidade.php" target="_blank">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer> 
 </body>
 </html>

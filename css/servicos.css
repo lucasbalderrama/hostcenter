@@ -33,14 +33,11 @@ header {
     justify-content: center;
 }
 #login{
-<<<<<<< HEAD
     margin-left: 160%;
-=======
     margin-left: 130%;
 }
 #sair{
     margin-left: 170%;
->>>>>>> ad24e4a3b541a7b6387989a1c7b9a1b2653b08c9
 }
 nav {
     flex-grow: 1; 
@@ -154,7 +151,6 @@ a:hover{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #2D4455;
 }
 .intro{
     width: 35%;
@@ -183,7 +179,7 @@ a:hover{
     gap: 20px;
     align-items: end;
     margin-top: 100px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     width: 58%;
     align-self: flex-start;
 }
@@ -215,53 +211,67 @@ a:hover{
     margin-top: 150px;
 }
 .image img{
-    width: 470px;
+    box-shadow: rgba(255, 251, 251, 0.108) 0px 1px 0px, rgba(255, 251, 251, 0.125) 0px 8px 24px, rgba(255, 251, 251, 0) 0px 16px 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
     height: 360px;
     border-radius: 3%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #lazer, #estacionamento{
     margin-bottom: 30px;
 }
 
-
-footer{
+/* footer */
+footer {
+    height: 350px;
     background-color:rgba(99, 149, 187, 1);
-    color:white;
-    text-align: left;
-    padding: 10px;
-    bottom: 0;
-    display: flex;
+    width: 100%;
+    color: white;
+}
+
+#footer {
     justify-content: space-evenly;
-    align-items: center;
-    height: 80px;
-}
-
-footer a{
-    text-decoration: none;
-    margin-top: 5px;
-}
-
-.fa-instagram{
-    font-size: 40px;
-}
-.fa-hotel{
-    font-size: 45px;
-}
-.flex{
     display: flex;
+    padding-top: 20px;
 }
-.flex a, .flex p{
-    margin-left: 10px;
-    color:white;
-    font-weight: bolder;
-    font-family: "Inter", sans-serif;
+
+footer h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
-.flex p{
-    margin-top: 7px;
+
+footer p, footer a {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 3px;
 }
-#footerHostCenter a, #footerHostCenter p{
-    margin-top: 30px;
+
+footer a {
+    text-decoration: none;
+    color: #092c4f;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+ 
+.contato {
+    margin-top: 5px;
 }
 
 @media (max-width: 768px) {
