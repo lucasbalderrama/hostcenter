@@ -125,7 +125,7 @@ a:hover{
 #botao{
     display: none;
     font-size: 40px;
-    color: white;
+    color:#00304D;
     cursor: pointer;
     float: right;
     margin-right: 10%;
@@ -492,6 +492,9 @@ footer ul li {
 }
 
 @media (max-width: 768px) {
+    header{
+        width: 100%;
+    }
     #nav1{
         display: none;
     }

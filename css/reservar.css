@@ -13,10 +13,14 @@ body {
 
 /* cabeçalho */
 header {
-    background-color: rgba(99, 149, 187, 1);
-    color:white;
+    background-color: rgb(255, 255, 255);
+    color: #0e3960;
     padding: 10px;
     text-align: center;
+    position: fixed;
+    z-index: 50;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
 }
 
 #container {
@@ -26,10 +30,15 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+#box-img{
+    width: 180px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
 .logo {
-    width: 55px;
-    
+    width: 140px;
+    float: left;
 }
 #nav1{
     margin-left: 8%;
@@ -37,13 +46,45 @@ header {
     justify-content: center;
 }
 #login{
-    margin-left: 130%;
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
 }
-#sair{
-    margin-left: 170%;
+#user-div{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#user{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 7px;
+    align-self: center;
+}
+#opt-nome{
+    display: none;
+}
+#opt-sair{
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
 }
 nav {
-    flex-grow: 1; 
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -54,11 +95,11 @@ nav ul {
 }
 
 nav ul li {
-    padding: 16px;
+    padding: 10px;
 }
 
 nav ul li a {
-    color:white;
+    color: #0e3960;
     text-decoration: none;
     font-size: 17px;
     font-weight: bold;
@@ -72,7 +113,7 @@ a{
 }
 
 a:hover{
-    color:#00304D;
+    color:#297caf;
 }
 
 
