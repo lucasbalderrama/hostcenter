@@ -13,10 +13,10 @@ header {
     color: #0e3960;
     padding: 10px;
     text-align: center;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 50;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: 100%;
 }
 
 #container {
@@ -267,7 +267,6 @@ a:hover{
 
 /* footer */
 footer {
-    height: 350px;
     background-color:rgba(99, 149, 187, 1);
     width: 100%;
     color: white;
@@ -386,8 +385,16 @@ footer ul li {
         height: 280px;
     }
 
-    footer a, footer p{
-        font-size: 15px;
+    #footer {
+        display: block;
+        overflow-wrap: break-word;
+        padding: 25px;
+    }
+    #footer h2{
+        font-size: 24px;
+    }
+    #footer p{
+        font-size: 13px;
     }
 
     #hotel{

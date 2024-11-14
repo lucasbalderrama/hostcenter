@@ -58,6 +58,7 @@ session_start();
             </nav>
         </div>
     </header>
+<main class="main-content">
     <section id="secao1">
     <div class="logo-container">
         <h1 id="page-logo">HostCenter</h1> <br>
@@ -164,5 +165,6 @@ session_start();
                 </div>
             </div>
         </footer> 
+</main>
 </body>
 </html>
