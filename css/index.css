@@ -436,43 +436,54 @@ button .fa-solid{
 /* fim galeria */
 /* fim seção 3 */
 /* footer */
-
-footer{
-    margin-top: 15vh;
+footer {
+    height: 350px;
     background-color:rgba(99, 149, 187, 1);
-    color:white;
-    text-align: left;
-    padding: 10px;
-    bottom: 0;
-    display: flex;
+    width: 100%;
+    color: white;
+    margin-top: 60px;
+}
+
+#footer {
     justify-content: space-evenly;
-    align-items: center;
-    height: 80px;
-}
-
-footer a{
-    text-decoration: none;
-    margin-top: 5px;
-}
-
-.fa-instagram{
-    font-size: 40px;
-}
-.fa-hotel{
-    font-size: 45px;
-    position: relative;
-}
-.flex{
     display: flex;
-}
-.flex a, .flex p{
-    margin-left: 10px;
-    color:white;
-    font-family: "Inter", sans-serif;
-    font-weight: bolder;
-}
-.flex p{
     margin-top: 30px;
+    padding-top: 20px;
+}
+
+footer h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 3px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #092c4f;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+ 
+.contato {
+    margin-top: 5px;
 }
 @media (max-width: 600px){
     .sobre p{
