@@ -53,33 +53,6 @@ header {
     font-family: 'Plus Jakarta Sans', sans-serif;
     text-transform: uppercase;
 }
-#user-div{
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-#user{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    color: #0e3960;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    text-transform: uppercase;
-    cursor: pointer;
-    height: 30px;
-    margin-top: 7px;
-    align-self: center;
-}
-#opt-nome{
-    display: none;
-}
-#opt-sair{
-    background-color: rgb(255, 255, 255);
-    font-weight: 600;
-    cursor: pointer;
-}
 nav {
     display: flex;
     flex-direction: row;
@@ -146,10 +119,10 @@ a:hover{
 
 .bloco-reserva {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 20px;
     width: 450px;
-    margin-top: 100px;
+    margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
@@ -194,7 +167,7 @@ input {
     width: 98%;
     background-color: #75B0DD;
     padding: 7px;
-    margin-top: 20px;
+    margin-top: 120px;
     margin-bottom: -15px;
     border: none;
     border-radius: 5px;
@@ -241,7 +214,7 @@ input {
     align-items: center;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    margin-top: 2px;
+    margin-top: 10px;
 }
 
 .checkbox-wrapper-29 .checkbox__label {
@@ -277,15 +250,13 @@ input {
 }
 
 
-#forma-pagamento p{
-   text-align: start;
-   margin-bottom: 10px;
-   margin-top: 20px;
+#forma-pagamento img{
+   margin-left: 30px;
 }
 
 .outro{
-    margin-bottom: 20px;
-    margin-top: 15px;
+    margin-top: 20px;
+    font-size: 15px;
 }
 
 .outro a{
