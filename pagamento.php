@@ -79,17 +79,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 </ul>
             </nav>
         </div>
+        
     </header>
     <section id="secao1">
         <div id="box-login">
             <h1>ENTRAR</h1>
             <div id="box-img-login">
-                <img id="img-login" src="../hostcenter/img/hostcenter-login.jpeg" alt="">
+                <img id="img-login" src="img/pagamento.png" alt="">
             </div>
             <form action="" method="POST">
-                <h2>Que bom te ver denovo!</h2>
+                <h2>Que bom te ver de novo!</h2>
                 <input class="inserir" name="email" type="email" placeholder="Email" required>
                 <input class="inserir" name="senha" type="password" placeholder="Senha" required>
+                <div id="forma-pagamento">
+                    <p>Forma de pagamento</p>
+                    <div class="checkbox-container">
+                        <div class="checkbox-wrapper-29">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" />  
+                            <span class="checkbox__label"></span>
+                            Débito
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" />  
+                            <span class="checkbox__label"></span>
+                            Crédito
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox__input" />  
+                            <span class="checkbox__label"></span>
+                            Pix
+                        </label>
+                        </div>
+                    </div>
+            </div>
                 <a href="../hostcenter/index.html"><input id="entrar" type="submit" value="Entrar"></a>
                 <p class="outro">Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
             </form>
