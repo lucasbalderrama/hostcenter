@@ -14,12 +14,11 @@
                 <ul id="nav1">
                     <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./ocupacoes.php">Reservar</a></h3></li>
+                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
                 <div id="user-div">
                     <?php
-                    session_start();
                     if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
                         echo "<select name='' id='user' onchange='sair()'>
                                 <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
@@ -36,8 +35,13 @@
                     </script>
                 </div>
                 <input type="checkbox" id="checkbox">
-                <label for="checkbox" id="botao">☰</label>
-                
+                <label for="checkbox" id="botaonav">☰</label>
+                <ul id="nav2">
+                    <li><h3><a href="./index.php">início</a></h3></li>
+                    <li><h3><a href="./servicos.php">Serviços</a></h3></li>
+                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./contato.php">Contato</a></h3></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -133,7 +137,48 @@
             </div>
         </div>
     </div>
-
+    <footer>
+            <div id="footer">
+        
+                <div class="contato">
+                    <h2>Informações de Contato</h2>
+                    <p><strong>SESI Caçapava:</strong></p>
+                    <p>Endereço: Av. Monsenhor Theodomiro Lobo, 100, Caçapava - SP, 12285-050</p>
+                    <p>Telefone: (12) 3653-1943</p>
+                    <p>E-mail: contato@sesi-cacapava.com.br</p>
+            
+                    <p><strong>SENAI Taubaté:</strong></p>
+                    <p>Endereço: Av. Independência, 846 - Independência, Taubaté - SP, 12031-001</p>
+                    <p>Telefone: (12) 3609-5701</p>
+                    <p>E-mail: senaitaubate@sp.senai.br</p>
+                </div> 
+            
+                <div class="equipe">
+                    <h2>Equipe Desenvolvedora</h2>
+                    <ul>
+                        <p>Ana Lívia dos Santos Lopes</p>
+                        <li><a href="https://linktr.ee/analivialopess" target="_blank">Link para contato</a></li>
+            
+                        <p>Gabriel Reis de Brito</p>
+                        <li><a href="https://linktr.ee/gabrielreiss" target="_blank">Link para contato</a></li>
+            
+                        <p>Isadora Gomes da Silva</p>
+                        <li><a href="https://linktr.ee/isadoragomess" target="_blank">Link para contato</a></li>
+            
+                        <p>Lucas Randal Abreu Balderrama</p>
+                        <li><a href="https://linktr.ee/lucasbalderrama" target="_blank">Link para contato</a></li>
+                    </ul>
+                </div>
+            
+                <div class="links-adicionais">
+                    <h2>Links Adicionais</h2>
+                    <ul>
+                        <li><a href="termos.php" target="_blank">Termos de Uso</a></li>
+                        <li><a href="privacidade.php" target="_blank">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer> 
     <script>
         document.querySelectorAll('.checkbox__input').forEach((checkbox) => {
             checkbox.addEventListener('change', function() {

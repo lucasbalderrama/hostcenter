@@ -53,6 +53,33 @@ header {
     font-family: 'Plus Jakarta Sans', sans-serif;
     text-transform: uppercase;
 }
+#user-div{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#user{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #0e3960;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 7px;
+    align-self: center;
+}
+#opt-nome{
+    display: none;
+}
+#opt-sair{
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
 nav {
     display: flex;
     flex-direction: row;
@@ -94,13 +121,24 @@ a:hover{
     display: none;
 }
 
-#botao{
+#botaonav{
     display: none;
     font-size: 40px;
-    color: white;
+    color:#00304D;
     cursor: pointer;
     float: right;
     margin-right: 10%;
+}
+
+#nav2{ 
+    display: none;
+    position: absolute;
+    background-color: rgba(216, 219, 220, 0.707);
+    top: 70px;
+    right: 0;
+    width: 200px;
+    z-index: 1; 
+    border: solid 5px rgba(217, 217, 217, 0.886);
 }
 /* fim cabeçalho */
 
@@ -165,7 +203,7 @@ input {
 
 #btn-reserva {
     width: 98%;
-    background-color: #75B0DD;
+    background-color: #467ba3;
     padding: 7px;
     margin-top: 120px;
     margin-bottom: -15px;
@@ -267,10 +305,56 @@ input {
 .outro a:hover{
     color: #0f2336; 
 }
+/* footer */
+footer {
+    background-color:rgba(99, 149, 187, 1);
+    width: 100%;
+    color: white;
+    margin-top: 60px;
+}
+
+#footer {
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+footer h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 3px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #092c4f;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+ 
+.contato {
+    margin-top: 5px;
+}
 @media (max-width: 768px) {
-    header{
-        width: 100%;
-    }
     #nav1{
         display: none;
     }
@@ -284,10 +368,10 @@ input {
         font-size: 12px;
         width: 30px;
     }
-    #botao{
+    #botaonav{
         display: block;
     }
-    #checkbox:checked + #botao + #nav2{
+    #checkbox:checked + #botaonav + #nav2{
         display: block;
     }
     .logo{
@@ -304,4 +388,34 @@ input {
     #footer p{
         font-size: 13px;
     }
+    .area-reserva {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .bloco-reserva {
+        padding: 15px;
+        width: 300px;
+    }
+    form {
+        width: 250px;
+    }
+    .container {
+        padding: 20px 20px;
+    }
+    .checkbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #forma-pagamento h2{
+        text-align: center;
+        margin-bottom: 40px;
+     }
+     #btn-reserva {
+        margin-top: 40px;
+        margin-bottom: 4px;
+    }
+    
+    
 }
