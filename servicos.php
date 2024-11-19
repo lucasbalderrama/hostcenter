@@ -18,7 +18,7 @@
     <script src="./js/servicos.js"></script>
 </head>
 <body>
-<header>
+<header id="header">
         <div id="container">
             <a href="index.php" id="box-img"><img class= "logo" src="./img/HC-logo.svg" alt="logo"></li></a>
             <nav>
