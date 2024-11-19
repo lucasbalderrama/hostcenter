@@ -56,7 +56,8 @@
         </div>
     </header>
     <div id="centralizar">
-        <div id="contato">
+    <div id="contato">
+
             <div class="caixinhaContato" id="insta">
                 <i id="iconInsta" class="fa-brands fa-instagram"></i><br> 
                 <h3>Instagram</h3>
@@ -82,21 +83,51 @@
                 <h3>Localização</h3>
                 <p>Hotel localizado em Serra Serena, no bairro Vila Verde, número 31.</p>
             </div>
-            <form onsubmit="comentario(event)">
+
+
+
+            <form method="POST" onsubmit="comentario(event)">
                 <h2>Entre em contato conosco</h2>
                 <div class="formulario">
-                    <input type="text" id="username" placeholder="Digite seu nome" required>
+                    <input type="text" name="username" id="username" placeholder="Digite seu nome" required>
                 </div>
                 <div class="formulario">
-                    <input type="email" id="emailForm" placeholder="Digite seu email" required>
+                    <input type="email" name="emailForm" id="emailForm" placeholder="Digite seu email" required>
                 </div>
                 <div class="formulario">
-                    <input type="text" id="observacao" placeholder="Digite sua pergunta ou observação">
+                    <input type="text" name="observacao" id="observacao" placeholder="Digite sua pergunta ou observação">
                 </div>
                 <div class="formulario">
                     <button type="submit" id="entrar">Enviar</button>  
                 </div>
             </form>
+
+
+
+            
+            <?php
+include 'conexao.php';
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $nome2 = $_POST["username"]; 
+    $email2 = $_POST["emailForm"]; 
+    $comentario = $_POST["observacao"]; 
+
+    $sql_insercao = "INSERT INTO comentarios (nome, email, comentario) VALUES (?, ?, ?)";
+    $stmt = $conexao->prepare($sql_insercao);
+
+    if ($stmt) {
+        $stmt->bind_param("sss", $nome2, $email2, $comentario);
+        $stmt->close();
+    } else {
+        echo "Erro na preparação da consulta: " . $conexao->error;
+    }
+    $conexao->close();
+}
+?>
+
+
+
         </div>
     </div>
     <footer>
