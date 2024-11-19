@@ -129,12 +129,12 @@ a:hover{
 #nav2{ 
     display: none;
     position: absolute;
-    background-color: rgba(99, 149, 187, 0.814);
+    background-color: rgba(216, 219, 220, 0.707);
     top: 70px;
     right: 0;
     width: 200px;
     z-index: 1; 
-    border: solid 5px rgb(99, 149, 187);
+    border: solid 5px rgba(217, 217, 217, 0.886);
 }
 
 
@@ -320,9 +320,6 @@ footer ul li {
         display: block;
     }
 
-    .logo{
-        margin-left: 50%;
-    }
     .container2 {
         flex-direction: column;
         height: auto;
@@ -423,6 +420,10 @@ footer ul li {
     }
     .logo{
         margin-left: 5%;
+    }
+
+    .service2{
+        margin-top: 0px;
     }
 }
 
