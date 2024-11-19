@@ -14,6 +14,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 <header>
@@ -81,19 +82,19 @@
                 <h3>Localização</h3>
                 <p>Hotel localizado em Serra Serena, no bairro Vila Verde, número 31.</p>
             </div>
-            <form action="./index.html">
+            <form onsubmit="comentario(event)">
                 <h2>Entre em contato conosco</h2>
                 <div class="formulario">
                     <input type="text" id="username" placeholder="Digite seu nome" required>
                 </div>
                 <div class="formulario">
-                    <input type="text" id="emailForm" placeholder="Digite seu email" required>
+                    <input type="email" id="emailForm" placeholder="Digite seu email" required>
                 </div>
                 <div class="formulario">
                     <input type="text" id="observacao" placeholder="Digite sua pergunta ou observação">
                 </div>
                 <div class="formulario">
-                    <button id="entrar">Enviar</button>  
+                    <button type="submit" id="entrar">Enviar</button>  
                 </div>
             </form>
         </div>
@@ -142,3 +143,12 @@
         </footer> 
 </body>
 </html>
+<script>
+    function comentario(event) {
+    event.preventDefault();
+    Swal.fire({
+        title: "Comentário enviado com sucesso!",
+        icon: "success"
+    });
+}
+</script>
