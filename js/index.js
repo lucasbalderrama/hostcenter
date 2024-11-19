@@ -1,3 +1,15 @@
+let antesScrollTop = 0;
+navbar = document.getElementById("header");
+window.addEventListener("scroll", function(){
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if(scrollTop > antesScrollTop){
+        navbar.classList.add('ativo');
+    } else {
+        navbar.classList.remove('ativo');
+    }
+    antesScrollTop = scrollTop;
+})
+
 let index = 0; //variavel que vai ser a imagem que vai estar visivel na hora 
 const slides = document.querySelectorAll('.imgCarossel img'); //ele vais selecionar e armazenar todas as imagens com classe .imgCarossel
 const totalSlides = slides.length; // uma variavel pra armazenar a quantidade de imaagens que tem 

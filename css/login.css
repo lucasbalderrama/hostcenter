@@ -1,7 +1,7 @@
 *{
     margin: 0;
 }
-header {
+#header {
     background-color: rgb(255, 255, 255);
     color: #0e3960;
     padding: 10px;
@@ -10,6 +10,12 @@ header {
     top: 0;
     z-index: 50;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.4s ease;
+}
+
+#header.ativo{
+    top: -95px;
+    opacity: 0;
 }
 
 #container {

@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #eaebf1;
+}
 
 header {
     background-color: rgb(255, 255, 255);
@@ -125,12 +128,12 @@ a:hover{
 #nav2{ 
     display: none;
     position: absolute;
-    background-color: rgba(99, 149, 187, 0.814);
+    background-color: rgba(216, 219, 220, 0.707);
     top: 70px;
     right: 0;
     width: 200px;
     z-index: 1; 
-    border: solid 5px rgb(99, 149, 187);
+    border: solid 5px rgba(217, 217, 217, 0.886);
 }
 
 /* fim cabeçalho */
@@ -151,10 +154,14 @@ form h2{
     font-size: 35px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+             rgba(0, 0, 0, 0.3) 0px 7px 13px, 
+             rgba(0, 0, 0, 0.2) 0px -3px 0px;
+
 }
 #contato a{
     text-decoration: none;
-    color: #000;
+    color: black;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 input{
@@ -166,6 +173,7 @@ input{
     border-radius: 7px;
     background-color: rgba(217, 217, 217, 1);
     font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 #observacao{
     height: 100px;
@@ -192,6 +200,7 @@ input{
     font-weight: 800;
     text-align: center;
     text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 #entrar:hover{
@@ -201,7 +210,7 @@ input{
 #centralizar{
     margin-left: 47%;
     margin-top: 90px;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
 
 }
 /* fim forms */
@@ -212,6 +221,7 @@ input{
     height: 470px;
     background-color: #5d89c7;
     padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 #contato p, #contato h3{
     margin: 12px;
@@ -226,16 +236,15 @@ input{
     position: absolute;
     width: 210px;
     height: 210px;
-    background-color: #f2f2f2;
+    background-color: white;
     color: #000;
     box-sizing: border-box;
     text-align: center;
     font-size: 17px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     
 }
-.caixinhaContato a{
-    color: white;
-}
+
 .caixinhaContato ul li {
     list-style: none;
 }
@@ -323,7 +332,7 @@ footer ul li {
         display: block;
     }
     .logo{
-        margin-left: 50%;
+        margin-left: 5%;
     }
     #footer {
         display: block;
@@ -355,10 +364,12 @@ footer ul li {
         height: 110px;
         font-size: 13px;
         background-color: #5d89c7;
+        box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px inset;
     }
     .caixinhaContato h3{
        display: none;
     }
+
     #insta {
         right: 0px;
         top: 405px;
@@ -428,6 +439,10 @@ footer ul li {
     }
     #entrar{
         width: 45%;
+    }
+
+    #contato a{
+        color: white;
     }
 }
 
