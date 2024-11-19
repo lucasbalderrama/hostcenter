@@ -14,13 +14,14 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div id="container">
             <a href="index.php" id="box-img"><img class= "logo" src="./img/HC-logo.svg" alt="logo"></li></a>
             <nav>
@@ -119,8 +120,8 @@ session_start();
                 <img class="galeriaImg" src="./img/galeria7.png">
                 
             </div>
-            <button class="anterior" onclick="anterior()"><i class="fa-solid fa-angle-left"></i></button>
-            <button class="proximo" onclick="proximo()"><i class="fa-solid fa-angle-right"></i></button>
+            <button class="anterior" onclick="anterior()"><i class='bx bx-chevron-left'></i></button>
+            <button class="proximo" onclick="proximo()"><i class='bx bx-chevron-right'></i></button>
         </div>
     </section>
     <footer>

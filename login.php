@@ -36,14 +36,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <title>HostCenter - Entrar</title>
     <link rel="shortcut icon" href="img/hostcenter-icon.png" type="image/x-icon">
-    <script src="./js/login.js"></script>
+    <script src="./js/login.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
+<header id="header">
         <div id="container">
             <a href="index.php" id="box-img"><img class= "logo" src="./img/HC-logo.svg" alt="logo"></li></a>
             <nav>
