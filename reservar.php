@@ -14,7 +14,7 @@
                 <ul id="nav1">
                     <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./ocupacoes.php">Ocupações</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
                 <div id="user-div">
@@ -40,7 +40,7 @@
                 <ul id="nav2">
                     <li><h3><a href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./ocupacoes.php">Ocupações</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
             </nav>
@@ -115,9 +115,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                         <label>Tipo de quarto:</label>
                         <select name="tpquarto" required>
                             <option value="" selected>Selecione o tipo de quarto</option>
-                            <option value="Quarto Casal">Quarto Casal</option>
-                            <option value="Quarto Familia">Quarto Família</option>
-                            <option value="Quarto Amigos">Quarto Amigos</option>
+                            <option value="Quarto Casal">Quarto Amigos</option>
+                            <option value="Quarto Familia">Quarto Casal</option>
+                            <option value="Quarto Amigos">Quarto Família</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                     <div id="forma-pagamento">
                         <h2>Forma de pagamento</h2>
                         <div class="checkbox-wrapper-29">
-                            <label class="checkbox"
+                            <label class="checkbox">
                                 <input type="checkbox" class="checkbox__input" name="forma_pagamento" value="Débito" />  
                                 <span class="checkbox__label"></span>
                                 Débito <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO2YOw7CMBBEfZBQIo7AEVJyBYRX4mwgPgXewH2oQWDJqzTIyNDGSZk1zJOmn/HuuhhjAAAAgF9ieZGJdbIjDp5Yog4FT06Oq3M7GzRPTm7jG5ZOWZZ78pgN8H358Y1Sv7bZALrWRrrlwrMngAKDPKxsgHm9iCXIIECNCUSsUBfFHzGV/o3SrwS4+pdKEQJ4TCBihfgffiFSLoMAjAlErFAXY68G4YhZf61inTxMDstyUB+AwyYbIHWPmqtFSt6aUGUDfA65CVWq71IDpsd4SF7261M77TUPAAAAmMJ4A08/Ru4Fa1HyAAAAAElFTkSuQmCC" alt="bank-card-back-side"  style="margin-left: 35px; height: 45px;">
@@ -163,7 +163,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                     </div>
                     <input type="submit" value="Reservar" name="submit" id="btn-reserva">
                 </form>
-                <p class="outro">Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
             </div>
         </div>
     </div>

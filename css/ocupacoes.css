@@ -139,9 +139,8 @@ a:hover{
 /* fim cabeçalho */
 
 /*inicio seção 1*/
-/* Ajustar o espaçamento das seções */
 .seção-plano {
-    padding: 60px 0px; /* Menor padding para reduzir o espaço da seção */
+    padding: 60px 0px; 
 }
 
 .tabela-preco-principal {
@@ -166,41 +165,58 @@ a:hover{
 .topo-preco {
     text-align: center;
     position: relative;
-    background-color: #297caf;
+}
+.topo-preco2 {
+    text-align: center;
+    position: relative;
 }
 .topo-preco h4 {
-    font-size: 1.2em;  /* Reduzir o tamanho da fonte */
+    font-size: 1.2em; 
     color: #fff;
     padding: 0.4em 1em;
     background: #0f2453;
     font-weight: 300;
     position: absolute;
-    top: 7em;  /* Ajustar a posição */
+    top: 7em;  
     right: 0em;
+    margin-top: 153px;
+}
+.topo-preco2 h4 {
+    font-size: 1.2em; 
+    color: #fff;
+    padding: 0.4em 1em;
+    background: #0f2453;
+    font-weight: 300;
+    position: absolute;
+    top: 7em;  
+    right: 0em;
+    margin-top: 145.5px;
 }
 .seleção-preco h3 {
     padding: 0.2em 0em 0em 0em;
-    font-size: 1.4em; /* Reduzir o tamanho da fonte */
+    font-size: 1.4em;
     float: left;
     margin-left: 20px;
 }
 .seleção-preco h3 span {
-    color: #ef0404;
-    font-size: 25px; /* Reduzir o tamanho do preço */
+    color:#297caf;
+    font-size: 25px; 
     margin-right: 5px;
 }
 .fundo-preco {
     background: #fff;
     text-align: center;
-    padding: 1em 0em 1em; /* Menor padding para reduzir a altura do card */
+    padding: 1em 0em 1em; 
 }
 .topo-preco img {
-    width: 80%; /* Diminuir o tamanho da imagem */
-    border-radius: 40px;
+    width: 100%; 
+}
+.topo-preco2 img {
+    width: 100%;
 }
 .lista-preco ul li {
     padding: 0.5em 0em;
-    font-size: 0.8em; /* Reduzir o tamanho da fonte das estrelas */
+    font-size: 0.8em; 
     color: #2b2b2b;
     display: inline-block;
 }
@@ -210,7 +226,7 @@ a:hover{
     background: #fff;
 }
 .seleção-preco a {
-    font-size: 1em; /* Diminuir o tamanho do botão */
+    font-size: 1em; 
     color: #000000;
     display: inline-block;
     padding: 0.5em 2em;
@@ -224,26 +240,16 @@ a:hover{
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
-    margin-bottom: 20px; /* Espaço entre os cards */
+    margin-bottom: 20px; 
 }
 .bloco-preco:hover, .w3layouts-pricing:hover, .w3-agileits-vpn-grid:hover {
-    transform: scale(1.05);  /* Menos zoom no hover */
+    transform: scale(1.05);  
 }
 
 /* Ajustar as larguras das colunas para ficar lado a lado */
 .coluna-md-4.card-preco {
-    width: 33.33%; /* Cards ocupam 1/3 da tela */
-    padding: 0 10px;  /* Ajuste de padding para dar espaço */
-}
-@media (max-width: 768px) {
-    .coluna-md-4.card-preco {
-        width: 50%;  /* Cards ocupam metade da tela em telas menores */
-    }
-}
-@media (max-width: 480px) {
-    .coluna-md-4.card-preco {
-        width: 100%;  /* Cards ocupam toda a tela em dispositivos muito pequenos */
-    }
+    width: 33.33%; 
+    padding: 0 10px; 
 }
 
 /* fim da seção 1 */

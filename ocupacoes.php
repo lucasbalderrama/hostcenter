@@ -22,7 +22,7 @@
                 <ul id="nav1">
                     <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./ocupacoes.php">Ocupações</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
                 <div id="user-div">
@@ -47,7 +47,7 @@
                 <ul id="nav2">
                     <li><h3><a href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./ocupacoes.php">Ocupações</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
             </nav>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>320</h3>
-                                    <a href="reservar.php">Reservar agora</a>
+                                    <a href="reservar.php">Reservar</a>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>220</h3>
-                                    <a href="reservar.php">Reservar agora</a>
+                                    <a href="reservar.php">Reservar</a>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,89 @@
                                 </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>180</h3>
-                                    <a href="reservar.php">Reservar agora</a>
+                                    <a href="reservar.php">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="seção-plano" id="quartos">
+            <div class="container">
+                <h3 class="titulo-w3-agileits titulo-preto-wthree">Plano Refeição</h3>
+                <div class="tabela-preco-principal">
+                    <div class="coluna-md-4 card-preco">
+                        <div class="bloco-preco agile">
+                            <div class="topo-preco2">
+                                <img src="img//cafe-da-manha.jpg" alt=" " class="img-responsiva" />
+                                <h4>Pacote Café da Manhã</h4>
+                            </div>
+                            <div class="fundo-preco">
+                                <div class="lista-preco">
+                                    <ul>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="seleção-preco">
+                                    <h3><span>R$</span>320</h3>
+                                    <a href="reservar.php">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coluna-md-4 card-preco">
+                        <div class="bloco-preco agile">
+                            <div class="topo-preco2">
+                                <img src="img/almoco.jpg" alt=" " class="img-responsiva" style="height: 317px;">
+                                <h4>Pacote Café da Manhã e Jantar</h4>
+                            </div>
+                            <div class="fundo-preco">
+                                <div class="lista-preco">
+                                    <ul>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="seleção-preco">
+                                    <h3><span>R$</span>220</h3>
+                                    <a href="reservar.php">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coluna-md-4 card-preco">
+                        <div class="bloco-preco agile">
+                            <div class="topo-preco2">
+                                <img src="img/pcompleto" alt=" " class="img-responsiva" style="height: 317px;">
+                                <h4>Pacote Completo</h4>
+                            </div>
+                            <div class="fundo-preco">
+                                <div class="lista-preco">
+                                    <ul>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="seleção-preco">
+                                    <h3><span>R$</span>180</h3>
+                                    <a href="reservar.php">Saiba mais</a>
                                 </div>
                             </div>
                         </div>

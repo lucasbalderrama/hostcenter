@@ -4,7 +4,7 @@
 }
 
 body {
-    background: rgba(45, 68, 85, 0.93);
+    background: rgb(243, 241, 241);
     font-size:x-large;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -161,14 +161,6 @@ a:hover{
     gap: 60px;
 }
 
-.bloco-reserva {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    width: 450px;
-    margin-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-}
 
 h2{
     font-size: 25px;
@@ -178,11 +170,9 @@ h2{
 
 form {
     padding: 20px;
-    border: 4px solid white; 
     border-radius: 10px; 
     width: 400px;
     display: block;
-    background-color: white;
 }
 
 label {
@@ -196,6 +186,7 @@ select {
     width: 98.2%;
     padding: 6px;
     margin-bottom: 10px;
+    background-color:white;
 }
 
 input {
@@ -205,6 +196,7 @@ input {
     border: 2px solid rgb(180, 180, 180);
     font-size: 17px;
     border-radius: 8px;
+    background-color:white;
 }
 
 #btn-reserva {
