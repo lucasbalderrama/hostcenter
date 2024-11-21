@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #2D4455;
+    background-color: #eee9e9;
 }
 
 /* cabeçalho */
@@ -136,93 +136,115 @@ a:hover{
     z-index: 1; 
     border: solid 5px rgb(99, 149, 187);
 }
-
 /* fim cabeçalho */
 
-/* seção 1 */
-
-h1 {
-    color: white;
-    text-align: center;
-    margin-top: 40px;
-    font-size: 60px;
-    font-family: "Reem Kufi", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+/*inicio seção 1*/
+/* Ajustar o espaçamento das seções */
+.seção-plano {
+    padding: 60px 0px; /* Menor padding para reduzir o espaço da seção */
 }
 
-h2 {
+.tabela-preco-principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-preto-wthree {
     font-size: 40px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    margin-left: -2px;
+    color:#0f2453;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -20px;
 }
 
-p {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    margin-top: 8px;
-    font-size: 22px;
+/*-- quartos & tarifas --*/
+.lista-preco ul {
+    padding: 0px;
+    list-style: none;
+}
+.topo-preco {
+    text-align: center;
+    position: relative;
+    background-color: #297caf;
+}
+.topo-preco h4 {
+    font-size: 1.2em;  /* Reduzir o tamanho da fonte */
+    color: #fff;
+    padding: 0.4em 1em;
+    background: #0f2453;
+    font-weight: 300;
+    position: absolute;
+    top: 7em;  /* Ajustar a posição */
+    right: 0em;
+}
+.seleção-preco h3 {
+    padding: 0.2em 0em 0em 0em;
+    font-size: 1.4em; /* Reduzir o tamanho da fonte */
+    float: left;
+    margin-left: 20px;
+}
+.seleção-preco h3 span {
+    color: #ef0404;
+    font-size: 25px; /* Reduzir o tamanho do preço */
+    margin-right: 5px;
+}
+.fundo-preco {
+    background: #fff;
+    text-align: center;
+    padding: 1em 0em 1em; /* Menor padding para reduzir a altura do card */
+}
+.topo-preco img {
+    width: 80%; /* Diminuir o tamanho da imagem */
+    border-radius: 40px;
+}
+.lista-preco ul li {
+    padding: 0.5em 0em;
+    font-size: 0.8em; /* Reduzir o tamanho da fonte das estrelas */
+    color: #2b2b2b;
+    display: inline-block;
+}
+.seleção-preco {
+    padding: 1em 0em;
+    text-align: center;
+    background: #fff;
+}
+.seleção-preco a {
+    font-size: 1em; /* Diminuir o tamanho do botão */
+    color: #000000;
+    display: inline-block;
+    padding: 0.5em 2em;
+    background: #ffce14;
+    text-decoration: none;
+    border: 2px solid #ecbf11;
+}
+.bloco-preco {
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    margin-bottom: 20px; /* Espaço entre os cards */
+}
+.bloco-preco:hover, .w3layouts-pricing:hover, .w3-agileits-vpn-grid:hover {
+    transform: scale(1.05);  /* Menos zoom no hover */
 }
 
-.quartos-img {
-    border-radius: 30px;
-    width: 400px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    margin-left: 300px;
+/* Ajustar as larguras das colunas para ficar lado a lado */
+.coluna-md-4.card-preco {
+    width: 33.33%; /* Cards ocupam 1/3 da tela */
+    padding: 0 10px;  /* Ajuste de padding para dar espaço */
 }
-
-#quartos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 50px;
+@media (max-width: 768px) {
+    .coluna-md-4.card-preco {
+        width: 50%;  /* Cards ocupam metade da tela em telas menores */
+    }
 }
-
-.bloco {
-    color: black;
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    width: 450px;
-    height: 267px;
-    margin-bottom: 40px;
+@media (max-width: 480px) {
+    .coluna-md-4.card-preco {
+        width: 100%;  /* Cards ocupam toda a tela em dispositivos muito pequenos */
+    }
 }
-
-.bloco p {
-    margin-top: 30px;
-}
-
-.bloco h2 {
-    margin-top: 18px;
-}
-
-button {
-    border-radius: 12px;
-    border: none;
-    color: black;
-    font-size: 20px;
-    background-color: #C3C3C3;
-    padding: 10px;
-    margin-top: 20px;
-    width: 160px;
-    height: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    
-}
-
-button:hover {
-    opacity: 0.5;
-    transform: scale(1.1);
-}
-
-
-
 
 /* fim da seção 1 */
 

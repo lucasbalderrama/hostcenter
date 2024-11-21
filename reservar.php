@@ -19,6 +19,7 @@
                 </ul>
                 <div id="user-div">
                     <?php
+                    session_start();
                     if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
                         echo "<select name='' id='user' onchange='sair()'>
                                 <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
@@ -47,51 +48,63 @@
     </header>
 
     <?php
-    // Inclui a configuração do banco
-    include 'conexao.php';
+// Inicia a sessão
 
-    // Verifica se o botão de submit foi clicado
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-        // Recebe os dados do formulário
-        $tp_quarto = $_POST['tpquarto'];
-        $plano_refeicao = $_POST['prefei'];
-        $entrada = $_POST['entrada-reserva'];
-        $saida = $_POST['saida-reserva'];
-        $forma_pagamento = $_POST['forma_pagamento'];
+// Inclui a configuração do banco
+include 'conexao.php';
 
-        // Lista de formas de pagamento válidas (deve coincidir com o ENUM do banco)
-        $formas_pagamento_validas = ['Débito', 'Crédito', 'Pix'];
-
-        // Valida a forma de pagamento
-        if (in_array($forma_pagamento, $formas_pagamento_validas)) {
-            // Insere os dados na tabela
-            $sql = "INSERT INTO reservas (tp_quarto, plano_refeicao, entrada, saida, forma_pagamento) 
-                    VALUES (?, ?, ?, ?, ?)";
-            $stmt = $conexao->prepare($sql);
-
-            if ($stmt) {
-                // Vincula os parâmetros
-                $stmt->bind_param("sssss", $tp_quarto, $plano_refeicao, $entrada, $saida, $forma_pagamento);
-                
-                // Executa e verifica a inserção
-                if ($stmt->execute()) {
-                    echo '<script>Swal.fire({text: "Reserva efetuada com sucesso!", icon: "success"});</script>';
-                } else {
-                    echo '<script>Swal.fire({text: "Erro ao fazer reserva.", icon: "error"});</script>';
-                }
-                $stmt->close();
-            } else {
-                echo '<script>Swal.fire({text: "Erro ao preparar consulta.", icon: "error"});</script>';
-            }
-        } else {
-            // Mensagem para forma de pagamento inválida
-            echo '<script>Swal.fire({text: "Forma de pagamento inválida.", icon: "error"});</script>';
-        }
-
-        // Fecha a conexão
-        $conexao->close();
+// Verifica se o botão de submit foi clicado
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    // Verifica se o id_usuario está na sessão
+    if (!isset($_SESSION['id_usuario'])) {
+        // Se o id_usuario não estiver na sessão, redireciona para a página de login
+        echo '<script>Swal.fire({text: "Você precisa estar logado para fazer uma reserva.", icon: "error"});</script>';
+        exit;
     }
-    ?>
+
+    // Recebe os dados do formulário
+    $tp_quarto = $_POST['tpquarto'];
+    $plano_refeicao = $_POST['prefei'];
+    $entrada = $_POST['entrada-reserva'];
+    $saida = $_POST['saida-reserva'];
+    $forma_pagamento = $_POST['forma_pagamento'];
+
+    // Obtém o ID do usuário da sessão
+    $id_usuario = $_SESSION['id_usuario']; // Agora podemos usar com segurança
+
+    // Lista de formas de pagamento válidas (deve coincidir com o ENUM do banco)
+    $formas_pagamento_validas = ['Débito', 'Crédito', 'Pix'];
+
+    // Valida a forma de pagamento
+    if (in_array($forma_pagamento, $formas_pagamento_validas)) {
+        // Insere os dados na tabela, incluindo o fk_id_usuario
+        $sql = "INSERT INTO reservas (tp_quarto, plano_refeicao, entrada, saida, forma_pagamento, fk_id_usuario) 
+                VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $conexao->prepare($sql);
+
+        if ($stmt) {
+            // Vincula os parâmetros
+            $stmt->bind_param("sssssi", $tp_quarto, $plano_refeicao, $entrada, $saida, $forma_pagamento, $id_usuario);
+
+            // Executa e verifica a inserção
+            if ($stmt->execute()) {
+                echo '<script>Swal.fire({text: "Reserva efetuada com sucesso!", icon: "success"});</script>';
+            } else {
+                echo '<script>Swal.fire({text: "Erro ao fazer reserva.", icon: "error"});</script>';
+            }
+            $stmt->close();
+        } else {
+            echo '<script>Swal.fire({text: "Erro ao preparar consulta.", icon: "error"});</script>';
+        }
+    } else {
+        // Mensagem para forma de pagamento inválida
+        echo '<script>Swal.fire({text: "Forma de pagamento inválida.", icon: "error"});</script>';
+    }
+
+    // Fecha a conexão
+    $conexao->close();
+}
+?>
 
     <div class="container">
         <div class="area-reserva">
@@ -119,11 +132,11 @@
                     </div>
                     <div class="form-group">
                         <label>Entrada:</label>
-                        <input name="entrada-reserva" type ="date">
+                        <input name="entrada-reserva" type ="date" >
                     </div>
                     <div class="form-group">
                         <label>Saída:</label>
-                        <input name="saida-reserva" type ="date">
+                        <input name="saida-reserva" type ="date" >
                         </div>
                     </div>
 
@@ -131,18 +144,18 @@
                     <div id="forma-pagamento">
                         <h2>Forma de pagamento</h2>
                         <div class="checkbox-wrapper-29">
-                            <label class="checkbox">
+                            <label class="checkbox"
                                 <input type="checkbox" class="checkbox__input" name="forma_pagamento" value="Débito" />  
                                 <span class="checkbox__label"></span>
                                 Débito <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nO2YOw7CMBBEfZBQIo7AEVJyBYRX4mwgPgXewH2oQWDJqzTIyNDGSZk1zJOmn/HuuhhjAAAAgF9ieZGJdbIjDp5Yog4FT06Oq3M7GzRPTm7jG5ZOWZZ78pgN8H358Y1Sv7bZALrWRrrlwrMngAKDPKxsgHm9iCXIIECNCUSsUBfFHzGV/o3SrwS4+pdKEQJ4TCBihfgffiFSLoMAjAlErFAXY68G4YhZf61inTxMDstyUB+AwyYbIHWPmqtFSt6aUGUDfA65CVWq71IDpsd4SF7261M77TUPAAAAmMJ4A08/Ru4Fa1HyAAAAAElFTkSuQmCC" alt="bank-card-back-side"  style="margin-left: 35px; height: 45px;">
                             </label>
                             <label class="checkbox">
-                                <input type="checkbox" class="checkbox__input" name="forma_pagamento" value="Crédito"/>  
+                                <input type="checkbox" class="checkbox__input" name="forma_pagamento" value="Crédito" />  
                                 <span class="checkbox__label"></span>
                                 Crédito <img src="data:image/png;base64,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" alt="credit-card-emoji"  style="height: 45px;">
                             </label>
                             <label class="checkbox">
-                                <input type="checkbox" class="checkbox__input" name="forma_pagamento" value="Pix"/>  
+                                <input type="checkbox" class="checkbox__input" name="forma_pagamento" value="Pix" />  
                                 <span class="checkbox__label"></span>
                                 Pix <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9UlEQVR4nO1a3U7UUBDuCxj1Wi/0SgT8SdRLRe+UznS98THUB1B8E2OC8aYzFRI6pxjfQMEb9RFQWQUimiiRRDP7RwMtS09PS9cwyUnIbpnzfbNz5sw3u553ZP+Z+fGLk2D4CQoto/BPEP6BhpdQaKY1N3fCa7L5Cd1Ew1/R8N/MJdzWZ7wmGgjdQaHfueB7CwxvYUwtbxTBYxNJQEHwjSIBluDTJED47kiCP1QS4Ag8HgYJ1+CxThJVgcc6SQTz88eCmG+A8FMwvF0auNAf9eUndF19e7XfvMJr9uB5DUw4VSnIIImCTs3e2XgdDc3eNtFpfX86Di/v2z7kpgttBEJX1Yf6AuHnXd876aR7uwa/A0BoBRZ5TJ/zF6NLBUms98HDIo+B0Ke8M2FN4iAHFoRWMaGJgiTW/Ti80g1QeE4D4fzGLlJtlIS/EE3q/6Ghi0NIFAKPNiRsSmWaxHT88jwa/pxxYNtKMAU+M21KkdCqkpfzBziUXwITjmeSEG63JLzQAW/CcX3Wbg/eytUTqqRsqsluEoMzsRBNoqH3ugYpltCELXhMByNL2XVkYBnHGSTS5gS86e0R8+OM3Od3Lpz3SGwGwg/xVXhWl/6tr7nyj4aX9hBQAe5wg0oXGNrMSCGnEap2CX/P+ARo2WWE0ET3W8ncGU0hSOiBywCB4bdZBGZG5hAbfrSHgJam7mXjBryWThD+CMIfXJZREFq99zo8vodA1RfZ4BYueZHBsPa720rwr6JR6Ud+n37Iqg9C+37oYCQKdqTVN3OF2ul0zhdop/taIKiqnS4qaCxU2W5Bs5IH3r0q62hgmvUXwlN98CD0zeLQb4CJrvUlpfpM62sn4IeSi/lWWVHv1z1u1xqspQyEnrkYq4Dh7a6vcCq3vo/SYAurnlhXOVrEusbtVQx3se7vClyO1/GwvuiwaTsaA74siUaAtyXRKPBFSTQS/K5xe3u/zrXycXpZU2WncxvVrfozg85PDYTeqAys/KY9Mq9++wfSId/ImvikTwAAAABJRU5ErkJggg==" alt="pix" style="margin-left: 58px; height: 45px;">
                             </label>
