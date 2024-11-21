@@ -152,7 +152,7 @@ a:hover{
 /* fim cabeçalho */
 /* seção 1 */
 #secao1{
-    background: url('../img/fundo.jpeg')
+    background: url('../img/pool.jpg')
     no-repeat center center;
     background-size: cover;
     height: 90vh;
@@ -160,23 +160,26 @@ a:hover{
     width: 100%;
 }
 #secao1 h1{
-    text-align: center;
-    color: rgb(228, 235, 249);
-    font-size: 90px;
-    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    color: #fff;;
+    text-shadow: 2px 6px 10px rgb(44, 44, 44);
+    font-size: 93px;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
-    margin-top: 50px;
+    margin-top: 200px;
     margin-bottom: 0;
+    padding-left: 195px;
+   
 }
 #secao1 p{
-    text-align: center;
-    color: rgb(228, 235, 249);
+    color: #fff;
+    text-align: left;
+    text-shadow: 2px 5px 15px rgb(44, 44, 44);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     font-size: 38px;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.685);
     animation: showup 5s forwards;
+    padding-left: 300px;
 }
 @keyframes showup {
     0% {opacity:0;}
@@ -192,8 +195,8 @@ a:hover{
   &:before {
     content:  "";
     position: absolute;
-    top:      0; 
-    left:     28%; 
+    top:      0;
+    left: 8%;
     width:    44%; 
     height:   4px;
     background-color: rgba(99, 149, 187, 1);
