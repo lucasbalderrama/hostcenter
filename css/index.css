@@ -162,13 +162,13 @@ a:hover{
 #secao1 h1{
     text-align: left;
     color: #fff;;
-    text-shadow: 2px 6px 10px rgb(44, 44, 44);
+    text-shadow: 4px 8px 30px rgb(44, 44, 44);
     font-size: 93px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-family: "Cinzel", serif;
+    font-weight: 400;
     margin-top: 200px;
     margin-bottom: 0;
-    padding-left: 195px;
+    padding-left: 185px;
    
 }
 #secao1 p{
@@ -176,7 +176,7 @@ a:hover{
     text-align: left;
     text-shadow: 2px 5px 15px rgb(44, 44, 44);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 38px;
     animation: showup 5s forwards;
     padding-left: 300px;
@@ -199,7 +199,7 @@ a:hover{
     left: 8%;
     width:    44%; 
     height:   4px;
-    background-color: rgba(99, 149, 187, 1);
+    background-color:#00304D;
     transform-origin: center center;
     transform: scaleX(0);
     
