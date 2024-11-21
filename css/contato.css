@@ -177,10 +177,10 @@ input{
     margin-bottom: 10px;
     border: solid #b4b4b4 2px;
     font-size: 17px;
-    border-radius: 7px;
+    border-radius: 5px;
     background-color: rgba(217, 217, 217, 1);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.211) 0px 2px 4px, rgba(0, 0, 0, 0.211) 0px 7px 13px -3px, rgba(0, 0, 0, 0.085) 0px -3px 0px inset;
 }
 #observacao{
     height: 100px;
@@ -207,7 +207,7 @@ input{
     font-weight: 800;
     text-align: center;
     text-decoration: none;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.182) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.073) 0px -3px 0px inset;
 }
 
 #entrar:hover{
@@ -345,7 +345,7 @@ footer ul li {
         display: block;
         overflow-wrap: break-word;
         padding: 25px;
-        margin-top: 300px;
+        margin-top: 1200px;
     }
     #footer h2{
         font-size: 24px;
@@ -367,71 +367,38 @@ footer ul li {
         font-size: 55px;
     }
     /* caixinhas de contato */
+    #contato{
+        width: 250px;
+        height: 390px;
+        background-color: #ffffff;
+    }
     .caixinhaContato {
-        width: 52%;
-        height: 110px;
-        font-size: 13px;
-        background-color: #5d89c7;
+        width: 290px;
+        height: 230px;
+        background-color: white;
+        color: #000;
         box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px inset;
+        
     }
-    .caixinhaContato h3{
-       display: none;
-    }
-
     #insta {
         right: 0px;
-        top: 405px;
-        border-top-width: 16px;
-        border-top-style: double; 
-        border-top-color:   #cdcfd8;
+        bottom: -530px;
     }
-    #insta a {
-        color: white;
-    }
-    
-    #email {
-        left: 0px;
-        top: 405px;
-        color: white;
-        border-top-width: 16px;
-        border-top-style: double; 
-        border-top-color:   #cdcfd8;
-    }
-    
     #equipe {
-        left: 0px;
-        top: 505px;
-        height: 160px;
-        border-bottom-left-radius: 20px;
-        color: white;
+        bottom: -300px;
+        right: 0px;
+    }
+    #email {
+        right: 0px;
+        bottom: -850px;
     }
     #local{
         right: 0px;
-        top: 505px;
-        height: 160px;
-        border-bottom-right-radius: 20px;
-        color: white;
+        bottom: -1080px;
     }
     .fa-location-dot, .fa-users, #iconInsta, .fa-envelope{
-        font-size: 20px;
+        font-size: 50px;
         margin-top: 15px;
-        color: white;
-    }
-    #iconInsta{
-        margin-bottom: 10px;
-    }
-    #centralizar{
-        margin-left: 0;
-        margin-top: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
-    #contato{
-        width: 70%;
-        height: 400px;
-        border-radius: 20px;
     }
     /* form */
     form{
@@ -441,6 +408,10 @@ footer ul li {
     form h2{
         font-size: 25px;
         margin-bottom: 40px;
+        color: black;
+        text-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, 
+        rgba(0, 0, 0, 0) 0px 7px 13px, 
+        rgba(0, 0, 0, 0) 0px -3px 0px;
     }
     #observacao{
         height: 20px;
@@ -450,7 +421,42 @@ footer ul li {
     }
 
     #contato a{
-        color: white;
+        color: black;
     }
+    #centralizar{
+        margin-left: 23%;
+    }
+
+    input{
+        width: 95%;
+        padding: 6px;
+        margin-bottom: 10px;
+        border: solid #b4b4b4 2px;
+        font-size: 17px;
+        border-radius: 5px;
+        background-color: rgba(217, 217, 217, 1);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        box-shadow: rgba(0, 0, 0, 0.211) 0px 2px 4px, rgba(0, 0, 0, 0.211) 0px 7px 13px -3px, rgba(0, 0, 0, 0.085) 0px -3px 0px inset;
+    }
+    #entrar{
+        width: 50%;
+        height: 40px;
+        background-color: rgba(217, 217, 217, 1);
+        margin-top: 6px;
+        border: solid #00304D 0.7px;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: #00304D;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: rgba(0, 0, 0, 0.182) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.073) 0px -3px 0px inset;
+    }
+    
+    
 }
 

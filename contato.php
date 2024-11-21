@@ -49,7 +49,7 @@
                 <ul id="nav2">
                     <li><h3><a href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./ocupacoes.php">Ocupações</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
             </nav>
