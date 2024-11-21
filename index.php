@@ -18,8 +18,8 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 </head>
@@ -31,7 +31,7 @@ session_start();
                 <ul id="nav1">
                     <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./ocupacoes.php">Ocupações</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
                 <div id="user-div">
@@ -56,7 +56,7 @@ session_start();
                 <ul id="nav2">
                     <li><h3><a href="./index.php">início</a></h3></li>
                     <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
+                    <li><h3><a href="./ocupacoes.php">Ocupações</a></h3></li>
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
             </nav>
@@ -72,7 +72,6 @@ session_start();
     <section id="secao2">
         <div class="imgSobre" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="sobre">
-                <h1>Sobre</h1>
                 <p>Bem-vindo a HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, oferecemos serviços de alta qualidade com excelência.</p>
                 <p>Seja para negócios ou lazer, o HostCenter é seu refúgio ideal.</p>
             </div>
