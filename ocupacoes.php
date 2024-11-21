@@ -62,34 +62,63 @@
             <div class="bloco">
                 <h2>Quarto Casal</h2>
                 <p>Quarto aconchegante com uma cama de casal, decoração elegante, Wi-Fi gratuito, TV de tela plana e ar-condicionado. Perfeito para casais que buscam conforto e tranquilidade</p>
-                <a href="reservar.php"><button>Reservar Agora</button></a>
             </div>
 
             <img class="quartos-img" src="img/qamigos.jpg" alt="">
             <div class="bloco">
                 <h2>Quarto Amigos</h2>
                 <p>O Quarto para Amigos dispõe de quatro camas de solteiro. Decorado com um toque moderno, oferece Wi-Fi gratuito, TV de tela plana e frigobar, garantindo uma estadia agradável para amigos que viajam juntos.</p>
-                <a href="reservar.php"><button>Reservar Agora</button></a>
             </div>
 
             <img class="quartos-img" src="img/qfamilia.jpg" alt="">
             <div class="bloco">
                 <h2>Quarto Familia</h2>
                     <p>Amplo quarto com duas camas, design moderno e funcional. Comodidades como Wi-Fi gratuito, TV de tela plana e mini-bar, ideal para famílias ou grupos de amigos menores.</p>
-                    <a href="reservar.php"><button>Reservar Agora</button></a>
             </div>
+            <a href="reservar.php"><button>Reservar Agora</button></a>
         </div>
     </section>
 
     <footer>
-        <div class="flex" id="footerHostCenter">
-            <i id="hotel" class="fa-solid fa-hotel"></i>
-            <p>HostCenter</p> 
+        <div id="footer">
+            <div class="contato">
+                <h2>Informações de Contato</h2>
+                <p><strong>SESI Caçapava:</strong></p>
+                <p>Endereço: Av. Monsenhor Theodomiro Lobo, 100, Caçapava - SP, 12285-050</p>
+                <p>Telefone: (12) 3653-1943</p>
+                <p>E-mail: contato@sesi-cacapava.com.br</p>
+            
+                <p><strong>SENAI Taubaté:</strong></p>
+                <p>Endereço: Av. Independência, 846 - Independência, Taubaté - SP, 12031-001</p>
+                <p>Telefone: (12) 3609-5701</p>
+                <p>E-mail: senaitaubate@sp.senai.br</p>
+            </div> 
+            
+            <div class="equipe">
+                <h2>Equipe Desenvolvedora</h2>
+                <ul>
+                    <p>Ana Lívia dos Santos Lopes</p>
+                    <li><a href="https://linktr.ee/analivialopess" target="_blank">Link para contato</a></li>
+            
+                    <p>Gabriel Reis de Brito</p>
+                    <li><a href="https://linktr.ee/gabrielreiss" target="_blank">Link para contato</a></li>
+            
+                    <p>Isadora Gomes da Silva</p>
+                    <li><a href="https://linktr.ee/isadoragomess" target="_blank">Link para contato</a></li>
+            
+                    <p>Lucas Randal Abreu Balderrama</p>
+                    <li><a href="https://linktr.ee/lucasbalderrama" target="_blank">Link para contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="links-adicionais">
+                <h2>Links Adicionais</h2>
+                <ul>
+                    <li><a href="termos.php" target="_blank">Termos de Uso</a></li>
+                    <li><a href="privacidade.php" target="_blank">Política de Privacidade</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="flex">
-            <i class="fa-brands fa-instagram"></i>
-            <a href="https://www.instagram.com/smartwebsn/">smartwebsn</a>
-        </div>
-    </footer>
+    </footer> 
 </body>
 </php>

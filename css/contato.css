@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-color: #eaebf1;
+    background-color: #cdcfd8;
 }
 
 header {
@@ -16,6 +16,12 @@ header {
     top: 0;
     z-index: 50;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.4s ease;
+}
+
+#header.ativo{
+    top: -95px;
+    opacity: 0;
 }
 
 #container {
@@ -135,6 +141,7 @@ a:hover{
     z-index: 1; 
     border: solid 5px rgba(217, 217, 217, 0.886);
 }
+
 
 /* fim cabeçalho */
 /* form */
@@ -338,6 +345,7 @@ footer ul li {
         display: block;
         overflow-wrap: break-word;
         padding: 25px;
+        margin-top: 300px;
     }
     #footer h2{
         font-size: 24px;
@@ -375,7 +383,7 @@ footer ul li {
         top: 405px;
         border-top-width: 16px;
         border-top-style: double; 
-        border-top-color:  rgba(45, 68, 85, 0.93);
+        border-top-color:   #cdcfd8;
     }
     #insta a {
         color: white;
@@ -387,7 +395,7 @@ footer ul li {
         color: white;
         border-top-width: 16px;
         border-top-style: double; 
-        border-top-color:  rgba(45, 68, 85, 0.93);
+        border-top-color:   #cdcfd8;
     }
     
     #equipe {
