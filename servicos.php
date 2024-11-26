@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
-    <title>HostCenter - Servicos</title>
+    <title>Serviços</title>
     <script src="js/servicos.js" defer></script>
 </head>
 <body>
@@ -76,7 +79,7 @@
                     Nosso hotel tem o compromisso de proporcionar uma estadia que vá além das expectativas, oferecendo serviços cuidadosamente pensados para o seu conforto e bem-estar. Com foco em excelência, disponibilizamos gastronomia de alta qualidade, opções de lazer para todas as idades, estacionamento seguro e um serviço de limpeza que garante um ambiente sempre impecável.
                 </p>
                 <div class="image">
-                    <img src="./img/family.pool.jpg" alt="Imagem dos serviços do hotel">
+                    <img src="./img/family--pool.jpg" alt="Imagem dos serviços do hotel">
                 </div>
             </div>
             

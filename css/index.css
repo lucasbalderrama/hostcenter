@@ -447,40 +447,38 @@ button .bx-chevron{
 /* fim seção 3 */
 /* footer */
 footer {
-    background-color:rgba(99, 149, 187, 1);
+    margin-top: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-color: white;
     width: 100%;
-    color: white;
-    margin-top: 60px;
+    color: black;
 }
 
 #footer {
     justify-content: space-evenly;
     display: flex;
-    margin-top: 30px;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 footer h2 {
-    margin-top: 20px;
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 footer p, footer a {
     font-size: 14px;
     line-height: 1.5;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    padding: 3px;
 }
 
 footer a {
     text-decoration: none;
-    color: #092c4f;
+    color: #1e90ff;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
+
 
 footer ul {
     list-style: none;
