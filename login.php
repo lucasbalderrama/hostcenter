@@ -1,23 +1,30 @@
 <?php
-
 session_start();
 include 'conexao.php';
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    $query = "SELECT * FROM usuarios WHERE email_usuario = '$email'";
+    $query = "SELECT * FROM usuarios WHERE email_usuario = ?";
+    $stmt = $conexao->prepare($query);
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
 
-    $result = mysqli_query($conexao, $query);
-
-    if($result->num_rows > 0) {
-        $usuario_logado = $result->fetch_assoc();
+    if ($resultado->num_rows > 0) {
+        $usuario_logado = $resultado->fetch_assoc();
 
         if (password_verify($senha, $usuario_logado['senha_usuario'])) {
+            $_SESSION['id_usuario'] = $usuario_logado['id_usuario'];
             $_SESSION['nome'] = $usuario_logado['nome_usuario'];
+
+            // Redireciona para a página anterior, se existir, ou para o index
+            $url_anterior = isset($_SESSION['url_anterior']) ? $_SESSION['url_anterior'] : 'index.php';
+            unset($_SESSION['url_anterior']); // Remove a URL da sessão
             
-            header('Location: index.php');
+            header("Location: $url_anterior");
+            exit;
         } else {
             echo "<p style='color:red;'>Senha incorreta</p>";
         }
@@ -43,44 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header id="header">
-        <div id="container">
-            <a href="index.php" id="box-img"><img class= "logo" src="./img/HC-logo.svg" alt="logo"></li></a>
-            <nav>
-                <ul id="nav1">
-                    <li><h3><a id="inicio" href="./index.php">início</a></h3></li>
-                    <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
-                    <li><h3><a href="./contato.php">Contato</a></h3></li>
-                </ul>
-                <div id="user-div">
-                    <?php
-                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
-                        echo "<select name='' id='user' onchange='sair()'>
-                                <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
-                                <a><option value='' id='opt-sair'>Sair</option></a>
-                            </select>";
-                    } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] == '') {
-                        echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
-                    }
-                    ?>
-                    <script>
-                        function sair(){
-                            window.location.href = "./logout.php";
-                        }
-                    </script>
-                </div>
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox" id="botao">☰</label>
-                <ul id="nav2">
-                    <li><h3><a href="./index.php">início</a></h3></li>
-                    <li><h3><a href="./servicos.php">Serviços</a></h3></li>
-                    <li><h3><a href="./reservar.php">Reservar</a></h3></li>
-                    <li><h3><a href="./contato.php">Contato</a></h3></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
     <section id="secao1">
         <div id="box-login">
             <div id="box-img-login">

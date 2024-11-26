@@ -219,10 +219,6 @@ input {
     background-color: #92c3e8;
 }
 
-#checkbox{
-    display: none;
-}
-
 #botao{
     display: none;
     font-size: 40px;
@@ -232,76 +228,22 @@ input {
     margin-right: 10%;
 }
 
-/* Estilos de "radio" */
-.checkbox-wrapper-29 {
-    --size: 1rem;
-    --background: #fff;
-    font-size: var(--size);
-}
-
-.checkbox-wrapper-29 input[type="checkbox"] {
-    visibility: hidden;
+.esconder{
     display: none;
 }
 
-.checkbox-wrapper-29 .checkbox {
+.radio {
     position: relative;
     display: flex;
     align-items: center;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     margin-top: 10px;
+    margin-right: 260px;
 }
-
-.checkbox-wrapper-29 .checkbox__label {
-    position: relative;
-    width: var(--size);
-    height: var(--size);
-    border: 2px solid #484848;
-    border-radius: 50%; /* Torna o checkbox redondo, como um radio */
-    background: var(--background);
-    margin-right: calc(var(--size) * 0.45);
-}
-
-.checkbox-wrapper-29 .checkbox__input:checked + .checkbox__label {
-    background-color: #0e3960; /* Cor de seleção */
-}
-
-.checkbox-wrapper-29 .checkbox__label:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(var(--size) * 0.5);
-    height: calc(var(--size) * 0.5);
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.2s ease-in-out;
-}
-
-.checkbox-wrapper-29 .checkbox__input:checked + .checkbox__label:after {
-    transform: translate(-50%, -50%) scale(1);
-    background: #fff;
-}
-
 
 #forma-pagamento img{
    margin-left: 30px;
-}
-
-.outro{
-    margin-top: 20px;
-    font-size: 15px;
-}
-
-.outro a{
-    text-decoration: none;
-    color: #0f467a;
-}
-
-.outro a:hover{
-    color: #0f2336; 
 }
 /* footer */
 footer {
@@ -367,9 +309,6 @@ footer ul li {
         width: 30px;
     }
     #botaonav{
-        display: block;
-    }
-    #checkbox:checked + #botaonav + #nav2{
         display: block;
     }
     .logo{

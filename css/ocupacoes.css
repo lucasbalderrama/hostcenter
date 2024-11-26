@@ -158,10 +158,6 @@ a:hover{
 }
 
 /*-- quartos & tarifas --*/
-.lista-preco ul {
-    padding: 0px;
-    list-style: none;
-}
 .topo-preco {
     text-align: center;
     position: relative;
@@ -179,7 +175,7 @@ a:hover{
     position: absolute;
     top: 7em;  
     right: 0em;
-    margin-top: 153px;
+    margin-top: 133px;
 }
 .topo-preco2 h4 {
     font-size: 1.2em; 
@@ -214,12 +210,6 @@ a:hover{
 .topo-preco2 img {
     width: 100%;
 }
-.lista-preco ul li {
-    padding: 0.5em 0em;
-    font-size: 0.8em; 
-    color: #2b2b2b;
-    display: inline-block;
-}
 .seleção-preco {
     padding: 1em 0em;
     text-align: center;
@@ -233,6 +223,9 @@ a:hover{
     background: #ffce14;
     text-decoration: none;
     border: 2px solid #ecbf11;
+}
+.seleção-preco a:hover {
+    background: #dcb30f;
 }
 .bloco-preco {
     box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
@@ -248,7 +241,7 @@ a:hover{
 
 /* Ajustar as larguras das colunas para ficar lado a lado */
 .coluna-md-4.card-preco {
-    width: 33.33%; 
+    width: 30%; 
     padding: 0 10px; 
 }
 

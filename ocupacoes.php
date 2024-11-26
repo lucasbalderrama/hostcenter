@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE php>
 <php lang="pt-BR">
 <head>
@@ -8,10 +11,15 @@
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <title>Veja nossas ocupações</title>
 </head>
 <body>
@@ -57,7 +65,7 @@
     <section id="secao1">
         <div class="seção-plano" id="quartos">
             <div class="container">
-                <h3 class="titulo-w3-agileits titulo-preto-wthree">Conheças nossas ocupações</h3>
+                <h3 class="titulo-w3-agileits titulo-preto-wthree">Conheça nossas ocupações</h3>
                 <div class="tabela-preco-principal">
                     <div class="coluna-md-4 card-preco">
                         <div class="bloco-preco agile">
@@ -66,15 +74,6 @@
                                 <h4>Quarto Amigos</h4>
                             </div>
                             <div class="fundo-preco">
-                                <div class="lista-preco">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>320</h3>
                                     <a href="reservar.php">Reservar</a>
@@ -90,15 +89,6 @@
                                 <h4>Quarto Casal</h4>
                             </div>
                             <div class="fundo-preco">
-                                <div class="lista-preco">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>220</h3>
                                     <a href="reservar.php">Reservar</a>
@@ -114,15 +104,6 @@
                                 <h4>Quarto Família</h4>
                             </div>
                             <div class="fundo-preco">
-                                <div class="lista-preco">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>180</h3>
                                     <a href="reservar.php">Reservar</a>
@@ -148,15 +129,6 @@
                                 <h4>Pacote Café da Manhã</h4>
                             </div>
                             <div class="fundo-preco">
-                                <div class="lista-preco">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>320</h3>
                                     <a href="reservar.php">Saiba mais</a>
@@ -172,15 +144,6 @@
                                 <h4>Pacote Café da Manhã e Jantar</h4>
                             </div>
                             <div class="fundo-preco">
-                                <div class="lista-preco">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>220</h3>
                                     <a href="reservar.php">Saiba mais</a>
@@ -196,15 +159,6 @@
                                 <h4>Pacote Completo</h4>
                             </div>
                             <div class="fundo-preco">
-                                <div class="lista-preco">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>180</h3>
                                     <a href="reservar.php">Saiba mais</a>
