@@ -161,7 +161,7 @@ a:hover{
 }
 .text-section h1 {
     margin-top: 150px;
-    font-size: 65px;
+    font-size: 62px;
     color: #00304D;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -173,11 +173,13 @@ a:hover{
     border-radius: 20px;
 }
 .text-section p {
-    font-size: 30px;
+    font-size: 26px;
     margin-top: 30px;
+    width: 90%;
+    text-align: justify;
     color: #555;
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;;
+    font-optical-sizing: auto;
 }
 .image-section {
     width: 50%;
@@ -264,8 +266,8 @@ a:hover{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    width: 480px;
-    height: 360px;
+    width: 500px;
+    height: 320px;
     border-radius: 3%;
 }
 #lazer, #estacionamento{
@@ -274,38 +276,37 @@ a:hover{
 
 /* footer */
 footer {
-    background-color:rgba(99, 149, 187, 1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-color: white;
     width: 100%;
-    color: white;
+    color: black;
 }
 
 #footer {
     justify-content: space-evenly;
     display: flex;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 footer h2 {
-    margin-top: 20px;
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 footer p, footer a {
     font-size: 14px;
     line-height: 1.5;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    padding: 3px;
 }
 
 footer a {
     text-decoration: none;
-    color: #092c4f;
+    color: #1e90ff;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
+
 
 footer ul {
     list-style: none;
