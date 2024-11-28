@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -36,6 +32,7 @@ session_start();
                 </ul>
                 <div id="user-div">
                     <?php
+                    session_start();
                     if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
                         echo "<select name='' id='user' onchange='sair()'>
                                 <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
