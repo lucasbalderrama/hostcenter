@@ -1,158 +1,281 @@
-*{
-    margin: 0;
-}
-#header {
-    background-color: rgb(255, 255, 255);
-    color: #0e3960;
-    padding: 10px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: all 0.4s ease;
-}
-
-#header.ativo{
-    top: -95px;
-    opacity: 0;
-}
-
-#container {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#box-img{
-    width: 180px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-}
-.logo {
-    width: 140px;
-    float: left;
-}
-#nav1{
-    margin-left: 8%;
-    display: flex;
-    justify-content: center;
-}
-#login{
-    color: #0e3960;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    text-transform: uppercase;
-}
-#user-div{
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-#user{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    color: #0e3960;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    text-transform: uppercase;
-    cursor: pointer;
-    height: 30px;
-    margin-top: 7px;
-    align-self: center;
-}
-#opt-nome{
-    display: none;
-}
-#opt-sair{
-    background-color: rgb(255, 255, 255);
-    font-weight: 600;
-    cursor: pointer;
-}
-nav {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-between;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-nav ul li {
-    padding: 10px;
-}
-
-nav ul li a {
-    color: #0e3960;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
+body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    text-transform: uppercase;
-    margin: 0 3vw;
-}
-
-a{
-    transition: color 0.3s;
-}
-
-a:hover{
-    color:#297caf;
-}
-
-
-#checkbox{
-    display: none;
-}
-
-#botao{
-    display: none;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    float: right;
-    margin-right: 10%;
-}
-
-#nav2{ 
-    display: none;
-    position: absolute;
-    background-color: rgba(99, 149, 187, 0.814);
-    top: 70px;
-    right: 0;
-    width: 200px;
-    z-index: 1; 
-    border: solid 5px rgb(99, 149, 187);
-}
-
-#secao1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 97vh;
-    width: 100%;
-    background-color: #2D4455;
+    height: 100vh;
+    background: url('../img/pool_pool.jpg') no-repeat center center;
+    background-size: cover;
+    
 }
-
-#box-login{
+#secao-login {
     display: flex;
-    background-color: white;
-    width: 720px;
+    width: 960px;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(255, 255, 255, 0.22) 0px 15px 12px;
+}
+#box-login, #box-welcome {
+    width: 50%;
+    height: 510px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#box-login {
+    background-color: #dde8f1;
+}
+#box-login h1 {
+    font-size: 36.5px;
+    color: #0e3960;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+}
+#box-login p{
+    text-align: center;
+    margin-top: 8px;
+    font-size: 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+}
+#box-welcome {
+    background-color: #0e3960;
+    color: white;
+}
+#box-welcome h2 {
+    font-size: 33px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 12px;
+}
+#box-welcome p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#box-login label {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    color: #0e3960;
+    margin: 10px 0 5px;
+}
+.inserir {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #a3a2a2;
+    font-size: 16px;
+    background-color: #ffffff00;
+    color: black;
+}
+#entrar, #cadastrar-button {
+    background-color: #dde8f1;
+    border: none;
+    border-radius: 20px;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 230px;
+    margin-top: 40px;
+    margin-bottom: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+#entrar{
+    background-color: #0e3960;
+    color: white;
+}
+#entrar:hover{
+    background-color: #dde8f1;
+    color: #0e3960;
+}
+#cadastrar-button{
+    color: #0e3960;
+}
+#cadastrar-button:hover {
+    background-color: #0e3960;
+    color: white;
 }
 
-#box-img-login{
+/* cadastrar */
+.secao-cadastro {
+    display: flex;
+    width: 1100px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.box-cadastro, .box-bemvindo {
+    width: 50%;
+    height: 570px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-cadastro {
+    background-color: #438e4b;
+    color: white;
+}
+
+.box-cadastro h1 {
+    font-size: 43.7px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.box-cadastro label {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    margin: 10px 0 5px;
+}
+
+.box-bemvindo {
+    background-color: #313131;
+    color: white;
+}
+
+.box-bemvindo h2 {
+    color: #55a95e;
+    font-size: 38px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 12px;
+}
+
+.box-bemvindo p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.campo-inserir {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #fffafa;
+    font-size: 16px;
+    background-color: #ffffff00;
+    font-weight: 400;
+}
+
+#botao-cadastrar, #botao-entrar {
+    background-color: #dde8f1;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 230px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+#botao-cadastrar a, #botao-entrar a{
+    text-decoration: none;
+    color: white;
+}
+#botao-cadastrar:hover, #botao-entrar:hover {
+    background-color: #438e4b;
+}
+.box-cadastro p{
+    text-align: center;
+}
+.box-cadastro a{
+    color: #313131;
+}
+.box-cadastro a:hover{
+    color: white;
+}
+.celular{
+    opacity: 0;
+}
+#mostrar{
+    color: #0e3960;
+}
+@media (max-width: 768px){
+    .celular{
+        opacity: 1;
+        font-weight: 400;
+        color: #313131;
+    }
+    .celular a{
+        color: #0e3960;
+    }
+    #entre{
+        color: #313131;
+    }
+    body {
+        padding: 10px;
+    }
+    #secao-login, .secao-cadastro {
+        flex-direction: column;
+        width: 90%;
+        max-width: 100%;
+    }
+    #box-login, #box-welcome, .box-cadastro, .box-bemvindo {
+        width: 100%;
+        padding: 30px;
+        height: auto;
+    }
+    #box-login h1, .box-cadastro h1 {
+        font-size: 2rem;
+    }
+    #box-welcome h2, .box-bemvindo h2 {
+        font-size: 1.8rem;
+    }
+    #box-login p, .box-cadastro p, #box-welcome p, .box-bemvindo p {
+        font-size: 1rem;
+    }
+    #entrar, #cadastrar-button, #botao-cadastrar, #botao-entrar {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    #box-welcome, .box-bemvindo {
+        display: none;
+    }
+}
+
+
+
+
+
+
+/* #box-img-login{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,53 +418,6 @@ input:checked + .slider:before{
     font-family: Reem Kufi;
 }
 
-footer {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-    height: 100%;
-    background-color: white;
-    width: 100%;
-    color: black;
-}
-
-#footer {
-    justify-content: space-evenly;
-    display: flex;
-    padding: 20px;
-}
-
-footer h2 {
-    margin-bottom: 10px;
-    font-size: 28px;
-}
-
-footer p, footer a {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-footer a {
-    text-decoration: none;
-    color: #1e90ff;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    margin-bottom: 8px;
-}
- 
-.contato {
-    margin-top: 5px;
-}
-
 @media (max-width: 768px) {
     #nav1{
         display: none;
@@ -398,4 +474,4 @@ footer ul li {
     .flex p{
         margin-bottom: 30px;
     }
-}
+} */ 

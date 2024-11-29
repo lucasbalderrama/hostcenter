@@ -82,11 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </header>
     <section id="secao1">
         <div id="box-login">
-            <div id="box-img-login">
-                <img id="img-login" src="../hostcenter/img/hostcenter-login.jpeg" alt="">
-            </div>
             <form action="" method="POST">
-                <h1>CADASTRAR</h1>
+                <h1>Cadastre-se</h1>
                 <h2>Crie uma conta</h2>
                 <input class="inserir" type="text" name="nome" placeholder="Nome">
 
@@ -100,15 +97,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </form>
         </div>
     </section>
-    <footer>
-        <div class="flex">
-            <i id="hotel" class="fa-solid fa-hotel"></i>
-            <p>HostCenter</p> 
-        </div>
-        <div class="flex">
-            <i class="fa-brands fa-instagram"></i>
-            <a href="#">smartwebsn</a>
-        </div>
-    </footer>
 </body>
 </html>
