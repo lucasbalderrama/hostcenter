@@ -67,11 +67,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p class="celular">Não possui uma conta? <a href="cadastro.php">Cadastre-se!</a></p>
             </form>
         </div>
-        <div id="box-welcome">
-            <h2>Não tem uma conta?</h2>
-            <p>Entre com seus dados pessoais e comece sua jornada conosco</p>
-            <button id="cadastrar-button" onclick="window.location='./cadastro.php'">Cadastre-se</button>
-        </div>
     </section>
     <script>
     function mostrarSenha() {
@@ -82,6 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             x.type = "password";
         }
     }
-</script>
+    </script>
 </body>
 </html>
