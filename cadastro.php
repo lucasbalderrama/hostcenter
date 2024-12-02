@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $senha_hashed = password_hash($senha, PASSWORD_DEFAULT);
 
-    $sql_insercao = "INSERT INTO usuarios (nome_usuario, email_usuario, senha_usuario) VALUES (?, ?, ?)";
+    $sql_insercao = "INSERT INTO usuarios (nome_usuario, email_usuario, senha_usuario, tipo_usuario) VALUES (?, ?, ?, 'cliente')";
     $stmt = $conexao->prepare($sql_insercao);
     $stmt->bind_param("sss", $nome, $email, $senha_hashed);
 

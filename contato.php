@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($stmt->execute()) {
                 echo "<script>
                 Swal.fire({
-                    title: 'Comentário enviado com sucesso!'', (Arrumar, não esta funcionando)
+                    title: 'Comentário enviado com sucesso!'', (Arrumar, não esta funcionandoo)
                     icon: 'success'
                 });
         </script>";

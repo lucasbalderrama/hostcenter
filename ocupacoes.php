@@ -6,7 +6,7 @@ session_start()
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/reservar.js"></script>
+    <script src="./js//ocupacoes.js"></script>
     <link rel="stylesheet" href="./css/ocupacoes.css">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -67,7 +67,7 @@ session_start()
             <div class="container">
                 <h3 class="titulo-w3-agileits titulo-preto-wthree">Conheça nossas ocupações</h3>
                 <div class="tabela-preco-principal">
-                    <div class="coluna-md-4 card-preco">
+                    <div class="coluna card-preco">
                         <div class="bloco-preco agile">
                             <div class="topo-preco">
                                 <img src="img/qamigos.jpg" alt=" " class="img-responsiva" />
@@ -76,13 +76,16 @@ session_start()
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>320</h3>
-                                    <a href="reservar.php">Reservar</a>
+                                    <button onclick="toggleCard(this)">Saiba Mais</button>
+                                        <div class="card" id="infoCard">
+                                            <p>Colocar detalhes.</p>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="coluna-md-4 card-preco">
+                    <div class="coluna card-preco">
                         <div class="bloco-preco agile">
                             <div class="topo-preco">
                                 <img src="img/qcasal.jpg" alt=" " class="img-responsiva" />
@@ -91,13 +94,16 @@ session_start()
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>220</h3>
-                                    <a href="reservar.php">Reservar</a>
+                                    <button onclick="toggleCard(this)">Saiba Mais</button>
+                                        <div class="card" id="infoCard">
+                                            <p>Colocar detalhes.</p>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="coluna-md-4 card-preco">
+                    <div class="coluna card-preco">
                         <div class="bloco-preco agile">
                             <div class="topo-preco">
                                 <img src="img/qfamilia.jpg" alt=" " class="img-responsiva" />
@@ -106,7 +112,76 @@ session_start()
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
                                     <h3><span>R$</span>180</h3>
-                                    <a href="reservar.php">Reservar</a>
+                                    <button onclick="toggleCard(this)">Saiba Mais</button>
+                                        <div class="card" id="infoCard">
+                                            <p>Colocar detalhes.</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a id="reservar-button"  href="./reservar.php">Reserve seu quarto!</a>
+
+    <section>
+        <div class="seção-plano" id="quartos">
+            <div class="container">
+                <h3 class="titulo-w3-agileits titulo-preto-wthree">Plano Refeição</h3>
+                <div class="tabela-preco-principal">
+                    <div class="coluna card-preco">
+                        <div class="bloco-preco agile">
+                            <div class="topo-preco2">
+                                <img src="img//cafe-da-manha.jpg" alt=" " class="img-responsiva" />
+                                <h4>Pacote Café da Manhã</h4>
+                            </div>
+                            <div class="fundo-preco">
+                                <div class="seleção-preco">
+                                    <h3><span>R$</span>320</h3>
+                                    <button onclick="toggleCard(this)">Saiba Mais</button>
+                                        <div class="card" id="infoCard">
+                                            <p>Colocar detalhes.</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coluna card-preco">
+                        <div class="bloco-preco agile">
+                            <div class="topo-preco2">
+                                <img src="img/almoco.jpg" alt=" " class="img-responsiva">
+                                <h4>Pacote Café da Manhã e Jantar</h4>
+                            </div>
+                            <div class="fundo-preco">
+                                <div class="seleção-preco">
+                                    <h3><span>R$</span>220</h3>
+                                    <button onclick="toggleCard(this)">Saiba Mais</button>
+                                        <div class="card" id="infoCard">
+                                            <p>Colocar detalhes.</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coluna card-preco">
+                        <div class="bloco-preco agile">
+                            <div class="topo-preco2">
+                                <img src="img/pcompleto" alt=" " class="img-responsiva">
+                                <h4>Pacote Completo</h4>
+                            </div>
+                            <div class="fundo-preco">
+                                <div class="seleção-preco">
+                                    <h3><span>R$</span>180</h3>
+                                    <button onclick="toggleCard(this)">Saiba Mais</button>
+                                        <div class="card" id="infoCard">
+                                            <p>Colocar detalhes.</p>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -118,58 +193,7 @@ session_start()
     </section>
 
     <section>
-        <div class="seção-plano" id="quartos">
-            <div class="container">
-                <h3 class="titulo-w3-agileits titulo-preto-wthree">Plano Refeição</h3>
-                <div class="tabela-preco-principal">
-                    <div class="coluna-md-4 card-preco">
-                        <div class="bloco-preco agile">
-                            <div class="topo-preco2">
-                                <img src="img//cafe-da-manha.jpg" alt=" " class="img-responsiva" />
-                                <h4>Pacote Café da Manhã</h4>
-                            </div>
-                            <div class="fundo-preco">
-                                <div class="seleção-preco">
-                                    <h3><span>R$</span>320</h3>
-                                    <a href="reservar.php">Saiba mais</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="coluna-md-4 card-preco">
-                        <div class="bloco-preco agile">
-                            <div class="topo-preco2">
-                                <img src="img/almoco.jpg" alt=" " class="img-responsiva" style="height: 317px;">
-                                <h4>Pacote Café da Manhã e Jantar</h4>
-                            </div>
-                            <div class="fundo-preco">
-                                <div class="seleção-preco">
-                                    <h3><span>R$</span>220</h3>
-                                    <a href="reservar.php">Saiba mais</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="coluna-md-4 card-preco">
-                        <div class="bloco-preco agile">
-                            <div class="topo-preco2">
-                                <img src="img/pcompleto" alt=" " class="img-responsiva" style="height: 317px;">
-                                <h4>Pacote Completo</h4>
-                            </div>
-                            <div class="fundo-preco">
-                                <div class="seleção-preco">
-                                    <h3><span>R$</span>180</h3>
-                                    <a href="reservar.php">Saiba mais</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
+        
     </section>
 
     <footer>
@@ -215,3 +239,14 @@ session_start()
     </footer> 
 </body>
 </php>
+
+<script>
+    function toggleCard(button) {
+        const card = button.nextElementSibling; 
+        if (card.style.display === 'none' || card.style.display === '') {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    }
+</script>

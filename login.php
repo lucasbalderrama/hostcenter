@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($senha, $usuario_logado['senha_usuario'])) {
             $_SESSION['id_usuario'] = $usuario_logado['id_usuario'];
             $_SESSION['nome'] = $usuario_logado['nome_usuario'];
+            $_SESSION['tipo'] = $usuario_logado['tipo_usuario'];
 
-            // Redireciona para a página anterior, se existir, ou para o index
             $url_anterior = isset($_SESSION['url_anterior']) ? $_SESSION['url_anterior'] : 'index.php';
-            unset($_SESSION['url_anterior']); // Remove a URL da sessão
+            unset($_SESSION['url_anterior']); 
             
             header("Location: $url_anterior");
             exit;
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <section id="secao-login">
         <div id="box-login">
-            <form action="../hostcenter/index.html" method="POST">
+            <form action="" method="POST">
                 <h1>Entre na sua conta</h1> 
                 <label for="email">Email</label>
                 <input class="inserir" name="email" type="email" required>
