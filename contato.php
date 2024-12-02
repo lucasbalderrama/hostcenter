@@ -1,9 +1,45 @@
+<?php
+include 'conexao.php';
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome_usuario = $_POST['username'];
+    $email_usuario = $_POST['emailForm'];
+    $comentario = $_POST['comentario'];
+
+    $id_usuario = isset($_SESSION['id_usuario']) ? $_SESSION['id_usuario'] : null;
+
+    if ($id_usuario) {
+        $sql_insercao = "INSERT INTO comentarios (id_usuario, nome_usuario, email_usuario, comentario) VALUES (?, ?, ?, ?)";
+        $stmt = $conexao->prepare($sql_insercao);
+
+        if ($stmt) {
+            $stmt->bind_param("isss", $id_usuario, $nome_usuario, $email_usuario, $comentario);
+            if ($stmt->execute()) {
+                echo "<script>
+                Swal.fire({
+                    title: 'Comentário enviado com sucesso!'', (Arrumar, não esta funcionando)
+                    icon: 'success'
+                });
+        </script>";
+            } else {
+                echo "Erro ao enviar o comentário: " . $stmt->error;
+            }
+            $stmt->close();
+        } else {
+            echo "Erro na preparação da consulta: " . $conexao->error;
+        }
+    } else {
+        echo "Erro: Usuário não está logado.";
+    }
+    $conexao->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/contato.css">
     <script src="js/contato.js" defer></script>
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
@@ -32,7 +68,7 @@
                     if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
                         echo "<select name='' id='user' onchange='sair()'>
                                 <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
-                                <a><option value='' id='opt-sair'>Sair</option></a>
+                                <option value='' id='opt-sair'>Sair</option>
                             </select>";
                     } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] == '') {
                         echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
@@ -84,10 +120,8 @@
                 <p>Hotel localizado em Serra Serena, no bairro Vila Verde, número 31.</p>
             </div>
 
-
-
-            <form method="POST" onsubmit="comentario(event)">
-                <h2>Entre em contato conosco</h2>
+            <form method="POST">
+                <h2 style="margin-bottom: 50px; margin-top: 20px">Envie seu comentario</h2>
                 <div class="formulario">
                     <input type="text" name="username" id="username" placeholder="Digite seu nome" required>
                 </div>
@@ -95,39 +129,12 @@
                     <input type="email" name="emailForm" id="emailForm" placeholder="Digite seu email" required>
                 </div>
                 <div class="formulario">
-                    <input type="text" name="observacao" id="observacao" placeholder="Digite sua pergunta ou observação">
+                    <input type="text" name="comentario" id="comentario" placeholder="Digite sua pergunta ou observação">
                 </div>
                 <div class="formulario">
                     <button type="submit" id="entrar">Enviar</button>  
                 </div>
             </form>
-
-
-
-            
-            <?php
-include 'conexao.php';
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $nome2 = $_POST["username"]; 
-    $email2 = $_POST["emailForm"]; 
-    $comentario = $_POST["observacao"]; 
-
-    $sql_insercao = "INSERT INTO comentarios (nome, email, comentario) VALUES (?, ?, ?)";
-    $stmt = $conexao->prepare($sql_insercao);
-
-    if ($stmt) {
-        $stmt->bind_param("sss", $nome2, $email2, $comentario);
-        $stmt->close();
-    } else {
-        echo "Erro na preparação da consulta: " . $conexao->error;
-    }
-    $conexao->close();
-}
-?>
-
-
-
         </div>
     </div>
     <footer>
@@ -172,14 +179,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
             </div>
         </footer> 
+
+        <script>
+            function comentario(event) {
+                event.preventDefault();
+                Swal.fire({
+                    title: "Comentário enviado com sucesso!",
+                    icon: "success"
+                });
+            }
+
+            document.getElementById('entrar').addEventListener('click', comentario);
+            comentario();
+        </script>
 </body>
 </html>
-<script>
-    function comentario(event) {
-    event.preventDefault();
-    Swal.fire({
-        title: "Comentário enviado com sucesso!",
-        icon: "success"
-    });
-}
-</script>
