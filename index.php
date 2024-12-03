@@ -64,16 +64,16 @@
     <div class="logo-container">
         <h1 id="page-logo">HostCenter</h1> <br>
     </div> <br>
-        <p>Sua estadia ideal</p>
-    </section>
-    <section id="secao2">
-        <div class="imgSobre" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <div class="sobre">
-                <p>Bem-vindo a HostCenter, onde conforto e qualidade se encontram. Localizado no centro da cidade de Serra Serena, oferecemos serviços de alta qualidade com excelência.</p>
-                <p>Seja para negócios ou lazer, o HostCenter é seu refúgio ideal.</p>
-            </div>
+    <p>Sua estadia ideal</p>
+</section>
+<section id="secao2">
+    <div class="imgSobre" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="sobre">
+            <p>Bem-vindo a HostCenter, onde <strong>conforto</strong> e <strong>qualidade</strong> se encontram. Localizado no centro da cidade de Serra Serena, oferecemos serviços de alta qualidade com excelência.</p>
+            <p>Seja para negócios ou lazer, o HostCenter é seu refúgio ideal.</p>
         </div>
-        <div id="recursos">
+    </div>
+    <div id="recursos">
             <div class="recurso card" id="primeiro">
                 <i class="fa-solid fa-car"></i>
                 <div class="info">
@@ -108,21 +108,40 @@
         
     </section>
     <section id="secao3">
-        <h2>Galeria</h2>
+        <h2>Descubra o que o nosso hotel tem a oferecer</h2>
         <div class="carossel">
             <div class="imgCarossel">
                 <img class="galeriaImg" src="./img/galeria1.png">
-                <img class="galeriaImg" src="./img/galeria2.png">
-                <img class="galeriaImg" src="./img/galeria3.png">
+                <img class="galeriaImg" src="./img/galeria2.jpg">
                 <img class="galeriaImg" src="./img/galeria4.png">
-                <img class="galeriaImg" src="./img/galeria6.png">
+                <img class="galeriaImg" src="./img/galeria6.jpg">
                 <img class="galeriaImg" src="./img/galeria7.png">
-                
+                <img class="galeriaImg" src="./img/galeria8.jpg">
+                <img class="galeriaImg" src="./img/galeria9.jpg">
+                <img class="galeriaImg" src="./img/galeria10.jpg">
+                <img class="galeriaImg" src="./img/galeria12.jpg">
             </div>
             <button class="anterior" onclick="anterior()"><i class='bx bx-chevron-left'></i></button>
             <button class="proximo" onclick="proximo()"><i class='bx bx-chevron-right'></i></button>
         </div>
     </section>
+    <div class="politica">
+        <h2>Políticas e hospedagem</h2>
+        <ul>
+            <li>Horário do check-in: a partir das 12h.</li>
+            <li>Horário do check-out: a partir das 14h.</li>
+            <li>Horário do café da manhã: das 07h às 10:30.</li>
+            <li>Horário do jantar: das 19h às 22h.</li>
+            <li>Planos de café da manhã e jantar disponíveis.</li>
+            <li>Horário de serviço de quarto: até as 21h.</li>
+            <li>Não é cobrado taxa de serviço.</li>
+            <li>Aceitamos cartões de crédito, débito e pagamentos via Pix.</li>
+            <li>O uso da piscina e da academia é permitido das 6h às 22h. Roupa adequada é obrigatória.</li>
+            <li>Não é permitido a entrada de animais. Exceto para ocasiões de necessidade de cão guia.</li>
+            <li>Conexão Wi-Fi gratuita disponível em todas as áreas do hotel.</li>
+            <li>Objetos esquecidos serão armazenados por até 30 dias. Entre em contato para recuperar pertences.</li>
+        </ul>
+    </div>
     <footer>
             <div id="footer">
         

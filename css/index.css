@@ -5,7 +5,7 @@
 }
 
 body {
-    background: rgba(45, 68, 85, 0.93);
+    background-color: #eee9e9;
     font-size:x-large;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -87,25 +87,25 @@ header {
     font-weight: 600;
     cursor: pointer;
 }
-nav {
+header nav {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-between;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     padding: 10px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: #0e3960;
     text-decoration: none;
     font-size: 17px;
@@ -232,12 +232,12 @@ a:hover{
 
 /* sobre */
 #secao2{
-    margin-top: 150px;
+    margin-top: 100px;
 }
 #secao2 p{
     text-align: justify;
 }
-.imgSobre {
+/* .imgSobre {
     background: url('../img/sobre.jpg') no-repeat center center;
     background-size: cover;
     height: 600px;
@@ -247,33 +247,41 @@ a:hover{
     margin: 50px auto;
     max-width: 90%;
     min-width: 600px;
-}
+} */
 
-.sobre {
-    position: absolute;
-    top: 13%;
-    left: 50px;
-    background-color: rgba(255, 255, 255, 0.9);
+.sobre{
+    border-left: 5px solid #00304D;
     padding: 20px;
-    width: 500px;
-    height: 400px;
+    margin: 30px auto;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    max-width: 70%;
-    min-width: 450px;
-}
-
-.sobre h1 {
-    font-size: 65px;
-    color: #00304D;
-    text-align: center;
+    width: 80%;
     font-family: 'Montserrat', sans-serif;
 }
-
+.politica {
+    background: #ffffffcb;
+    border-left: 5px solid #00304D;
+    padding: 20px;
+    margin: 45px auto;
+    border-radius: 8px;
+    width: 68%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+.politica h2{
+    font-size: 40px;
+    color: #00304D;
+    padding: 8px;
+}
+.politica ul li{
+    padding: 5px;
+    font-size: 23px;
+    list-style-type: square;
+    list-style-position: inside;
+    color: #4b4a4a;
+}
 .sobre p {
     margin-top: 18px;
-    font-size: 30px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 26px;
 }
 /* fim sobre */
 /* recursos */
@@ -381,14 +389,13 @@ a:hover{
 /* seção 3 */
 #secao3 h2{
     text-align: center;
-    color: rgb(240, 244, 254);
-    font-size: 90px;
+    color: rgb(8, 25, 66);
+    font-size: 54px;
     margin-top: 90px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-optical-sizing: auto;
     font-weight:bolder;
     font-style: normal;
-    /* text-transform: uppercase; */
 }
 
 .carossel {
