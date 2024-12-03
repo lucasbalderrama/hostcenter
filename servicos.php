@@ -32,21 +32,32 @@
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
                 <div id="user-div">
-                    <?php
-                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
-                        echo "<select name='' id='user' onchange='sair()'>
-                                <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
-                                <a><option value='' id='opt-sair'>Sair</option></a>
-                            </select>";
-                    } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] == '') {
-                        echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
-                    }
-                    ?>
-                    <script>
-                        function sair(){
-                            window.location.href = "./logout.php";
+                <?php
+                if (isset($_SESSION['nome']) && $_SESSION['nome'] != '' && $_SESSION['tipo'] == 'Admin') {
+                    echo "
+                    <select id='user' onchange='redirecionar(this.value)'>
+                        <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                        <option value='admin.php'>Admin</option>
+                        <option value='logout.php'>Sair</option>
+                    </select>";
+                } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] != '' && $_SESSION['tipo'] == 'Cliente') {
+                    echo "
+                    <select id='user' onchange='redirecionar(this.value)'>
+                        <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                        <option value='logout.php'>Sair</option>
+                    </select>";
+                } else {
+                    echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
+                }
+                ?>
+
+                <script>
+                    function redirecionar(url) {
+                        if (url) {
+                            window.location.href = url;
                         }
-                    </script>
+                    }
+                </script>
                 </div>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>

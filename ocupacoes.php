@@ -34,21 +34,32 @@ session_start()
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
                 <div id="user-div">
-                    <?php
-                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
-                        echo "<select name='' id='user' onchange='sair()'>
-                                <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
-                                <a><option value='' id='opt-sair'>Sair</option></a>
-                            </select>";
-                    } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] == '') {
-                        echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
-                    }
-                    ?>
-                    <script>
-                        function sair(){
-                            window.location.href = "./logout.php";
+                <?php
+                if (isset($_SESSION['nome']) && $_SESSION['nome'] != '' && $_SESSION['tipo'] == 'Admin') {
+                    echo "
+                    <select id='user' onchange='redirecionar(this.value)'>
+                        <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                        <option value='admin.php'>Admin</option>
+                        <option value='logout.php'>Sair</option>
+                    </select>";
+                } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] != '' && $_SESSION['tipo'] == 'Cliente') {
+                    echo "
+                    <select id='user' onchange='redirecionar(this.value)'>
+                        <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                        <option value='logout.php'>Sair</option>
+                    </select>";
+                } else {
+                    echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
+                }
+                ?>
+
+                <script>
+                    function redirecionar(url) {
+                        if (url) {
+                            window.location.href = url;
                         }
-                    </script>
+                    }
+                </script>
                 </div>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>
@@ -75,10 +86,12 @@ session_start()
                             </div>
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
-                                    <h3><span>R$</span>320</h3>
+                                    <h3><span>R$</span>200</h3>
                                     <button onclick="toggleCard(this)">Saiba Mais</button>
                                         <div class="card" id="infoCard">
-                                            <p>Colocar detalhes.</p>
+                                            <p>Descontraído e funcional, o Quarto Amigos é ideal para grupos que viajam juntos e buscam conforto e praticidade. Equipado com duas ou três camas de solteiro, possui uma decoração moderna, Wi-Fi gratuito, TV a cabo e um banheiro privativo espaçoso. O ambiente perfeito para relaxar após um dia de aventuras.</p>
+                                            <br>
+                                            <p id='p-dia'>R$200,00 por dia</p>
                                         </div>
                                 </div>
                             </div>
@@ -93,10 +106,12 @@ session_start()
                             </div>
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
-                                    <h3><span>R$</span>220</h3>
+                                    <h3><span>R$</span>250</h3>
                                     <button onclick="toggleCard(this)">Saiba Mais</button>
                                         <div class="card" id="infoCard">
-                                            <p>Colocar detalhes.</p>
+                                            <p>Romântico e aconchegante, o Quarto Casal foi pensado para casais que desejam momentos especiais. Com uma cama queen-size, iluminação suave, varanda com vista (dependendo da disponibilidade), ar-condicionado, TV a cabo, Wi-Fi gratuito e banheiro privativo com amenities exclusivos, é o refúgio ideal para relaxar e criar memórias inesquecíveis.</p>
+                                            <br>
+                                            <p id='p-dia'>R$250,00 por dia</p>
                                         </div>
                                 </div>
                             </div>
@@ -111,10 +126,12 @@ session_start()
                             </div>
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
-                                    <h3><span>R$</span>180</h3>
+                                    <h3><span>R$</span>300 </h3>
                                     <button onclick="toggleCard(this)">Saiba Mais</button>
                                         <div class="card" id="infoCard">
-                                            <p>Colocar detalhes.</p>
+                                            <p>Espaçoso e confortável, o Quarto Família é perfeito para quem viaja com crianças ou em grupo. Com uma cama de casal e duas camas de solteiro (ou beliche), além de espaço extra para acomodar até 4 pessoas. Inclui Wi-Fi gratuito, TV a cabo, frigobar, ar-condicionado e banheiro privativo. Este quarto garante conforto e praticidade para toda a família.</p>
+                                            <br>
+                                            <p id='p-dia'>R$300,00 por dia</p>
                                         </div>
                                 </div>
                             </div>
@@ -141,10 +158,12 @@ session_start()
                             </div>
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
-                                    <h3><span>R$</span>320</h3>
+                                    <h3><span>R$</span>40</h3>                                    
                                     <button onclick="toggleCard(this)">Saiba Mais</button>
                                         <div class="card" id="infoCard">
-                                            <p>Colocar detalhes.</p>
+                                            <p>Perfeito para quem deseja começar o dia com energia e sabor! Este pacote inclui um café da manhã completo, com uma seleção variada de pães, bolos, frutas frescas, sucos naturais, pratos quentes e bebidas como café, chá e chocolate quente. Tudo preparado com ingredientes frescos para uma experiência matinal deliciosa.</p>
+                                            <br>
+                                            <p id='p-dia'>R$40,00 por dia</p>
                                         </div>
                                 </div>
                             </div>
@@ -159,10 +178,12 @@ session_start()
                             </div>
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
-                                    <h3><span>R$</span>220</h3>
+                                    <h3><span>R$</span>80</h3>
                                     <button onclick="toggleCard(this)">Saiba Mais</button>
                                         <div class="card" id="infoCard">
-                                            <p>Colocar detalhes.</p>
+                                            <p>Ideal para quem busca conforto e praticidade. Este pacote inclui nosso café da manhã completo, além de um jantar delicioso com pratos da culinária local e internacional. O jantar é composto por entrada, prato principal e sobremesa, com opções que agradam a todos os gostos. Perfeito para quem quer explorar durante o dia e voltar para uma refeição reconfortante no hotel.</p>
+                                            <br>
+                                            <p id='p-dia'>R$80,00 por dia</p>
                                         </div>
                                 </div>
                             </div>
@@ -177,10 +198,12 @@ session_start()
                             </div>
                             <div class="fundo-preco">
                                 <div class="seleção-preco">
-                                    <h3><span>R$</span>180</h3>
+                                    <h3><span>R$</span>120</h3>  
                                     <button onclick="toggleCard(this)">Saiba Mais</button>
                                         <div class="card" id="infoCard">
-                                            <p>Colocar detalhes.</p>
+                                            <p>Uma experiência gastronômica completa! Este pacote inclui café da manhã, almoço e jantar, com menus cuidadosamente elaborados para cada refeição. Desfrute de uma ampla variedade de pratos frescos e saborosos, incluindo opções vegetarianas e infantis. Com este pacote, você pode relaxar e aproveitar sua estadia sem se preocupar com nada além de saborear as melhores refeições.</p>
+                                            <br>
+                                            <p id='p-dia'>R$120,00 por dia</p>
                                         </div>
                                 </div>
                             </div>
@@ -193,7 +216,7 @@ session_start()
     </section>
 
     <section>
-        
+
     </section>
 
     <footer>

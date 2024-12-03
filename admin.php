@@ -1,14 +1,18 @@
 <?php
-// Inclui o arquivo de conexão com o banco de dados
+session_start();
 include 'conexao.php';
 
-// Inicia a sessão para verificar se o usuário é um administrador
-session_start();
+if (!isset($_SESSION['id_usuario'])) {
+    header("Location: login.php");
+    exit();
+}
 
-// Verifica se o usuário está logado como administrador
+if ($_SESSION['tipo'] !== 'Admin') {
+    echo '<p style="color:rgba(45, 68, 85, 0.93);; text-align:center; font-family: \'Inter\', sans-serif; font-size:80px;margin-top:180px;">Você não tem permissão para acessar esta página</p>';
+    echo '<a href="index.php" style="text-decoration: none;"><button style="display: block; margin: 0 auto; padding: 22px; background: rgba(45, 68, 85, 0.93); color: white; font-size: 22px; border: none; cursor: pointer; transition: background 0.3s, transform 0.3s;" onmouseover="this.style.background=\'rgba(45, 68, 85, 1)\'" onmouseout="this.style.background=\'rgba(45, 68, 85, 0.93)\'; this.style.transform=\'scale(1)\'">Voltar</button></a>';
+    exit();
+}
 
-
-// Consulta SQL para buscar as reservas com as informações do cliente
 $sql = "
     SELECT 
         reservas.id_reserva, 
@@ -16,7 +20,8 @@ $sql = "
         reservas.plano_refeicao, 
         reservas.entrada, 
         reservas.saida, 
-        reservas.forma_pagamento, 
+        reservas.forma_pagamento,
+        reservas.valor_total,
         usuarios.nome_usuario, 
         usuarios.email_usuario
     FROM reservas
@@ -25,6 +30,7 @@ $sql = "
 
 $resultado = $conexao->query($sql);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -89,6 +95,7 @@ $resultado = $conexao->query($sql);
                         <th>Data de Entrada</th>
                         <th>Data de Saída</th>
                         <th>Forma de Pagamento</th>
+                        <th>Valor total</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -102,6 +109,7 @@ $resultado = $conexao->query($sql);
                             <td><?php echo ($row['entrada']); ?></td>
                             <td><?php echo ($row['saida']); ?></td>
                             <td><?php echo ($row['forma_pagamento']); ?></td>
+                            <td><?php echo ($row['valor_total']); ?></td>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>

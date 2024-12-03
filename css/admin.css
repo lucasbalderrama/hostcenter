@@ -29,8 +29,9 @@ th, td {
     font-size: 15px;
 }
 th {
-    background-color: #007BFF;
+    background-color: #00304D;
     color: white;
+    border: none;
 }
 tr:nth-child(even) {
     background-color: #f9f9f9;
@@ -176,6 +177,22 @@ a:hover{
     z-index: 1; 
     border: solid 5px rgba(217, 217, 217, 0.886);
 }
-
-
 /* fim cabeçalho */
+@media (max-width: 768px) {
+    #user{
+        font-size: 10px;
+    }
+    #nav1{
+        display: none;
+    }
+    #botao{
+        display: block;
+        color: black;
+    }
+    #checkbox:checked + #botao + #nav2{
+        display: block;
+    }
+    .logo{
+        margin-left: 5%;
+    }
+}

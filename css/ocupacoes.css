@@ -151,7 +151,7 @@ a:hover{
 .titulo-preto-wthree {
     font-size: 40px;
     color:#0f2453;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 12px;
@@ -216,6 +216,7 @@ a:hover{
     padding: 1em 0em;
     text-align: center;
     background: #fff;
+    font-family: Arial, sans-serif;
 }
 .seleção-preco button {
     font-size: 1em; 
@@ -224,6 +225,7 @@ a:hover{
     padding: 0.5em 2em;
     background: #ffce14;
     border: 2px solid #ecbf11;
+    font-family: Arial, sans-serif;
 }
 .seleção-preco button:hover {
     background: #dcb30f;
@@ -237,7 +239,7 @@ a:hover{
     border: 2px solid #ecbf11;
     width: 200px;
     height: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     border-radius: 10px;
     margin-left: 34%;
     transition: 1s;
@@ -251,6 +253,7 @@ a:hover{
     padding-right: 15px;
     margin-top: 30px;
     text-align: justify;
+    font-family: Arial, sans-serif;
 }
 .bloco-preco {
     box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
@@ -258,6 +261,7 @@ a:hover{
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
+    font-family: Arial, sans-serif;
     margin-bottom: 20px; 
 }
 .bloco-preco:hover {
@@ -268,7 +272,10 @@ a:hover{
     width: 30%; 
     padding: 0 10px; 
 }
-
+#p-dia {
+    font-size: 20px;
+    font-weight: bold;
+}
 /* fim da seção 1 */
 
 /* footer */
@@ -317,4 +324,22 @@ footer ul li {
  
 .contato {
     margin-top: 5px;
+}
+@media (max-width: 768px) {
+    #user{
+        font-size: 10px;
+    }
+    #nav1{
+        display: none;
+    }
+    #botao{
+        display: block;
+        color: black;
+    }
+    #checkbox:checked + #botao + #nav2{
+        display: block;
+    }
+    .logo{
+        margin-left: 5%;
+    }
 }

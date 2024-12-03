@@ -2,8 +2,8 @@
 include 'conexao.php';
 session_start();
 if (!isset($_SESSION['id_usuario'])) {
-    $_SESSION['url_anterior'] = $_SERVER['REQUEST_URI']; // Salva a URL atual
-    header("Location: login.php"); // Redireciona para a página de login
+    $_SESSION['url_anterior'] = $_SERVER['REQUEST_URI']; 
+    header("Location: login.php"); 
     exit;
 }
 ?>
@@ -13,6 +13,9 @@ if (!isset($_SESSION['id_usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reservar.css">
+    <script src="./js/reservar.js" defer></script>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Reserve seu quarto</title>
 </head>
 <body>
@@ -27,21 +30,32 @@ if (!isset($_SESSION['id_usuario'])) {
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
                 <div id="user-div">
-                    <?php
-                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
-                        echo "<select name='' id='user' onchange='sair()'>
-                                <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
-                                <a><option value='' id='opt-sair'>Sair</option></a>
-                            </select>";
-                    } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] == '') {
-                        echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
-                    }
-                    ?>
-                    <script>
-                        function sair(){
-                            window.location.href = "./logout.php";
+                <?php
+                if (isset($_SESSION['nome']) && $_SESSION['nome'] != '' && $_SESSION['tipo'] == 'Admin') {
+                    echo "
+                    <select id='user' onchange='redirecionar(this.value)'>
+                        <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                        <option value='admin.php'>Admin</option>
+                        <option value='logout.php'>Sair</option>
+                    </select>";
+                } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] != '' && $_SESSION['tipo'] == 'Cliente') {
+                    echo "
+                    <select id='user' onchange='redirecionar(this.value)'>
+                        <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                        <option value='logout.php'>Sair</option>
+                    </select>";
+                } else {
+                    echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
+                }
+                ?>
+
+                <script>
+                    function redirecionar(url) {
+                        if (url) {
+                            window.location.href = url;
                         }
-                    </script>
+                    }
+                </script>
                 </div>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>
@@ -57,7 +71,6 @@ if (!isset($_SESSION['id_usuario'])) {
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
-    // Verifica se o usuário está logado
     if (!isset($_SESSION['id_usuario'])) {
         echo "<script>alert('Você precisa estar logado para fazer uma reserva!');'</script>";
         $_SESSION['url_anterior'] = $_SERVER['REQUEST_URI'];
@@ -65,20 +78,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         exit;
     }
 
-    // Obtém os dados do formulário e do usuário logado
     $id_usuario = $_SESSION['id_usuario'];
     $tp_quarto = $_POST['tpquarto'];
     $plano_refeicao = $_POST['prefei'];
     $entrada = $_POST['entrada-reserva'];
     $saida = $_POST['saida-reserva'];
     $forma_pagamento = $_POST['forma_pagamento'];
+    $valor_total = $_POST['total_reserva'];
 
-    // Cria a query de inserção usando prepared statement
-    $stmt = $conexao->prepare("INSERT INTO reservas (tp_quarto, plano_refeicao, entrada, saida, forma_pagamento, id_usuario) 
-                            VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssi", $tp_quarto, $plano_refeicao, $entrada, $saida, $forma_pagamento, $id_usuario);
+    $stmt = $conexao->prepare("INSERT INTO reservas (tp_quarto, plano_refeicao, entrada, saida, forma_pagamento, id_usuario, valor_total) 
+                            VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssii", $tp_quarto, $plano_refeicao, $entrada, $saida, $forma_pagamento, $id_usuario, $valor_total);
 
-    // Executa a query
     if ($stmt->execute()) {
         echo '<script>
                 Swal.fire({
@@ -89,50 +100,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     } else {
         echo "Erro ao inserir os dados: " . $stmt->error;
     }
-
-    $formas_pagamento_validas = ['Débito', 'Crédito', 'Pix'];
-
-        if (in_array($forma_pagamento, $formas_pagamento_validas)) {
-            $sql = "INSERT INTO reservas (tp_quarto, plano_refeicao, entrada, saida, forma_pagamento, id_usuario) 
-                    VALUES (?, ?, ?, ?, ?, ?)";
-            $stmt = $conexao->prepare($sql);
-
-            if ($stmt) {
-                $stmt->bind_param("sssssi", $tp_quarto, $plano_refeicao, $entrada, $saida, $forma_pagamento, $id_usuario);
-                if ($stmt->execute()) {
-                    echo '<script>
-                            Swal.fire({
-                                text: "Reserva efetuada com sucesso!",
-                                icon: "success"
-                            });
-                          </script>';
-                } else {
-                    echo '<script>
-                            Swal.fire({
-                                text: "Erro ao fazer a reserva. Tente novamente.",
-                                icon: "error"
-                            });
-                          </script>';
-                }
-                $stmt->close();
-            } else {
-                echo '<script>
-                        Swal.fire({
-                            text: "Erro ao preparar consulta SQL.",
-                            icon: "error"
-                        });
-                      </script>';
-            }
-        } else {
-            echo '<script>
-                    Swal.fire({
-                        text: "Forma de pagamento inválida.",
-                        icon: "error"
-                    });
-                  </script>';
-        }
-
-    // Fecha a conexão
     $conexao->close();
 }
 ?>
@@ -143,21 +110,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                 <form name="form" method="post">
                     <div class="form-group">
                         <label>Tipo de quarto:</label>
-                        <select name="tpquarto" required>
-                            <option class="esconder" value="" selected>Selecione o tipo de quarto</option>
-                            <option value="Quarto Casal">Quarto Casal</option>
-                            <option value="Quarto Família">Quarto Família</option>
-                            <option value="Quarto Amigos">Quarto Amigos</option>
+                        <select name="tpquarto" id="quarto" required>
+                            <option class="esconder" value="" data-preco="0" selected>Selecione o tipo de quarto</option>
+                            <option value="Quarto Amigos" data-preco="250">Quarto Amigos</option>
+                            <option value="Quarto Casal" data-preco="200">Quarto Casal</option>
+                            <option value="Quarto Família" data-preco="300">Quarto Família</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Pacotes Refeição:</label>
-                        <select name="prefei" required>
-                            <option class="esconder" value="" selected>Selecione o pacote</option>
-                            <option value="Pacote Café da Manhã">Pacote Café da Manhã</option>
-                            <option value="Pacote Adicional">Pacote Adicional</option>
-                            <option value="Pacote Completo">Pacote Completo</option>
-                            <option value="Nenhum Pacote">Nenhum Pacote</option>
+                        <select name="prefei" id="refeicao" required>
+                            <option class="esconder" value="" data-preco="0" selected>Selecione o pacote</option>
+                            <option value="Pacote Café da Manhã" data-preco="40">Pacote Café da Manhã</option>
+                            <option value="Pacote Café da Manhã e Jantar" data-preco="80">Pacote Café da Manhã e Jantar</option>
+                            <option value="Pacote Completo" data-preco="120">Pacote Completo</option>
+                            <option value="Nenhum Pacote" data-preco="0">Nenhum Pacote</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -189,6 +156,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9UlEQVR4nO1a3U7UUBDuCxj1Wi/0SgT8SdRLRe+UznS98THUB1B8E2OC8aYzFRI6pxjfQMEb9RFQWQUimiiRRDP7RwMtS09PS9cwyUnIbpnzfbNz5sw3u553ZP+Z+fGLk2D4CQoto/BPEP6BhpdQaKY1N3fCa7L5Cd1Ew1/R8N/MJdzWZ7wmGgjdQaHfueB7CwxvYUwtbxTBYxNJQEHwjSIBluDTJED47kiCP1QS4Ag8HgYJ1+CxThJVgcc6SQTz88eCmG+A8FMwvF0auNAf9eUndF19e7XfvMJr9uB5DUw4VSnIIImCTs3e2XgdDc3eNtFpfX86Di/v2z7kpgttBEJX1Yf6AuHnXd876aR7uwa/A0BoBRZ5TJ/zF6NLBUms98HDIo+B0Ke8M2FN4iAHFoRWMaGJgiTW/Ti80g1QeE4D4fzGLlJtlIS/EE3q/6Ghi0NIFAKPNiRsSmWaxHT88jwa/pxxYNtKMAU+M21KkdCqkpfzBziUXwITjmeSEG63JLzQAW/CcX3Wbg/eytUTqqRsqsluEoMzsRBNoqH3ugYpltCELXhMByNL2XVkYBnHGSTS5gS86e0R8+OM3Od3Lpz3SGwGwg/xVXhWl/6tr7nyj4aX9hBQAe5wg0oXGNrMSCGnEap2CX/P+ARo2WWE0ET3W8ncGU0hSOiBywCB4bdZBGZG5hAbfrSHgJam7mXjBryWThD+CMIfXJZREFq99zo8vodA1RfZ4BYueZHBsPa720rwr6JR6Ud+n37Iqg9C+37oYCQKdqTVN3OF2ul0zhdop/taIKiqnS4qaCxU2W5Bs5IH3r0q62hgmvUXwlN98CD0zeLQb4CJrvUlpfpM62sn4IeSi/lWWVHv1z1u1xqspQyEnrkYq4Dh7a6vcCq3vo/SYAurnlhXOVrEusbtVQx3se7vClyO1/GwvuiwaTsaA74siUaAtyXRKPBFSTQS/K5xe3u/zrXycXpZU2WncxvVrfozg85PDYTeqAys/KY9Mq9++wfSId/ImvikTwAAAABJRU5ErkJggg==" alt="pix" style="margin-left: 58px; height: 45px;">
                         </label>
                     </div>
+                    <input type="hidden" name="total_reserva" id="input-total-reserva" value="0">
+                    <p id="total-reserva" style="font-size: 18px;margin-top:60px">Total: R$ 0,00</p>
+
                     <input type="submit" value="Reservar" name="submit" id="btn-reserva">
                 </div>
             </div>
