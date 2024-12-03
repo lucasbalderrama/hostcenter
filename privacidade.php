@@ -9,46 +9,54 @@
 </head>
 <body>
 <div id="conteudo">
-        <h1>Política de Privacidade - HostCenter</h1>
+    <h1>Política de Privacidade - HostCenter</h1>
 
-        <h2>1. Informações que Coletamos</h2>
-        <p>Nós podemos coletar as seguintes informações:</p>
-        <ul>
-            <li><strong>Informações de contato:</strong> Caso você entre em contato conosco, podemos coletar seu nome e e-mail.</li>
-            <li><strong>Informações fornecidas voluntariamente:</strong> Se você optar por fornecer informações, como ao nos enviar perguntas ou se inscrever em nossa newsletter.</li>
-        </ul>
+    <h2>1. Informações que Coletamos</h2>
+    <p>No HostCenter, podemos coletar as seguintes informações quando você interage com nosso site:</p>
+    <ul>
+        <li><strong>Informações de contato:</strong> Como nome, endereço de e-mail, telefone e dados de pagamento fornecidos ao realizar uma reserva ou entrar em contato conosco.</li>
+        <li><strong>Informações de reserva:</strong> Detalhes sobre suas reservas, incluindo datas de chegada e saída, tipo de quarto e preferências.</li>
+        <li><strong>Informações de navegação:</strong> Dados sobre seu dispositivo, como o endereço IP, tipo de navegador, e informações sobre como você utiliza o nosso site, para melhorar sua experiência de navegação.</li>
+    </ul>
 
-        <h2>2. Como Usamos Suas Informações</h2>
-        <p>As informações coletadas podem ser usadas para:</p>
-        <ul>
-            <li>Responder às suas perguntas e solicitações.</li>
-            <li>Enviar comunicações relacionadas ao site, como atualizações ou novidades.</li>
-        </ul>
+    <h2>2. Como Usamos Suas Informações</h2>
+    <p>As informações que coletamos são usadas para os seguintes fins:</p>
+    <ul>
+        <li>Processar suas reservas de hospedagem e garantir que sua estadia no HostCenter seja agradável.</li>
+        <li>Entrar em contato com você para confirmar ou fornecer detalhes sobre sua reserva ou serviços relacionados.</li>
+        <li>Enviar ofertas, promoções e informações sobre novos serviços e eventos do HostCenter.</li>
+        <li>Melhorar o desempenho do nosso site e a experiência do usuário, com base nas interações dos usuários com a plataforma.</li>
+    </ul>
 
-        <h2>3. Compartilhamento de Informações com Terceiros</h2>
-        <p>Nós não vendemos, comercializamos ou transferimos suas informações pessoais para terceiros. No entanto, podemos compartilhar dados com prestadores de serviço que nos auxiliam na operação do site, desde que eles concordem em manter essas informações confidenciais.</p>
+    <h2>3. Compartilhamento de Informações com Terceiros</h2>
+    <p>O HostCenter não vende nem comercializa suas informações pessoais. No entanto, podemos compartilhar suas informações com terceiros nas seguintes situações:</p>
+    <ul>
+        <li>Com prestadores de serviços que nos ajudam a operar o site ou a processar suas reservas, como provedores de pagamento e sistemas de gestão de reservas, que são obrigados a manter suas informações confidenciais.</li>
+        <li>Quando necessário para cumprir com a lei ou para proteger nossos direitos, como no caso de investigações legais ou solicitações de autoridades competentes.</li>
+    </ul>
 
-        <h2>4. Segurança das Informações</h2>
-        <p>Adotamos medidas de segurança adequadas para proteger suas informações contra acesso, alteração, divulgação ou destruição não autorizada. Embora nos esforcemos para proteger suas informações, nenhuma transmissão de dados pela internet é 100% segura.</p>
+    <h2>4. Segurança das Informações</h2>
+    <p>Adotamos medidas de segurança adequadas para proteger suas informações pessoais contra acessos não autorizados, alterações, divulgações ou destruições. Contudo, embora tomemos todos os cuidados possíveis, nenhuma transmissão de dados na internet pode ser completamente segura.</p>
 
-        <h2>5. Links para Sites de Terceiros</h2>
-        <p>Nosso site pode conter links para sites externos que não são operados por nós. Não temos controle sobre o conteúdo ou as práticas de privacidade desses sites e não podemos nos responsabilizar por suas políticas.</p>
+    <h2>5. Links para Sites de Terceiros</h2>
+    <p>Nosso site pode conter links para sites de terceiros. Não somos responsáveis pelas práticas de privacidade de sites externos. Recomendamos que você leia as políticas de privacidade de cada site que acessar.</p>
 
-        <h2>6. Direitos dos Usuários</h2>
-        <p>Você tem o direito de:</p>
-        <ul>
-            <li>Solicitar acesso às informações que coletamos sobre você.</li>
-            <li>Solicitar a correção ou exclusão de suas informações pessoais.</li>
-            <li>Retirar o consentimento para o uso de suas informações a qualquer momento.</li>
-        </ul>
-        <p>Para exercer esses direitos, entre em contato conosco através do e-mail [seu email de contato].</p>
+    <h2>6. Direitos dos Usuários</h2>
+    <p>Você tem o direito de:</p>
+    <ul>
+        <li>Solicitar acesso às informações pessoais que coletamos sobre você.</li>
+        <li>Solicitar a correção ou exclusão de suas informações pessoais, quando aplicável.</li>
+        <li>Retirar o seu consentimento para o uso de suas informações pessoais, a qualquer momento, sem que isso afete a legalidade do uso prévio.</li>
+    </ul>
+    <p>Para exercer seus direitos, entre em contato conosco por meio do e-mail <strong>contato@hostcenter.com</strong>.</p>
 
-        <h2>7. Alterações na Política de Privacidade</h2>
-        <p>Podemos atualizar esta Política de Privacidade periodicamente. Qualquer alteração será publicada nesta página. Recomendamos que você revise esta política regularmente para se manter informado sobre como protegemos suas informações.</p>
+    <h2>7. Alterações na Política de Privacidade</h2>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer alterações serão publicadas nesta página, com a data da última atualização indicada no final da política. Recomendamos que você revise a política regularmente para se manter informado sobre como protegemos suas informações.</p>
 
-        <h2>8. Contato</h2>
-        <p>Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco por meio do e-mail [seu email de contato].</p>
-    </div>
+    <h2>8. Contato</h2>
+    <p>Se você tiver dúvidas sobre esta Política de Privacidade ou sobre a forma como tratamos suas informações pessoais, entre em contato conosco pelo e-mail <strong>contato@hostcenter.com</strong>.</p>
+</div>
+
 
     <footer>
         <div id="footer">

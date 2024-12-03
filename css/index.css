@@ -196,7 +196,7 @@ a:hover{
     content:  "";
     position: absolute;
     left: 1.55%;
-    width:    60%; 
+    width:    54%; 
     height:   4px;
     background-color:#1a4a67;
     transform-origin: center center;
@@ -251,7 +251,7 @@ a:hover{
 
 .sobre{
     border-left: 5px solid #00304D;
-    padding: 20px;
+    padding: 13px;
     margin: 30px auto;
     border-radius: 5px;
     width: 80%;
@@ -280,7 +280,7 @@ a:hover{
     color: #4b4a4a;
 }
 .sobre p {
-    margin-top: 18px;
+    margin-top: 3px;
     font-size: 26px;
 }
 /* fim sobre */
@@ -557,17 +557,14 @@ footer ul li {
     }
     #secao1 h1{
         font-size: 52px;
-        margin-top: 60px;
+        margin-top: 100px;
+        padding-left: 35px;
     }
     #secao1 p{
         font-size: 20px;
+        padding-left: 127px;
     }
-    .imgSobre {
-        height: 500px;
-        width: 1100px;
-        position: relative;
-        min-width: 60px;
-    }
+
     .sobre {
         width: 300px;
         height: 370px;
@@ -578,7 +575,7 @@ footer ul li {
         font-size: 40px;
     }
     .sobre p {
-        font-size: 18px;
+        font-size: 24px;
     }
     #recursos{
         min-width: 60px;
@@ -593,18 +590,39 @@ footer ul li {
     .recurso p{
         font-size: 18px;
     }
-    #secao3 h1{
-        font-size: 50px;
+    #secao3 h2{
+        font-size: 43px;
     }
     .info p{
         font-size: 1px;
     }
 
-
+    .logo-container {
+        position: relative;
+        height: 20%;
+        
+        &:before {
+          content:  "";
+          position: absolute;
+          left: 27%;
+          width:    45%; 
+          height:   4px;
+          background-color:#1a4a67;
+          transform-origin: center center;
+          transform: scaleX(0);
+          
+          animation: line-animation 3s ease forwards; 
+        }
+        
+        h1#page-logo {
+          
+          animation: clip-path-reveal-1 3s ease forwards; 
+        }
+      }
     @keyframes line-animation {
     0% { transform: scaleX(0); }
     15% { transform: scaleX(0); }
-    20%, 25% { transform: scaleX(1.8); top: 0px; } 
+    15%, 20% { transform: scaleX(1.8); top: 0px; } 
     50% { transform: scaleX(1.8); top: calc(100% + 5px); } 
     70% { transform: scaleX(0.9); top: calc(100% + 5px); } 
     80%, 100% { transform: scaleX(0.9); top: calc(100% + 5px); }
@@ -616,6 +634,9 @@ footer ul li {
     }
     .logo-container {
         height: 11%;
+    }
+    #user{
+        font-size: 10px;
     }
 
 }
