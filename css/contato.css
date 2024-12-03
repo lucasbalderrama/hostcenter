@@ -145,6 +145,10 @@ a:hover{
 
 /* fim cabeçalho */
 /* form */
+#esteja_logado{
+    color: rgb(77, 77, 81);
+    font-size: 14.53px;
+}
 form{
     padding: 20px;
     width: 400px;
@@ -164,7 +168,8 @@ form h2{
     text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
              rgba(0, 0, 0, 0.3) 0px 7px 13px, 
              rgba(0, 0, 0, 0.2) 0px -3px 0px;
-
+             margin-bottom: 40px;
+             margin-top: 10px;
 }
 #contato a{
     text-decoration: none;
@@ -182,9 +187,16 @@ input{
     font-family: 'Plus Jakarta Sans', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.211) 0px 2px 4px, rgba(0, 0, 0, 0.211) 0px 7px 13px -3px, rgba(0, 0, 0, 0.085) 0px -3px 0px inset;
 }
-#observacao{
-    height: 100px;
+#comentario{
+    height: 20px;
+    padding-bottom: 90px;
 }
+
+input::placeholder {
+    position: absolute;
+    top: 5px; 
+
+  }
 .formulario{
     margin-top: 15px;
     font-size: 17px;
@@ -371,6 +383,9 @@ footer ul li {
         width: 250px;
         height: 390px;
         background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0) 0px 19px 38px, rgba(0, 0, 0, 0) 0px 15px 12px;
+        border: solid #1e5aba 2px;
+        border-radius: 10px;
     }
     .caixinhaContato {
         width: 290px;
@@ -378,46 +393,70 @@ footer ul li {
         background-color: white;
         color: #000;
         box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px inset;
-        
+        border: solid #1e5aba 2px;
     }
     #insta {
         right: 0px;
         bottom: -530px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     #equipe {
         bottom: -300px;
         right: 0px;
+        border-bottom: solid #ffffff 2px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
     #email {
         right: 0px;
         bottom: -850px;
+        border-bottom: solid #ffffff 2px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
     #local{
         right: 0px;
         bottom: -1080px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     .fa-location-dot, .fa-users, #iconInsta, .fa-envelope{
         font-size: 50px;
-        margin-top: 15px;
+        margin-top: 35px;
     }
+    
     /* form */
     form{
-        padding: 10px;
+        padding: 0px;
+        padding-left: 10px;
         width: 75%;
     }
     form h2{
-        font-size: 25px;
-        margin-bottom: 40px;
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
         color: black;
         text-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, 
         rgba(0, 0, 0, 0) 0px 7px 13px, 
         rgba(0, 0, 0, 0) 0px -3px 0px;
     }
-    #observacao{
+    #comentario{
         height: 20px;
+        padding-bottom: 70px;
+    }
+    #esteja_logado{
+        font-size: 11.4px;
     }
     #entrar{
         width: 45%;
+        height: 40px;
+        margin-top: 0px;
+        font-size: 20px;
+        background-color: rgb(255, 255, 255);
+        border: solid #1e5aba 2px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px inset;
     }
 
     #contato a{
@@ -426,37 +465,30 @@ footer ul li {
     #centralizar{
         margin-left: 23%;
     }
-
-    input{
-        width: 95%;
-        padding: 6px;
-        margin-bottom: 10px;
-        border: solid #b4b4b4 2px;
+    .formulario{
+        margin-top: 10px;
         font-size: 17px;
-        border-radius: 5px;
-        background-color: rgba(217, 217, 217, 1);
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        box-shadow: rgba(0, 0, 0, 0.211) 0px 2px 4px, rgba(0, 0, 0, 0.211) 0px 7px 13px -3px, rgba(0, 0, 0, 0.085) 0px -3px 0px inset;
+        display: flex;
+        align-items: center;
     }
-    #entrar{
-        width: 50%;
-        height: 40px;
-        background-color: rgba(217, 217, 217, 1);
-        margin-top: 6px;
-        border: solid #00304D 0.7px;
-        border-radius: 25px;
-        cursor: pointer;
+    #centralizar{
         margin-left: auto;
         margin-right: auto;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        color: #00304D;
-        font-size: 20px;
-        font-weight: 800;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: rgba(0, 0, 0, 0.182) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.073) 0px -3px 0px inset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 90px;
+        margin-bottom: 100px;
+    
     }
+    input{
+        border: solid #1e5aba 2px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0) 0px -3px 0px inset;
+    }
+    input::placeholder {
+        font-size: 15px;
     
-    
+      }
 }
 

@@ -18,9 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($stmt->execute()) {
                 echo "<script>
                 Swal.fire({
-                    title: 'Comentário enviado com sucesso!'', (Arrumar, não esta funcionandoo)
-                    icon: 'success'
-                });
+    title: 'Comentário enviado com sucesso!'',
+    icon: 'success'
+});
+
         </script>";
             } else {
                 echo "Erro ao enviar o comentário: " . $stmt->error;
@@ -64,21 +65,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li><h3><a href="./contato.php">Contato</a></h3></li>
                 </ul>
                 <div id="user-div">
-                    <?php
-                    if (isset($_SESSION['nome']) && $_SESSION['nome'] != ''){
-                        echo "<select name='' id='user' onchange='sair()'>
-                                <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
-                                <option value='' id='opt-sair'>Sair</option>
-                            </select>";
-                    } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] == '') {
-                        echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
-                    }
-                    ?>
-                    <script>
-                        function sair(){
-                            window.location.href = "./logout.php";
+                <?php
+                if (isset($_SESSION['nome']) && $_SESSION['nome'] != '' && $_SESSION['tipo'] == 'Admin') {
+                    echo "
+                    <select id='user' onchange='redirecionar(this.value)'>
+                        <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                        <option value='admin.php'>Admin</option>
+                        <option value='logout.php'>Sair</option>
+                    </select>";
+                } elseif (isset($_SESSION['nome']) && $_SESSION['nome'] != '' && $_SESSION['tipo'] == 'Cliente') {
+                    echo "
+                    <select id='user' onchange='redirecionar(this.value)'>
+                        <option value='' id='opt-nome'>".$_SESSION['nome']."</option>
+                        <option value='logout.php'>Sair</option>
+                    </select>";
+                } else {
+                    echo "<h3><a id='login' href='./login.php'>Entrar</a></h3>";
+                }
+                ?>
+
+                <script>
+                    function redirecionar(url) {
+                        if (url) {
+                            window.location.href = url;
                         }
-                    </script>
+                    }
+                </script>
                 </div>
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox" id="botao">☰</label>
@@ -121,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <form method="POST">
-                <h2 style="margin-bottom: 50px; margin-top: 20px">Envie seu comentario</h2>
+                <h2>Envie seu comentario</h2>
                 <div class="formulario">
                     <input type="text" name="username" id="username" placeholder="Digite seu nome" required>
                 </div>
@@ -129,8 +141,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="email" name="emailForm" id="emailForm" placeholder="Digite seu email" required>
                 </div>
                 <div class="formulario">
-                    <input type="text" name="comentario" id="comentario" placeholder="Digite sua pergunta ou observação">
+                    <input type="text" name="comentario" id="comentario" placeholder="Digite sua observação">
                 </div>
+                <p id="esteja_logado">Esteja logado com uma conta para enviar o comentario</p>
                 <div class="formulario">
                     <button type="submit" id="entrar">Enviar</button>  
                 </div>
@@ -180,17 +193,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </footer> 
 
-        <script>
-            function comentario(event) {
-                event.preventDefault();
-                Swal.fire({
-                    title: "Comentário enviado com sucesso!",
-                    icon: "success"
-                });
-            }
-
-            document.getElementById('entrar').addEventListener('click', comentario);
-            comentario();
-        </script>
 </body>
 </html>
