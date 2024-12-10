@@ -162,7 +162,7 @@ a:hover{
 }
 
 
-h2{
+#h2-titulo {
     font-size: 25px;
     margin-bottom: 10px;
     margin-top: 8px;
@@ -238,12 +238,31 @@ input {
     align-items: center;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    margin-top: 10px;
-    margin-right: 260px;
+    margin-top: 100px;
 }
 
-#forma-pagamento img{
-   margin-left: 30px;
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.checkbox input[type="radio"] {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox label {
+    font-size: 16px;
+    margin: 0; 
+}
+
+.checkbox img {
+    height: 40px;
+    margin: 0;
 }
 /* footer */
 footer {

@@ -1,5 +1,15 @@
 <?php
-session_start()
+session_start();
+include'conexao.php';
+
+$sql = "
+    SELECT 
+        comentarios.nome_usuario,
+        comentarios.comentario
+    FROM comentarios
+";
+
+$resultado = $conexao->query($sql);
 ?>
 <!DOCTYPE php>
 <php lang="pt-BR">
@@ -8,7 +18,6 @@ session_start()
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js//ocupacoes.js"></script>
     <link rel="stylesheet" href="./css/ocupacoes.css">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +29,7 @@ session_start()
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <title>Veja nossas ocupações</title>
 </head>
 <body>
@@ -148,7 +158,7 @@ session_start()
     <section>
         <div class="seção-plano" id="quartos">
             <div class="container">
-                <h3 class="titulo-w3-agileits titulo-preto-wthree">Plano Refeição</h3>
+                <h3 class="titulo-preto-wthree">Plano refeição</h3>
                 <div class="tabela-preco-principal">
                     <div class="coluna card-preco">
                         <div class="bloco-preco agile">
@@ -193,7 +203,7 @@ session_start()
                     <div class="coluna card-preco">
                         <div class="bloco-preco agile">
                             <div class="topo-preco2">
-                                <img src="img/pcompleto" alt=" " class="img-responsiva">
+                                <img src="img/comida.png" alt=" " class="img-responsiva">
                                 <h4>Pacote Completo</h4>
                             </div>
                             <div class="fundo-preco">
@@ -216,7 +226,23 @@ session_start()
     </section>
 
     <section>
-
+        <h1 id='coment-h1'>Comentários</h1>
+        <div class="comentarios" style="overflow-x:auto;">
+            <?php if ($resultado->num_rows > 0): ?>
+                <table>
+                    <tbody>
+                        <?php while ($row = $resultado->fetch_assoc()): ?>
+                            <tr>
+                                <td><?php echo ($row['nome_usuario']); ?></td>
+                                <td><?php echo ($row['comentario']); ?></td>
+                            </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
+            <?php else: ?>
+                <p style="color: #0e3960; margin-top: 30px; text-align: center; font-family:Arial, Helvetica, sans-serif; font-size:18px;">Nenhuma comentário encontrado.</p>
+            <?php endif; ?>
+        </div>
     </section>
 
     <footer>

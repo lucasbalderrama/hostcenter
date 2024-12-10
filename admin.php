@@ -21,9 +21,9 @@ $sql = "
         reservas.entrada, 
         reservas.saida, 
         reservas.forma_pagamento,
-        reservas.valor_total,
         usuarios.nome_usuario, 
-        usuarios.email_usuario
+        usuarios.email_usuario,
+        reservas.valor_total
     FROM reservas
     JOIN usuarios ON reservas.id_usuario = usuarios.id_usuario
 ";
@@ -38,6 +38,7 @@ $resultado = $conexao->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <title>Painel do Administrador - Reservas</title>
 </head>
 <body>
@@ -80,21 +81,21 @@ $resultado = $conexao->query($sql);
         </div>
     </header>
     
-    <div class="container">
-        <h1>Reservas</h1>
+    <h1>Reservas</h1>
+    <div class="container" style="overflow-x:auto;">
 
         <?php if ($resultado->num_rows > 0): ?>
             <table>
                 <thead>
                     <tr>
-                        <th>ID da Reserva</th>
-                        <th>Nome do Cliente</th>
+                        <th>ID da reserva</th>
+                        <th>Nome do cliente</th>
                         <th>Email</th>
-                        <th>Tipo de Quarto</th>
-                        <th>Plano Refeição</th>
-                        <th>Data de Entrada</th>
-                        <th>Data de Saída</th>
-                        <th>Forma de Pagamento</th>
+                        <th>Tipo de quarto</th>
+                        <th>Plano refeição</th>
+                        <th>Data de entrada</th>
+                        <th>Data de saída</th>
+                        <th>Forma de pagamento</th>
                         <th>Valor total</th>
                     </tr>
                 </thead>

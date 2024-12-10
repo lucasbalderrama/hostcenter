@@ -195,7 +195,7 @@ a:hover{
   &:before {
     content:  "";
     position: absolute;
-    left: 1.55%;
+    left: 4.55%;
     width:    54%; 
     height:   4px;
     background-color:#1a4a67;

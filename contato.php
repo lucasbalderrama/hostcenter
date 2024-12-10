@@ -18,10 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($stmt->execute()) {
                 echo "<script>
                 Swal.fire({
-    title: 'Comentário enviado com sucesso!'',
-    icon: 'success'
-});
-
+                    title: 'Comentário enviado com sucesso!'',
+                    icon: 'success'
+                });
         </script>";
             } else {
                 echo "Erro ao enviar o comentário: " . $stmt->error;
@@ -143,7 +142,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="formulario">
                     <input type="text" name="comentario" id="comentario" placeholder="Digite sua observação">
                 </div>
-                <p id="esteja_logado">Esteja logado com uma conta para enviar o comentario</p>
                 <div class="formulario">
                     <button type="submit" id="entrar">Enviar</button>  
                 </div>
